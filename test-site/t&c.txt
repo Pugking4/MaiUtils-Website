@@ -1,50 +1,4 @@
-<!DOCTYPE html>
-<link rel="stylesheet" href="style.css">
-<html>
-<head>
-	<title>My Website</title>
-</head>
-<body>
-
-	<!-- header section -->
-	<header>
-		<h1>Bruh</h1>
-	</header>
-
-	<!-- navigation section -->
-	<nav>
-		<ul>
-			<li><a href="#about">About</a></li>
-			<li><a href="#services">Services</a></li>
-			<li><a href="#portfolio">Portfolio</a></li>
-			<li><a href="#contact">Contact</a></li>
-		</ul>
-	</nav>
-
-	<!-- main content section -->
-	<main>
-		<section id="about">
-			<h2>About Us</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget bibendum quam. Nunc euismod sapien ac augue pulvinar faucibus. Aliquam at volutpat nisi. Sed tincidunt sapien eget eros bibendum lobortis. </p>
-		</section>
-
-		<section id="services">
-			<h2>Our Services</h2>
-			<p>Nulla eu ligula id diam ultricies congue. Integer feugiat consectetur tortor, eget feugiat lacus rhoncus vel. Sed dictum tristique augue, non pellentesque ipsum dapibus at. </p>
-		</section>
-
-		<section id="portfolio">
-			<h2>Portfolio</h2>
-			<p>Quisque at elit dapibus, malesuada ex sed, commodo sem. Aenean vitae risus ut risus suscipit venenatis. Ut feugiat, odio ut gravida egestas, ipsum lacus vehicula risus, non iaculis turpis elit id nunc. </p>
-		</section>
-
-		<section id="contact">
-			<h2>Contact Us</h2>
-			<p>Pellentesque lacinia, odio ac hendrerit tincidunt, enim arcu aliquet ipsum, nec efficitur mauris enim a nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse tincidunt magna sapien, sed pellentesque massa venenatis eget. </p>
-		</section>
-
-
-		<h2><strong>Terms and Conditions</strong></h2>
+<h2><strong>Terms and Conditions</strong></h2>
 
 <p>Welcome to Projects!</p>
 
@@ -163,12 +117,3 @@
 <p>The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including liabilities arising in contract, in tort and for breach of statutory duty.</p>
 
 <p>As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.</p>
-	</main>
-
-	<!-- footer section -->
-	<footer>
-		<p>&copy; 2023 My Website. All rights reserved.</p>
-	</footer>
-
-</body>
-</html>
