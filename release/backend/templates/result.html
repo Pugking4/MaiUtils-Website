@@ -8,5 +8,27 @@
     <p>Constant: {{ constant }}</p>
     <p>Achievement: {{ achievement }}</p>
     <p>Rating: {{ rating }}</p>
+    <table id="data-table">
+        <tr>
+            <th>Ranks</th>
+            <th>S</th>
+            <th>S+</th>
+            <th>SS</th>
+            <th>SS+</th>
+            <th>SSS</th>
+            <th>SSS+</th>
+            <th>Custom Achievement</th>
+        </tr>
+        <tr>
+            <td>Rating</td>
+            <td id="s-rating">{{ s-rating }}</td>
+            <td id="splus-rating">{{ splus-rating }}</td>
+            <td id="ss-rating"></td>
+            <td id="ssplus-rating"></td>
+            <td id="sss-rating"></td>
+            <td id="sssplus-rating">{{ sssplus-rating }}</td>
+            <td id="custom-rating">{{ custom-rating }}</td>
+        </tr>
+    </table>
 </body>
 </html>

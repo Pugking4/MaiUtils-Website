@@ -32,4 +32,4 @@ def calculate_rating(constant=13.9, achievement=0, rating=0):
 
 s_rating, splus_rating, ss_rating, ssplus_rating, sss_rating, sssplus_rating, custom_rating = calculate_rating(achievement=99.5)
 
-print(s_rating, sssplus_rating, custom_rating)
+#print(s_rating, sssplus_rating, custom_rating)
