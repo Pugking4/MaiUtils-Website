@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MaiUtils</title>
+	<link rel="stylesheet" href="ratingcal.css">
+	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+<body>
+
+	<!-- header section -->
+	<header>
+		<h1>pugking4.me (MaiUtils)</h1>
+	</header>
+
+	<!-- main content section -->
+	<main>
+		<section id="intro">
+			<h2>Rating Calculator</h2>
+			<p>This tool allows you to calculate the rating you would receive for a given difficulty constant and score. If the score field is left empty, it will display the S to SSS+ ranks by default. Additionally, you can use this utility to determine the difficulty levels you would need to play in order to achieve your desired rating.</p>
+		</section>
+
+		<section id="calculator">
+			<h2>Calculator</h2>
+			<div class="box">
+				<label for="constant">Constant:</label>
+				<input type="text" id="constant" name="constant" placeholder="Required (13.9)">
+			</div>
+			<div class="box">
+				<label for="score">Score:</label>
+				<input type="text" id="score" name="score" placeholder="Optional (97 - 100.5)">
+			</div>
+			<div class="box">
+				<label for="rating">Rating:</label>
+				<input type="text" id="rating" name="rating" placeholder="Optional">
+			</div>
+			<div>
+				<button id="calculate-btn">Calculate</button>
+			</div>
+			<table id="data-table">
+				<tr>
+					<th>Ranks</th>
+					<th>S</th>
+					<th>S+</th>
+					<th>SS</th>
+					<th>SS+</th>
+					<th>SSS</th>
+					<th>SSS+</th>
+                    <th>Custom Score</th>
+				</tr>
+				<tr>
+					<td>Rating</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+                    <td></td>
+				</tr>
+			</table>
+		</section>
+	</main>
+
+	<!-- footer section -->
+	<footer>
+		<p>&copy; 2023 pugking4.me. All rights reserved.</p>
+	</footer>
+
+	<!-- Import JavaScript file -->
+	<script src="ratingcal.js"></script>
+</body>
+</html>
