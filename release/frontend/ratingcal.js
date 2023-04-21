@@ -1,6 +1,6 @@
 // Get references to the input fields and table cells
 const constantInput = document.getElementById('constant');
-const scoreInput = document.getElementById('score');
+const achievementInput = document.getElementById('achievement');
 const ratingInput = document.getElementById('rating');
 const sCell = document.querySelector('#data-table tr:nth-child(2) td:nth-child(2)');
 const splusCell = document.querySelector('#data-table tr:nth-child(2) td:nth-child(3)');
@@ -14,7 +14,7 @@ const customCell = document.querySelector('#data-table tr:nth-child(2) td:nth-ch
 document.getElementById('calculate-btn').addEventListener('click', () => {
   // Get the values of the input fields
   const constant = constantInput.value;
-  const score = scoreInput.value;
+  const achievement = achievementInput.value;
   const rating = ratingInput.value;
 
   // Send an AJAX request to the server with the input values
@@ -34,5 +34,5 @@ document.getElementById('calculate-btn').addEventListener('click', () => {
     sssplusCell.textContent = sssplus_rating;
     customCell.textContent = custom_rating;
   };
-  xhr.send(`constant=${constant}&score=${score}&rating=${rating}`);
+  xhr.send(`constant=${constant}&achievement=${achievement}&rating=${rating}`);
 });
