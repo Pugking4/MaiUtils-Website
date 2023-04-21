@@ -13,6 +13,12 @@ def calculate():
     constant = float(request.form['constant'])
     achievement = request.form['achievement']
     rating = request.form['rating']
+    
+    print(f"Constant: {constant}")
+    print(f"Achievement: {achievement}")
+    print(f"Rating: {rating}")
+
+    
 
     # Process the data here
 
