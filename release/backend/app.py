@@ -8,7 +8,13 @@ def home():
 
 @app.route('/calculate', methods=['POST'])
 def calculate():
-    # Handle the calculation here
+    # Get the input values from the form
+    constant = float(request.form['constant'])
+    achievement = request.form['achievement']
+    rating = request.form['rating']
+
+    # Process the data here
+
     header_text = "Calculation complete!"
     return render_template('index.html', header=header_text)
 
