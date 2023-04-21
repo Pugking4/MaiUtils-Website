@@ -22,8 +22,11 @@ def calculate():
 
 @app.route('/result')
 def result():
-    message = request.args.get('message')
-    return render_template('result.html', message=message)
+    constant = float(request.form['constant'])
+    achievement = request.form['achievement']
+    rating = request.form['rating']
+    header_text = "Calculation complete!"
+    return render_template('result.html', constant=constant, achievement=achievement, rating=rating, header_text=header_text)
 
 if __name__ == '__main__':
     app.run(debug=True, host='192.168.58.50', port=5000)
