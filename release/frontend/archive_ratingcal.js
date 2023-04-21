@@ -1,41 +1,38 @@
-const calculateBtn = document.querySelector("#calculate-btn");
-const achievementInput = document.querySelector("#achievement");
-const difficultyInput = document.querySelector("#constant");
-const ratingInput = document.querySelector("#rating");
-const dataTable = document.querySelector("#data-table");
+// Get references to the input fields and table cells
+const constantInput = document.getElementById('constant');
+const achievementInput = document.getElementById('achievement');
+const ratingInput = document.getElementById('rating');
+const sCell = document.querySelector('#data-table tr:nth-child(2) td:nth-child(2)');
+const splusCell = document.querySelector('#data-table tr:nth-child(2) td:nth-child(3)');
+const ssCell = document.querySelector('#data-table tr:nth-child(2) td:nth-child(4)');
+const ssplusCell = document.querySelector('#data-table tr:nth-child(2) td:nth-child(5)');
+const sssCell = document.querySelector('#data-table tr:nth-child(2) td:nth-child(6)');
+const sssplusCell = document.querySelector('#data-table tr:nth-child(2) td:nth-child(7)');
+const customCell = document.querySelector('#data-table tr:nth-child(2) td:nth-child(8)');
 
-calculateBtn.addEventListener("click", () => {
-  const achievement = achievementInput.value || 0;
-  const constant = difficultyInput.value || 13.9;
-  const rating = ratingInput.value || 0;
+// Add a click event listener to the Calculate button
+document.getElementById('calculate-btn').addEventListener('click', () => {
+  // Get the values of the input fields
+  const constant = constantInput.value;
+  const achievement = achievementInput.value;
+  const rating = ratingInput.value;
 
-  const url = `/calculate?achievement=${achievement}&constant=${constant}&rating=${rating}`;
+  // Send an AJAX request to the server with the input values
+  const xhr = new XMLHttpRequest();
+  xhr.open('POST', 'http://pugking4.me/calculate');
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  xhr.onload = () => {
+    // Parse the response JSON
+    const { s_rating, splus_rating, ss_rating, ssplus_rating, sss_rating, sssplus_rating, custom_rating } = JSON.parse(xhr.responseText);
 
-  fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      const ranks = ["S", "S+", "SS", "SS+", "SSS", "SSS+"];
-      const customAchievement = data.customAchievement;
-
-      // Fill in rating data
-      const ratingRow = dataTable.rows[1];
-      const ratingCells = ratingRow.cells;
-      ratingCells[7].textContent = customAchievement;
-
-      if (rating !== "") {
-        const ratingIndex = ranks.indexOf(rating.toUpperCase());
-        if (ratingIndex >= 0) {
-          ratingCells[ratingIndex + 1].textContent = customAchievement;
-        }
-      }
-
-      // Fill in difficulty data
-      const difficulties = data.difficulties;
-      const difficultyRow = dataTable.rows[2];
-      const difficultyCells = difficultyRow.cells;
-      difficulties.forEach((d, i) => {
-        difficultyCells[i + 1].textContent = d;
-      });
-    })
-    .catch(error => console.error(error));
+    // Update the table cells with the response values
+    sCell.textContent = s_rating;
+    splusCell.textContent = splus_rating;
+    ssCell.textContent = ss_rating;
+    ssplusCell.textContent = ssplus_rating;
+    sssCell.textContent = sss_rating;
+    sssplusCell.textContent = sssplus_rating;
+    customCell.textContent = custom_rating;
+  };
+  xhr.send(`constant=${constant}&achievement=${achievement}&rating=${rating}`);
 });

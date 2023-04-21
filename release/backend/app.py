@@ -16,7 +16,7 @@ def calculate():
     # Process the data here
 
     header_text = "Calculation complete!"
-    return render_template('index.html', header=header_text)
+    return header_text
 
 if __name__ == '__main__':
     app.run(debug=True)
