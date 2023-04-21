@@ -13,7 +13,7 @@ def calculate():
     constant = float(request.form['constant'])
     achievement = request.form['achievement']
     rating = request.form['rating']
-    
+
     print(f"Constant: {constant}")
     print(f"Achievement: {achievement}")
     print(f"Rating: {rating}")
@@ -23,14 +23,13 @@ def calculate():
     # Process the data here
 
     # Redirect the user to a new page with a success message
-    success_message = "Calculation complete!"
-    return redirect(url_for('result', message=success_message))
+    return redirect(url_for('result', constant=constant, achievement=achievement, rating=rating))
 
 @app.route('/result')
 def result():
-    constant = float(request.form['constant'])
-    achievement = request.form['achievement']
-    rating = request.form['rating']
+    constant = float(request.args.get('constant'))
+    achievement = request.args.get('achievement')
+    rating = request.args.get('rating')
     header_text = "Calculation complete!"
     return render_template('result.html', constant=constant, achievement=achievement, rating=rating, header_text=header_text)
 
