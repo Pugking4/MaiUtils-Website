@@ -1,0 +1,15 @@
+Idea #1
+Create a website or tab which reads scores from maimai every hour (or set time interval) using web scraper and compiles it into days 
+and displays my scores of that day or if there are non yet just display whatever the previous day was.
+It should also log what day I was at kp (if I played atleast 1 game) and how many games I played, what I played and my score of said plays
+Should be exclusive to me as it would require my sega ID and pass for web scraping (prob not gonna release publically)
+
+Idea #2
+Create a website or tab which calculates the rating gain when you input a level constant (eg 14.8 or 13.4) 
+and then outputs the rating you would receive for each rank or if you input a score/rank it would output the rating gained from that (eg 100.1453 at 13.5)
+
+Idea #3
+Tab which you can extract all chart song information from in SQLite format or other.
+
+Idea #4
+Tab for checking completed lamps and how close each lamp is to completion (bonus to include hardest charts over set constant or default 14.0 as a seperate warning)
