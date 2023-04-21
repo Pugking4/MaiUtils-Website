@@ -8,6 +8,7 @@ def home():
 
 @app.route('/calculate', methods=['POST'])
 def calculate():
+    print("Received a POST request at /calculate")
     # Get the input values from the form
     constant = float(request.form['constant'])
     achievement = request.form['achievement']
@@ -19,4 +20,4 @@ def calculate():
     return header_text
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='192.168.58.50', port=5000)
