@@ -4,7 +4,6 @@ def calculate_rating(constant=13.9, achievement=0, rating=0):
     achievement = float(achievement)
     rating = float(rating)
     factors = {
-        0: 0,
         0.97: 20,
         0.98: 20.3,
         0.99: 20.8,
@@ -12,6 +11,7 @@ def calculate_rating(constant=13.9, achievement=0, rating=0):
         1.00: 21.6,
         1.005: 22.4
     }
+    rt_constants = []
 
     achievement = achievement / 100
 
@@ -43,3 +43,16 @@ def calculate_rating(constant=13.9, achievement=0, rating=0):
         print(f"Achievement: {achievement}")
         print(f"Rating: {rating}")
         return int(s_rating), int(splus_rating), int(ss_rating), int(ssplus_rating), int(sss_rating), int(sssplus_rating), int(custom_rating)
+    else:
+
+        for factor in factors:
+            rt_constant = round(rating / (factor * factors[factor]), 1)
+            if rt_constant > 15:
+                rt_constant = 'Null'
+            #rt_constants[factors[factor]] = rt_constant
+            rt_constants.append(rt_constant)
+        
+        rt_constant = round(rating / (achievement * custom_fac), 1)
+        rt_constants.append(rt_constant)
+
+        return int(rt_constants[0]), int(rt_constants[1]), int(rt_constants[2]), int(rt_constants[3]), int(rt_constants[4]), int(rt_constants[5]), int(rt_constants[6])
