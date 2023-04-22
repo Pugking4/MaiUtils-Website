@@ -35,23 +35,20 @@
 	        <form id="calculator-form" method="post" action="/calculate">
 	            <div class="box">
 	                <label for="constant">Constant:</label>
-	                <input type="text" id="constant" name="constant" placeholder="Required (13.9)">
+	                <input type="text" id="constant" name="constant" placeholder="Required (13.9)" value='{{ constant }}'>
 	            </div>
 	            <div class="box">
 	                <label for="achievement">Achievement:</label>
-	                <input type="text" id="achievement" name="achievement" placeholder="Optional (97 - 100.5)">
+	                <input type="text" id="achievement" name="achievement" placeholder="Optional (97 - 100.5)" value='{{ achievement }}'>
 	            </div>
 	            <div class="box">
 	                <label for="rating">Rating:</label>
-	                <input type="text" id="rating" name="rating" placeholder="Optional" value='{{ constant }}'>
+	                <input type="text" id="rating" name="rating" placeholder="Optional" value='{{ rating }}'>
 	            </div>
 	            <div>
 	                <button id="calculate-btn" type="submit">Calculate</button>
 	            </div>
 	        </form>
-			<p>{{ constant }}</p>
-			<p>{{ achievement }}</p>
-			<p>{{ rating }}</p>
 	        <table id="data-table">
 	            <tr>
 	                <th>Ranks</th>
