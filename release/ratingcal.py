@@ -57,4 +57,4 @@ def calculate_rating(constant=13.9, achievement=0, rating=0):
             rt_constant = 'Null'
         rt_constants.append(rt_constant)
 
-        return int(rt_constants[0]), int(rt_constants[1]), int(rt_constants[2]), int(rt_constants[3]), int(rt_constants[4]), int(rt_constants[5]), int(rt_constants[6])
+        return rt_constants[0], rt_constants[1], rt_constants[2], rt_constants[3], rt_constants[4], rt_constants[5], rt_constants[6]
