@@ -1,20 +1,12 @@
-import string
-
 def calculate_rating(constant, achievement, rating):
     custom_fac = 0
-    if string.isnumeric(constant):
-        constant = float(constant)
-    else:
-        constant = 13.9
+    if type(constant) != float and type(constant) != int:
+        constant = 13.9       
     
-    if string.isnumeric(achievement):
-        achievement = float(achievement)
-    else:
+    if type(achievement) != float and type(achievement) != int:
         achievement = 0
 
-    if string.isnumeric(rating):
-        rating = float(rating)
-    else:
+    if type(rating) != int:
         rating = 0
 
     factors = {
@@ -51,11 +43,7 @@ def calculate_rating(constant, achievement, rating):
         ssplus_rating = round((21.1 * 0.995) * constant, 0)
         sss_rating = round((21.6 * 1.00) * constant, 0)
         sssplus_rating = round((22.4 * 1.005) * constant, 0)
-        custom_rating = (custom_fac * achievement) * constant
-        print(f"Custom Rating: {custom_rating}")
-        print(f"Custom Factor: {custom_fac}")
-        print(f"Achievement: {achievement}")
-        print(f"Rating: {rating}")
+        custom_rating = round((custom_fac * achievement) * constant, 0)
         return int(s_rating), int(splus_rating), int(ss_rating), int(ssplus_rating), int(sss_rating), int(sssplus_rating), int(custom_rating)
     else:
 
