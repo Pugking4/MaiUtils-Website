@@ -1,12 +1,19 @@
 def calculate_rating(constant, achievement, rating):
     custom_fac = 0
-    if type(constant) != float and type(constant) != int:
-        constant = 13.9       
+    if constant:
+        constant = float(constant)
+    else:
+        constant = 0
     
-    if type(achievement) != float and type(achievement) != int:
+    if achievement:
+        achievement = float(achievement)
+    else:
         achievement = 0
 
-    rating = int(rating)
+    if rating:
+        rating = int(rating)
+    else:
+        rating = 0
 
     factors = {
         0.97: 20,
