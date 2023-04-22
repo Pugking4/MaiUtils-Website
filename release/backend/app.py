@@ -8,7 +8,7 @@ def home():
     return render_template('index.html')
 
 @app.route('/index')
-def home():
+def index():
     return send_from_directory('frontend/index.html')
 
 @app.route('/calculate', methods=['POST'])
