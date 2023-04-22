@@ -9,7 +9,7 @@ def index():
 
 @app.route('/calculate-rating')
 def ratingcal():
-    return render_template('ratingcal.html')
+    return render_template('release/backend/templates/ratingcal.html')
 
 @app.route('/calculate', methods=['POST'])
 def calculate():
