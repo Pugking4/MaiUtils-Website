@@ -14,14 +14,21 @@ def calculate_rating(constant=13.9, achievement=0, rating=0):
     }
 
     achievement = achievement / 100
-    for key in factors:
-        if isinstance(key, tuple):
-            if key[0] <= achievement <= key[1]:
-                custom_fac = factors[key]
-                break
-        elif key == achievement:
-            custom_fac = factors[key]
-            break
+
+    if achievement >= 0.97 and achievement < 0.98:
+        custom_fac = 20
+    elif achievement >= 0.98 and achievement < 0.99:
+        custom_fac = 20.3
+    elif achievement >= 0.99 and achievement < 0.995:
+        custom_fac = 20.8
+    elif achievement >= 0.995 and achievement < 1.00:
+        custom_fac = 21.1
+    elif achievement >= 1.00 and achievement < 1.005:
+        custom_fac = 21.6
+    elif achievement >= 1.005:
+        custom_fac = 22.4
+    else:
+        custom_fac = 0
 
     if rating == 0:
         s_rating = round((20 * 0.97) * constant, 0)
