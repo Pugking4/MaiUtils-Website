@@ -16,7 +16,7 @@ def index():
 @app.route('/ratingcal')
 def ratingcal():
     print("Received a request at /ratingcal")
-    return render_template('release/backend/templates/ratingcal.html')
+    return render_template('ratingcal.html')
 
 @app.route('/calculate', methods=['POST'])
 def calculate():
