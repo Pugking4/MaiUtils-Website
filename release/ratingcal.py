@@ -51,8 +51,10 @@ def calculate_rating(constant=13.9, achievement=0, rating=0):
                 rt_constant = 'Null'
             #rt_constants[factors[factor]] = rt_constant
             rt_constants.append(rt_constant)
-        
-        rt_constant = round(rating / (achievement * custom_fac), 1)
+        try:
+            rt_constant = round(rating / (achievement * custom_fac), 1)
+        except:
+            rt_constant = 'Null'
         rt_constants.append(rt_constant)
 
         return int(rt_constants[0]), int(rt_constants[1]), int(rt_constants[2]), int(rt_constants[3]), int(rt_constants[4]), int(rt_constants[5]), int(rt_constants[6])
