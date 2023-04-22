@@ -7,9 +7,9 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-#@app.route('/index')
-#def index():
-#    return send_from_directory('frontend/index.html')
+@app.route('/index')
+def index():
+    return send_from_directory('frontend/index.html')
 
 @app.route('/calculate', methods=['POST'])
 def calculate():
