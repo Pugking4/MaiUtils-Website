@@ -36,7 +36,10 @@ def calculate_rating(constant, achievement, rating):
     else:
         custom_fac = 0
 
+    print(f"Rating: {rating}")
+
     if rating == 0:
+        print("Rating is 0")
         s_rating = round((20 * 0.97) * constant, 0)
         splus_rating = round((20.3 * 0.98) * constant, 0)
         ss_rating = round((20.8 * 0.99) * constant, 0)
@@ -46,7 +49,7 @@ def calculate_rating(constant, achievement, rating):
         custom_rating = round((custom_fac * achievement) * constant, 0)
         return int(s_rating), int(splus_rating), int(ss_rating), int(ssplus_rating), int(sss_rating), int(sssplus_rating), int(custom_rating)
     else:
-
+        print("Rating is not 0")
         for factor in factors:
             rt_constant = round(rating / (factor * factors[factor]), 1)
             if rt_constant > 15:
