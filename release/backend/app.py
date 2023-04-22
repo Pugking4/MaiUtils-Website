@@ -5,10 +5,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+    print("Received a request at /")
     return render_template('index.html')
 
-@app.route('/calculate-rating')
+@app.route('/ratingcal')
 def ratingcal():
+    print("Received a request at /ratingcal")
     return render_template('release/backend/templates/ratingcal.html')
 
 @app.route('/calculate', methods=['POST'])
@@ -35,6 +37,7 @@ def calculate():
 
 @app.route('/result')
 def result():
+    print("Received a request at /result")
     constant = float(request.args.get('constant'))
     achievement = request.args.get('achievement')
     rating = request.args.get('rating')
