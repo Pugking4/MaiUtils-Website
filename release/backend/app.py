@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, send_from_directory
 from ratingcal import calculate_rating
 
 app = Flask(__name__)
@@ -6,6 +6,10 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return render_template('index.html')
+
+@app.route('/index')
+def home():
+    return send_from_directory('release/frontend/index.html')
 
 @app.route('/calculate', methods=['POST'])
 def calculate():
@@ -34,7 +38,7 @@ def result():
     constant = float(request.args.get('constant'))
     achievement = request.args.get('achievement')
     rating = request.args.get('rating')
-    
+
     s_rating = request.args.get('s_rating')
     splus_rating = request.args.get('splus_rating')
     ss_rating = request.args.get('ss_rating')
@@ -44,6 +48,8 @@ def result():
     custom_rating = request.args.get('custom_rating')
 
     header_text = "Calculation complete!"
+    #Make it insert data rather than use template or use templates exclusively
+
     return render_template('result.html', constant=constant, achievement=achievement, rating=rating, s_rating=s_rating, splus_rating=splus_rating, ss_rating=ss_rating, ssplus_rating=ssplus_rating, sss_rating=sss_rating, sssplus_rating=sssplus_rating, custom_rating=custom_rating, header_text=header_text)
 
 if __name__ == '__main__':
