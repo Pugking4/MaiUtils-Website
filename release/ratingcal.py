@@ -6,8 +6,8 @@ def calculate_rating(constant, achievement, rating):
     if type(achievement) != float and type(achievement) != int:
         achievement = 0
 
-    if type(rating) != int:
-        rating = 0
+    #if type(rating) != int:
+    #    rating = 0
 
     factors = {
         0.97: 20,
