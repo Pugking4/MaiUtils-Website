@@ -22,6 +22,11 @@ def ratingcal():
 def calculate():
     print("Received a POST request at /calculate")
     # Get the input values from the form
+
+    print(request.form['constant'])
+    print(request.form['achievement'])
+    print(request.form['rating'])
+
     if request.form['constant']:
         constant = 0
     else:
