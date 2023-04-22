@@ -8,6 +8,11 @@ def index():
     print("Received a request at /")
     return render_template('index.html')
 
+@app.route('/index')
+def index():
+    print("Received a request at /index")
+    return render_template('index.html')
+
 @app.route('/ratingcal')
 def ratingcal():
     print("Received a request at /ratingcal")
