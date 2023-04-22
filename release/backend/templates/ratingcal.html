@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MaiUtils</title>
+	<link rel="stylesheet" href="ratingcal.css">
+	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+<body>
+
+	<!-- header section -->
+	<header>
+		<h1>pugking4.me (MaiUtils)</h1>
+	</header>
+
+	<!-- navigation section -->
+	<nav>
+		<ul>
+			<li><a href="http://pugking4.me/frontend/index.html">Index</a></li>
+			<li><a href="http://pugking4.me/frontend/ratingcal.html">Rating Calculator</a></li>
+			<li><a href="wip.html">Placeholder 2</a></li>
+			<li><a href="wip.html">Placeholder 3</a></li>
+			<li><a href="wip.html">Placeholder 4</a></li>
+		</ul>
+	</nav>
+
+	<!-- main content section -->
+	<main>
+	    <section id="intro">
+	        <h2>Rating Calculator</h2>
+	        <p>This tool allows you to calculate the rating you would receive for a given difficulty constant and score. If the score field is left empty, it will display the S to SSS+ ranks by default. Additionally, you can use this utility to determine the difficulty levels you would need to play in order to achieve your desired rating.</p>
+	    </section>
+
+	    <section id="calculator">
+	        <h2>Calculator</h2>
+	        <form id="calculator-form" method="post" action="http://192.168.58.50:5000/calculate">
+	            <div class="box">
+	                <label for="constant">Constant:</label>
+	                <input type="text" id="constant" name="constant" placeholder="Required (13.9)">
+	            </div>
+	            <div class="box">
+	                <label for="achievement">Achievement:</label>
+	                <input type="text" id="achievement" name="achievement" placeholder="Optional (97 - 100.5)">
+	            </div>
+	            <div class="box">
+	                <label for="rating">Rating:</label>
+	                <input type="text" id="rating" name="rating" placeholder="Optional">
+	            </div>
+	            <div>
+	                <button id="calculate-btn" type="submit">Calculate</button>
+	            </div>
+	        </form>
+	        <table id="data-table">
+	            <tr>
+	                <th>Ranks</th>
+	                <th>S</th>
+	                <th>S+</th>
+	                <th>SS</th>
+	                <th>SS+</th>
+	                <th>SSS</th>
+	                <th>SSS+</th>
+	                <th>Custom Achievement</th>
+	            </tr>
+	            <tr>
+	                <td>Rating</td>
+	                <td id="s-rating"></td>
+	                <td id="splus-rating"></td>
+	                <td id="ss-rating"></td>
+	                <td id="ssplus-rating"></td>
+	                <td id="sss-rating"></td>
+	                <td id="sssplus-rating"></td>
+	                <td id="custom-rating"></td>
+	            </tr>
+	        </table>
+	    </section>
+	</main>
+
+
+	<!-- footer section -->
+	<footer>
+		<p>&copy; 2023 pugking4.me. All rights reserved.</p>
+	</footer>
+
+	<!-- Import JavaScript file -->
+	<script src="ratingcal.js"></script>
+</body>
+</html>

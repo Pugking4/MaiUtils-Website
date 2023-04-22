@@ -4,12 +4,12 @@ from ratingcal import calculate_rating
 app = Flask(__name__)
 
 @app.route('/')
-def home():
+def index():
     return render_template('index.html')
 
-@app.route('/index')
-def index():
-    return send_from_directory('frontend/index.html')
+@app.route('/calculate-rating')
+def ratingcal():
+    return render_template('ratingcal.html')
 
 @app.route('/calculate', methods=['POST'])
 def calculate():
