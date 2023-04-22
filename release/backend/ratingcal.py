@@ -31,8 +31,8 @@ def calculate_rating(constant=13.9, achievement=0, rating=0):
         sss_rating = round((21.6 * 1.00) * constant, 0)
         sssplus_rating = round((22.4 * 1.005) * constant, 0)
         custom_rating = (custom_fac * achievement) * constant
+        print(f"Custom Rating: {custom_rating}")
+        print(f"Custom Factor: {custom_fac}")
+        print(f"Achievement: {achievement}")
+        print(f"Rating: {rating}")
         return int(s_rating), int(splus_rating), int(ss_rating), int(ssplus_rating), int(sss_rating), int(sssplus_rating), int(custom_rating)
-
-s_rating, splus_rating, ss_rating, ssplus_rating, sss_rating, sssplus_rating, custom_rating = calculate_rating(achievement=99.5)
-
-#print(s_rating, sssplus_rating, custom_rating)
