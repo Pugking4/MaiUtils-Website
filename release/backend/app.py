@@ -4,7 +4,7 @@ from ratingcal import calculate_rating
 app = Flask(__name__)
 
 @app.route('/')
-def index():
+def home():
     print("Received a request at /")
     return render_template('index.html')
 
