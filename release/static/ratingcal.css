@@ -137,7 +137,7 @@ body {
     border: none;
     border-radius: 5px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    color: darkgrey;
+    background-color: darkgrey;
     outline: none;
     cursor: pointer;
   }
