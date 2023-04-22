@@ -1,8 +1,22 @@
-def calculate_rating(constant=13.9, achievement=0, rating=0):
+import string
+
+def calculate_rating(constant, achievement, rating):
     custom_fac = 0
-    constant = float(constant)
-    achievement = float(achievement)
-    rating = float(rating)
+    if string.isnumeric(constant):
+        constant = float(constant)
+    else:
+        constant = 13.9
+    
+    if string.isnumeric(achievement):
+        achievement = float(achievement)
+    else:
+        achievement = 0
+
+    if string.isnumeric(rating):
+        rating = float(rating)
+    else:
+        rating = 0
+
     factors = {
         0.97: 20,
         0.98: 20.3,
