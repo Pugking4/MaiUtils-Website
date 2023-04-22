@@ -22,16 +22,24 @@ def ratingcal():
 def calculate():
     print("Received a POST request at /calculate")
     # Get the input values from the form
-    constant = float(request.form['constant'])
-    achievement = request.form['achievement']
-    rating = request.form['rating']
+    if request.form['constant']:
+        constant = 0
+    else:
+        constant = float(request.form['constant'])
 
+    if request.form['achievement']:
+        achievement = 0
+    else:
+        achievement = float(request.form['achievement'])
 
+    if request.form['rating']:
+        rating = 0
+    else:
+        rating = request.form['rating']
+    
     print(f"Constant: {constant}")
     print(f"Achievement: {achievement}")
     print(f"Rating: {rating}")
-
-    
 
     # Process the data here
     s_rating, splus_rating, ss_rating, ssplus_rating, sss_rating, sssplus_rating, custom_rating = calculate_rating(constant=constant, achievement=achievement, rating=rating)
