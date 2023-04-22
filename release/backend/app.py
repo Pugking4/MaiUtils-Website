@@ -9,7 +9,7 @@ def home():
 
 @app.route('/index')
 def home():
-    return send_from_directory('release/frontend/index.html')
+    return send_from_directory('frontend/index.html')
 
 @app.route('/calculate', methods=['POST'])
 def calculate():
