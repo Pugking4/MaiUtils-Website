@@ -99,7 +99,7 @@ def db_export():
 @app.route('/db-export/download')
 def db_export_download():
     print("Received a request at /db-export/download")
-    path = "/db/20230423db.sqlite3"
+    path = "./flask_app/db/20230423db.sqlite3"
     return send_file(path, as_attachment=True)
 
 if __name__ == '__main__':
