@@ -124,7 +124,8 @@ def db_export_download():
 @auth.login_required
 def mai_camera():
     print("Received a request at /mai-camera")
-    username = g.username
+    username = auth.username()
+    print(f"Username: {username}")
     return render_template('mai-camera.html', username=username)
 
 
