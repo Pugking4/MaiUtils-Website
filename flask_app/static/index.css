@@ -96,6 +96,10 @@ footer p {
 	margin: 0;
 }
 
+priv_foot {
+	color: #fff;
+}
+
 @media (max-width: 768px) {
 
 	.container {
@@ -128,3 +132,4 @@ footer p {
 	}
 
 }
+
