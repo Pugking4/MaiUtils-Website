@@ -127,10 +127,9 @@ def mai_camera():
     print("Received a request at /mai-camera")
     username = auth.username()
     print(f"Username: {username}")
-    image_files = [f for f in os.listdir(image_dir) if f.endswith(('.jpg', '.jpeg', '.png', '.gif'))]
 
     image_dir = 'static/images'
-
+    image_files = [f for f in os.listdir(image_dir) if f.endswith(('.jpg', '.jpeg', '.png', '.gif'))]
     return render_template('mai-camera.html', username=username, image_files=image_files)
 
 
