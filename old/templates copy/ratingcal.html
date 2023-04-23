@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MaiUtils</title>
+	<link rel="stylesheet" href="static/ratingcal.css">
+	<link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+</head>
+<body>
+
+	<!-- header section -->
+	<header>
+		<h1>pugking4.me (MaiUtils)</h1>
+	</header>
+
+	<!-- navigation section -->
+	<nav>
+		<ul>
+			<li><a href="index">Index</a></li>
+			<li><a href="ratingcal">Rating Calculator</a></li>
+			<li><a href="wip">Placeholder 2</a></li>
+			<li><a href="wip">Placeholder 3</a></li>
+			<li><a href="wip">Placeholder 4</a></li>
+		</ul>
+	</nav>
+
+	<!-- main content section -->
+	<main>
+	    <section id="intro">
+	        <h2>Rating Calculator</h2>
+	        <p>This tool allows you to calculate the rating you would receive for a given difficulty constant and score. If the score field is left empty, it will display the S to SSS+ ranks by default. Additionally, you can use this utility to determine the difficulty levels you would need to play in order to achieve your desired rating.</p>
+	    </section>
+
+	    <section id="calculator">
+	        <h2>Calculator</h2>
+	        <form id="calculator-form" method="post" action="/calculate">
+	            <div class="box">
+	                <label for="constant">Constant:</label>
+	                <input type="text" id="constant" name="constant" placeholder="Required (13.9)" value='{{ constant }}'>
+	            </div>
+	            <div class="box">
+	                <label for="achievement">Achievement:</label>
+	                <input type="text" id="achievement" name="achievement" placeholder="Optional (97 - 100.5)" value='{{ achievement }}'>
+	            </div>
+	            <div class="box">
+	                <label for="rating">Rating:</label>
+	                <input type="text" id="rating" name="rating" placeholder="Optional" value='{{ rating }}'>
+	            </div>
+	            <div>
+	                <button id="calculate-btn" type="submit">Calculate</button>
+	            </div>
+	        </form>
+	        <table id="data-table">
+	            <tr>
+	                <th>Ranks</th>
+	                <th>S</th>
+	                <th>S+</th>
+	                <th>SS</th>
+	                <th>SS+</th>
+	                <th>SSS</th>
+	                <th>SSS+</th>
+	                <th>Custom Achievement</th>
+	            </tr>
+	            <tr>
+	                <td>Rating</td>
+	                <td id="s-rating">{{ s_rating }}</td>
+	                <td id="splus-rating">{{ splus_rating }}</td>
+	                <td id="ss-rating">{{ ss_rating }}</td>
+	                <td id="ssplus-rating">{{ ssplus_rating }}</td>
+	                <td id="sss-rating">{{ sss_rating }}</td>
+	                <td id="sssplus-rating">{{ sssplus_rating }}</td>
+	                <td id="custom-rating">{{ custom_rating }}</td>
+	            </tr>
+	        </table>
+	    </section>
+	</main>
+
+
+	<!-- footer section -->
+	<footer>
+		<p>&copy; 2023 pugking4.me. All rights reserved.</p>
+	</footer>
+
+	<!-- Import JavaScript file -->
+	<script src="{{ url_for('static', filename='scripts/ratingcal.js') }}"></script>
+</body>
+</html>

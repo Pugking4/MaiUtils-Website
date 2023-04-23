@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/static/result.css">
+<html>
+<head>
+    <title>Calculation Result</title>
+</head>
+<body>
+    <h1>{{ header_text }}</h1>
+    <p>Constant: {{ constant }}</p>
+    <p>Achievement: {{ achievement }}</p>
+    <p>Rating: {{ rating }}</p>
+    <table id="data-table">
+        <tr>
+            <th>Ranks</th>
+            <th>S</th>
+            <th>S+</th>
+            <th>SS</th>
+            <th>SS+</th>
+            <th>SSS</th>
+            <th>SSS+</th>
+            <th>Custom Achievement</th>
+        </tr>
+        <tr>
+            <td>Rating</td>
+            <td id="s_rating">{{ s_rating }}</td>
+            <td id="splus_rating">{{ splus_rating }}</td>
+            <td id="ss_rating">{{ ss_rating }}</td>
+            <td id="ssplus_rating">{{ ssplus_rating }}</td>
+            <td id="sss_rating">{{ sss_rating }}</td>
+            <td id="sssplus_rating">{{ sssplus_rating }}</td>
+            <td id="custom_rating">{{ custom_rating }}</td>
+        </tr>
+    </table>
+</body>
+</html>

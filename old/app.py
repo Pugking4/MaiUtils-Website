@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, send_from_directory, session
+from flask import Flask, render_template, request, redirect, url_for, send_from_directory
 from ratingcal import calculate_rating
 
 app = Flask(__name__)
@@ -51,20 +51,9 @@ def calculate():
     # Process the data here
     s_rating, splus_rating, ss_rating, ssplus_rating, sss_rating, sssplus_rating, custom_rating = calculate_rating(constant=constant, achievement=achievement, rating=rating)
 
-    # Store the result in session variables
-    session['constant'] = constant
-    session['achievement'] = achievement
-    session['rating'] = rating
-    session['s_rating'] = s_rating
-    session['splus_rating'] = splus_rating
-    session['ss_rating'] = ss_rating
-    session['ssplus_rating'] = ssplus_rating
-    session['sss_rating'] = sss_rating
-    session['sssplus_rating'] = sssplus_rating
-    session['custom_rating'] = custom_rating
 
-    # Return the result through POST method
-    return render_template('ratingcal.html', constant=constant, achievement=achievement, rating=rating, s_rating=s_rating, splus_rating=splus_rating, ss_rating=ss_rating, ssplus_rating=ssplus_rating, sss_rating=sss_rating, sssplus_rating=sssplus_rating, custom_rating=custom_rating)
+    # Redirect the user to a new page with a success message
+    return redirect(url_for('result', constant=constant, achievement=achievement, rating=rating, s_rating=s_rating, splus_rating=splus_rating, ss_rating=ss_rating, ssplus_rating=ssplus_rating, sss_rating=sss_rating, sssplus_rating=sssplus_rating, custom_rating=custom_rating))
 
 @app.route('/result')
 def result():
