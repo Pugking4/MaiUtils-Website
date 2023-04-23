@@ -1,8 +1,23 @@
 from flask import Flask, render_template, request, redirect, url_for, send_from_directory, session, send_file
+from flask_httpauth import HTTPBasicAuth
+
 from ratingcal import calculate_rating
 
+
 app = Flask(__name__)
+auth = HTTPBasicAuth()
 app.secret_key = 'maimai'
+
+users = {
+    "admin": "rats",
+    "guest": "temp",
+}
+
+def verify_password(username, password):
+    if username in users and users[username] == password:
+        return True
+    else:
+        return False
 
 @app.route('/')
 def home():
@@ -101,6 +116,12 @@ def db_export_download():
     print("Received a request at /db-export/download")
     path = "/home/admin/Desktop/Projects-Website/flask_app/db/20230423db.sqlite3"
     return send_file(path, as_attachment=True)
+
+@app.route('/mai-camera')
+@auth.login_required
+def mai_camera():
+    print("Received a request at /mai-camera")
+    return render_template('mai-camera.html')
 
 if __name__ == '__main__':
     app.run(debug=True, host='127.0.0.1', port=5000)
