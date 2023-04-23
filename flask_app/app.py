@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, send_from_directory, session, send_file, g
 from flask_httpauth import HTTPBasicAuth
+import os
 
 from ratingcal import calculate_rating
 
@@ -126,7 +127,12 @@ def mai_camera():
     print("Received a request at /mai-camera")
     username = auth.username()
     print(f"Username: {username}")
-    return render_template('mai-camera.html', username=username)
+    image_files = [f for f in os.listdir(image_dir) if f.endswith(('.jpg', '.jpeg', '.png', '.gif'))]
+
+    image_dir = 'static/images'
+
+    return render_template('mai-camera.html', username=username, image_files=image_files)
+
 
 
 if __name__ == '__main__':
