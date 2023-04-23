@@ -1,5 +1,9 @@
 /* General styles */
 
+footer a {
+	color: #fff;
+  }  
+
 body {
 	font-family: Arial, sans-serif;
 	background-color: #f4f4f4;
@@ -96,9 +100,6 @@ footer p {
 	margin: 0;
 }
 
-footer a {
-	color: #fff;
-  }  
 
 @media (max-width: 768px) {
 
