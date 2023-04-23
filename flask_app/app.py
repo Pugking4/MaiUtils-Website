@@ -97,7 +97,7 @@ def db_export():
     return render_template('db-export.html')
 
 @app.route('/db-export/download')
-def db_export():
+def db_export_download():
     print("Received a request at /db-export/download")
     path = "/static/db/20230423db.sqlite3"
     return send_file(path, as_attachment=True)
