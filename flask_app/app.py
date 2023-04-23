@@ -4,10 +4,12 @@ import os
 
 from ratingcal import calculate_rating
 
+app = Flask(__name__)
 
 app = Flask(__name__)
 auth = HTTPBasicAuth()
 app.secret_key = 'maimai'
+
 
 users = {
     "admin": "rats",
@@ -128,11 +130,9 @@ def mai_camera():
     username = auth.username()
     print(f"Username: {username}")
 
-    image_dir = 'mai-camera-protected'
+    image_dir = '/static/images/mai-camera'
     image_files = [f for f in os.listdir(image_dir) if f.endswith(('.jpg', '.jpeg', '.png', '.gif'))]
     return render_template('mai-camera.html', username=username, image_files=image_files)
-
-
 
 if __name__ == '__main__':
     app.run(debug=True, host='127.0.0.1', port=5000)
