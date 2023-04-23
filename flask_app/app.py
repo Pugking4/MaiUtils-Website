@@ -19,7 +19,7 @@ def index():
     print("Received a request at /index")
     return render_template('index.html')
 
-@app.route('/ratingcal')
+@app.route('/rating-calculator')
 def ratingcal():
     print("Received a request at /ratingcal")
     return render_template('ratingcal.html')
@@ -90,6 +90,11 @@ def result():
 def privacy_policy():
     print("Received a request at /privacy-policy")
     return render_template('privacy-policy.html')
+
+@app.route('/db-export')
+def privacy_policy():
+    print("Received a request at /db-export")
+    return render_template('db-export.html')
 
 if __name__ == '__main__':
     app.run(debug=True, host='127.0.0.1', port=5000)
