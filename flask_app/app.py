@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, send_from_directory, session, send_file
+from flask import Flask, render_template, request, redirect, url_for, send_from_directory, session, send_file, g
 from flask_httpauth import HTTPBasicAuth
 
 from ratingcal import calculate_rating
@@ -13,13 +13,14 @@ users = {
     "guest": "temp",
 }
 
-def verify_password(username, password):
+@auth.verify_password
+def check_auth(username, password):
     if username in users and users[username] == password:
-        print("Correct username and password")
-        return True
+        return username
     else:
-        print("Incorrect username or password")
+        print("Incorrect username or password.")
         return False
+
 
 @app.route('/')
 def home():
@@ -123,7 +124,9 @@ def db_export_download():
 @auth.login_required
 def mai_camera():
     print("Received a request at /mai-camera")
-    return render_template('mai-camera.html')
+    username = g.username
+    return render_template('mai-camera.html', username=username)
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='127.0.0.1', port=5000)
