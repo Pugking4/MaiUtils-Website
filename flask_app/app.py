@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, send_from_directory, session
+from flask import Flask, render_template, request, redirect, url_for, send_from_directory, session, send_file
 from ratingcal import calculate_rating
 
 app = Flask(__name__)
@@ -95,6 +95,12 @@ def privacy_policy():
 def db_export():
     print("Received a request at /db-export")
     return render_template('db-export.html')
+
+@app.route('/db-export/download')
+def db_export():
+    print("Received a request at /db-export/download")
+    path = "/static/db/20230423db.sqlite3"
+    return send_file(path, as_attachment=True)
 
 if __name__ == '__main__':
     app.run(debug=True, host='127.0.0.1', port=5000)
