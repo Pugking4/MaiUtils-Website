@@ -3,7 +3,7 @@ from ratingcal import calculate_rating
 
 app = Flask(__name__)
 
-app.config['STATIC_URL'] = '/flask_app/static/'
+app.config['STATIC_URL'] = '/static/'
 
 @app.route('/')
 def home():
