@@ -96,9 +96,9 @@ footer p {
 	margin: 0;
 }
 
-priv_foot {
+footer a {
 	color: #fff;
-}
+  }  
 
 @media (max-width: 768px) {
 
