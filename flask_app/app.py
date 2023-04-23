@@ -92,7 +92,7 @@ def privacy_policy():
     return render_template('privacy-policy.html')
 
 @app.route('/db-export')
-def privacy_policy():
+def db_export():
     print("Received a request at /db-export")
     return render_template('db-export.html')
 
