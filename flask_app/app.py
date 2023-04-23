@@ -3,12 +3,15 @@ from ratingcal import calculate_rating
 
 app = Flask(__name__)
 
-app.config['STATIC_URL'] = '/static/'
-
 @app.route('/')
 def home():
     print("Received a request at /")
     return render_template('index.html')
+
+# Serve static files
+@app.route('/static/<path:path>')
+def send_static(path):
+    return send_from_directory('static', path)
 
 @app.route('/index')
 def index():
