@@ -15,8 +15,10 @@ users = {
 
 def verify_password(username, password):
     if username in users and users[username] == password:
+        print("Correct username and password")
         return True
     else:
+        print("Incorrect username or password")
         return False
 
 @app.route('/')
