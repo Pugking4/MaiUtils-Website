@@ -128,7 +128,7 @@ def mai_camera():
     username = auth.username()
     print(f"Username: {username}")
 
-    image_dir = 'static/images/mai-camera'
+    image_dir = 'mai-camera-protected'
     image_files = [f for f in os.listdir(image_dir) if f.endswith(('.jpg', '.jpeg', '.png', '.gif'))]
     return render_template('mai-camera.html', username=username, image_files=image_files)
 
