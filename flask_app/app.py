@@ -8,8 +8,7 @@ from html_process import record_master
 
 #Get .env variable
 
-segaid = 'pugking4'
-password = 'Cocothe4th00'
+
 
 #Init variables
 
