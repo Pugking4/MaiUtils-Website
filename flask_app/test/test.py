@@ -13,10 +13,10 @@ options = Options()
 options.BinaryLocation = "/usr/bin/chromium-browser"
 # we use custom chromedriver for raspberry
 driver_path = "/usr/bin/chromedriver"
-driver = webdriver.Chrome(options=options, service=Service(driver_path))
+driver = webdriver.Chrome(service=Service(driver_path))
 
 driver.get('https://www.google.com')
 
 print("bruh")
 
-driver.quit()
+Service(driver_path).stop()
