@@ -1,17 +1,14 @@
 from flask import Flask, render_template, request, redirect, url_for, send_from_directory, session, send_file, g
 from flask_httpauth import HTTPBasicAuth
 from flask_apscheduler import APScheduler
-import os
-from dotenv import load_dotenv
-load_dotenv()
 
-from backend_python.ratingcal import calculate_rating
-from backend_python.selenium.html_process import record_master
+from ratingcal import calculate_rating
+from html_process import record_master
 
 #Get .env variable
 
-segaid = os.getenv('SEGA_ID')
-password = os.getenv('PASSWORD')
+segaid = 'pugking4'
+password = 'Cocothe4th00'
 
 #Init variables
 

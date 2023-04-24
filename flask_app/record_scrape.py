@@ -2,12 +2,18 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from dotenv import load_dotenv
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 
 def scrape(segaid, password):
     options = webdriver.ChromeOptions()
     #options.add_argument("--headless")
-    driver = webdriver.Chrome(options=options)
+    options = Options()
+    # browser is Chromium instead of Chrome
+    options.BinaryLocation = "/usr/bin/chromium-browser"
+    # we use custom chromedriver for raspberry
+    driver_path = "/usr/bin/chromedriver"
+    driver = webdriver.Chrome(options=options, service=Service(driver_path))
 
     # navigate to the login page
     driver.get("https://lng-tgk-aime-gw.am-all.net/common_auth/login?site_id=maimaidxex&redirect_url=https://maimaidx-eng.com/maimai-mobile/record//&back_url=https://maimai.sega.com/")
