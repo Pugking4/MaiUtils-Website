@@ -148,9 +148,11 @@ def mai_camera():
     return render_template('mai-camera.html', username=username, image_files=image_files)
 
 #Scheduler routes
-@scheduler.task('interval', id='do_job_1', seconds=30, misfire_grace_time=900)
-def job1():
-    print('Job 1 executed')
+#@scheduler.task('interval', id='do_job_1', seconds=30, misfire_grace_time=900)
+#def job1():
+#    print('Job 1 executed')
+
+#use_reloader=False
 
 if __name__ == '__main__':
     app.run(debug=True, host='127.0.0.1', port=5000)

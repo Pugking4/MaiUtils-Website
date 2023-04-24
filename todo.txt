@@ -1,8 +1,8 @@
 Idea #1
 Create a website or tab which reads scores from maimai every hour (or set time interval) using web scraper and compiles it into days 
-and displays my scores of that day or if there are non yet just display whatever the previous day was.
+and displays my scores of that day or if there are none yet just display whatever the previous day was.
 It should also log what day I was at kp (if I played atleast 1 game) and how many games I played, what I played and my score of said plays
-Should be exclusive to me as it would require my sega ID and pass for web scraping (prob not gonna release publically)
+Should be exclusive to me as it would require my sega ID and pass for web scraping (prob not gonna release publicly)
 
 Idea #2
 Create a website or tab which calculates the rating gain when you input a level constant (eg 14.8 or 13.4) 
