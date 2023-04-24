@@ -1,0 +1,27 @@
+/* General styles */
+
+footer a {
+	color: #fff;
+  }  
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f4f4f4;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+a {
+	color: #1b1b1b;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
