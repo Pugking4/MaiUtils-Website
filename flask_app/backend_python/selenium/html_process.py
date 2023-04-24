@@ -1,16 +1,6 @@
 from bs4 import BeautifulSoup
-from records_scrape import scrape
-import asyncio
-from dotenv import load_dotenv
-import os
+from record_scrape import scrape
 
-
-
-load_dotenv()
-segaid = os.getenv('SEGA_ID')
-password = os.getenv('PASSWORD')
-
-dataframes = {}
 def record_master(segaid, password):
     def get_score_data(html):
 
@@ -86,7 +76,7 @@ def record_master(segaid, password):
     def iterate_scores(html_data):
         data = []
         #deletes the last empty element
-        del html_data[-1]
+        #del html_data[-1]
         for html in html_data:
             data.append(get_score_data(html))
 
@@ -96,7 +86,7 @@ def record_master(segaid, password):
         #df.set_index('title', inplace=True)
         #dataframes[diff] = df
 
-    html_data = asyncio.run(scrape(segaid, password))
+    html_data = scrape(segaid, password)
 
     data = iterate_scores(html_data)
 
@@ -120,10 +110,3 @@ def record_master(segaid, password):
     writer.save()
 
     '''
-
-data = record_master(segaid, password)
-print(data)
-with open("output_gen.txt", "w", encoding='utf-8') as f:
-    for i in data:
-        f.write(str(i))
-        f.write('\n')

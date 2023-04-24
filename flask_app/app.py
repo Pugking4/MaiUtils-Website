@@ -2,15 +2,21 @@ from flask import Flask, render_template, request, redirect, url_for, send_from_
 from flask_httpauth import HTTPBasicAuth
 from flask_apscheduler import APScheduler
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 from backend_python.ratingcal import calculate_rating
+from backend_python.selenium.html_process import record_master
 
+#Get .env variable
+
+segaid = os.getenv('SEGA_ID')
+password = os.getenv('PASSWORD')
 
 #Init variables
 
 app = Flask(__name__)
 scheduler = APScheduler()
-app = Flask(__name__)
 auth = HTTPBasicAuth()
 
 app.secret_key = 'maimai'
@@ -147,6 +153,15 @@ def mai_camera():
     image_dir = 'static/images/mai-camera'
     image_files = [f for f in os.listdir(image_dir) if f.endswith(('.jpg', '.jpeg', '.png', '.gif'))]
     return render_template('mai-camera.html', username=username, image_files=image_files)
+
+#@app.route('/mai-camera/upload', methods=['POST'])
+
+@app.route('/test')
+def test():
+    print("Received a request at /test")
+    data = record_master(segaid, password)
+    print(data)
+    return render_template('index.html')
 
 #Scheduler routes
 #@scheduler.task('interval', id='do_job_1', seconds=30, misfire_grace_time=900)
