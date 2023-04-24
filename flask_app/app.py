@@ -1,13 +1,17 @@
 from flask import Flask, render_template, request, redirect, url_for, send_from_directory, session, send_file, g
 from flask_httpauth import HTTPBasicAuth
+from flask_apscheduler import APScheduler
 import os
 
 from ratingcal import calculate_rating
 
-app = Flask(__name__)
+#Init variables
 
 app = Flask(__name__)
+scheduler = APScheduler()
+app = Flask(__name__)
 auth = HTTPBasicAuth()
+
 app.secret_key = 'maimai'
 
 
@@ -16,6 +20,15 @@ users = {
     "guest": "temp",
 }
 
+#Config
+scheduler.api_enabled = True
+
+
+#Init modules
+scheduler.init_app(app)
+scheduler.start()
+
+#Auth routes
 @auth.verify_password
 def check_auth(username, password):
     if username in users and users[username] == password:
@@ -24,13 +37,13 @@ def check_auth(username, password):
         print("Incorrect username or password.")
         return False
 
-
+#Webpage routes
 @app.route('/')
 def home():
     print("Received a request at /")
     return render_template('index.html')
 
-# Serve static files
+#Serve static files
 @app.route('/static/<path:path>')
 def send_static(path):
     return send_from_directory('static', path)
@@ -133,6 +146,11 @@ def mai_camera():
     image_dir = 'static/images/mai-camera'
     image_files = [f for f in os.listdir(image_dir) if f.endswith(('.jpg', '.jpeg', '.png', '.gif'))]
     return render_template('mai-camera.html', username=username, image_files=image_files)
+
+#Scheduler routes
+@scheduler.task('interval', id='do_job_1', seconds=30, misfire_grace_time=900)
+def job1():
+    print('Job 1 executed')
 
 if __name__ == '__main__':
     app.run(debug=True, host='127.0.0.1', port=5000)
