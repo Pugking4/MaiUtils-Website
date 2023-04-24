@@ -3,7 +3,8 @@ from flask_httpauth import HTTPBasicAuth
 from flask_apscheduler import APScheduler
 import os
 
-from ratingcal import calculate_rating
+from backend_python.ratingcal import calculate_rating
+
 
 #Init variables
 
