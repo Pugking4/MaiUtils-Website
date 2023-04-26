@@ -8,8 +8,8 @@ from backend_python.ratingcal import calculate_rating
 from backend_python.record_scrape import *
 
 #Get .env variable
-segaid = 'pugking4'
-password = 'Cocothe4th00'
+segaid = 
+password = 
 
 
 #Init variables
