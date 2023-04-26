@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MaiUtils</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" href="static/view-records.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPHDZG3MYW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-HPHDZG3MYW');
+    </script>
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+</head>
+<body>
+
+    <!-- header section -->
+    <header>
+        <h1>pugking4.me (MaiUtils)</h1>
+    </header>
+
+    <!-- navigation section -->
+    <nav>
+        <ul>
+			<li><a href="index">Index</a></li>
+			<li><a href="rating-calculator">Rating Calculator</a></li>
+			<li><a href="db-export">Song Database Export</a></li>
+			<li><a href="mai-camera">MaiMai Camera Gallery</a></li>
+			<li><a href="view-records">Daily Records</a></li>
+        </ul>
+    </nav>
+
+    <!-- main content section -->
+    <main>
+        </form>
+        {% if data %}
+        <table id="table">
+            <tr>
+                <th></th>
+                <th>Title</th>
+                <th>Type</th>
+                <th>Difficulty</th>
+                <th>Score</th>
+                <th>Deluxe Score</th>
+                <th>Combo</th>
+                <th>Sync</th>
+                <th>Place</th>
+                <th>Players</th>
+                <th>Time</th>
+                <th>Track</th>
+            </tr>
+            {% for item in data %}
+            <tr>
+                <td><img src="{{ item['img_link'] }}"></td>
+                <td>{{ item['title'] }}</td>
+                <td>{{ item['type'] }}</td>
+                <td>{{ item['difficulty'] }}</td>
+                <td>{{ item['score'] }}</td>
+                <td>{{ item['deluxe_score'] }}</td>
+                <td>{{ item['combo'] }}</td>
+                <td>{{ item['sync'] }}</td>
+                <td>{{ item['place'] }}</td>
+                <td>{{ item['players'] }}</td>
+                <td>{{ item['time'] }}</td>
+                <td>{{ item['track'] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <p>No records found.</p>
+        {% endif %}
+        <h1>Search by day</h1>
+        <form method="POST" id="date-form">
+            <label for="date">Select date from:</label>
+            <input type="date" id="date-input" name="date" value="{{ date }}">
+            <input type="submit" value="Submit">
+    </main>
+
+    <!-- footer section -->
+    <footer>
+        <p>&copy; 2023 pugking4.me. All rights reserved.</p>
+        <p><a href="privacy-policy">Privacy Policy</a></p>
+    </footer>
+    <!-- JavaScript section-->
+    <script src="static/scripts/records_search.js"></script>
+</body>
+</html>

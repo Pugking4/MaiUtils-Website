@@ -30,27 +30,31 @@
 			<li><a href="rating-calculator">Rating Calculator</a></li>
 			<li><a href="db-export">Song Database Export</a></li>
 			<li><a href="mai-camera">MaiMai Camera Gallery</a></li>
-			<li><a href="view-records">Daily Records</a></li>
+			<li><a href="wip">Placeholder 4</a></li>
 		</ul>
 	</nav>
 
 	<!-- main content section -->
 	<main>
-		<section id="about">
-			<h2>About</h2>
-			<p>This website contains many tools and stats relating to MaiMai and my MaiMai profile.</p>
+		<section id="data_status">
+			<h2>No data found</h2>
+			<p>There's no data loaded currently or I have not set any scores today, please run /manual-scrape or wait for the auto-update.</p>
 		</section>
+        <!-- form section -->
+        <section id="date_selection">
+        	<h2>Select a date</h2>
+        	<form method="post" id="date-form">
+        		<label for="date">Date:</label>
+        		<input type="date" id="date-input" name="date" min="2023-04-24" value="2023-04-24"><br><br>
+        		</select><br><br>
+        		<input type="submit" value="Submit">
+        	</form>
+        </section>
 
-		<section id="source">
-			<h2>Source Code</h2>
-			<p>The source code to this website is <a href="https://github.com/Pugking4/Projects-Website">here</a></p>
-		</section>
-
-		<section id="contact">
-			<h2>Contact</h2>
-			<p>If there is an issue with the website please contact me at: pugking6@protonmail.com</p>
-		</section>
 	</main>
+
+    <!-- JavaScript section-->
+    <script src="static/scripts/records_search.js"></script>
 
 	<!-- footer section -->
 	<footer>

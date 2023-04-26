@@ -2,12 +2,14 @@ from flask import Flask, render_template, request, redirect, url_for, send_from_
 from flask_httpauth import HTTPBasicAuth
 from flask_apscheduler import APScheduler
 import os
+import datetime
 
-from ratingcal import calculate_rating
-from html_process import record_master
+from backend_python.ratingcal import calculate_rating
+from backend_python.record_scrape import *
 
 #Get .env variable
-
+segaid = 'pugking4'
+password = 'Cocothe4th00'
 
 
 #Init variables
@@ -28,9 +30,24 @@ users = {
 scheduler.api_enabled = True
 
 
+#Variables
+#data = []
+#with open(r'C:\Users\joshu\Documents\GitHub\Projects-Website\flask_app\output_gen.txt', 'r', encoding='utf-8') as f:
+#    data = f.read()
+    
+
 #Init modules
 scheduler.init_app(app)
 scheduler.start()
+
+#Functions
+def records_search_data(date):
+    data = []
+    with open(fr'records\{date}.json', 'r') as f:
+        data = json.load(f)
+    return data
+
+
 
 #Auth routes
 @auth.verify_password
@@ -104,26 +121,6 @@ def calculate():
     # Return the result through POST method
     return render_template('ratingcal.html', constant=constant, achievement=achievement, rating=rating, s_rating=s_rating, splus_rating=splus_rating, ss_rating=ss_rating, ssplus_rating=ssplus_rating, sss_rating=sss_rating, sssplus_rating=sssplus_rating, custom_rating=custom_rating)
 
-@app.route('/result')
-def result():
-    print("Received a request at /result")
-    constant = float(request.args.get('constant'))
-    achievement = request.args.get('achievement')
-    rating = request.args.get('rating')
-
-    s_rating = request.args.get('s_rating')
-    splus_rating = request.args.get('splus_rating')
-    ss_rating = request.args.get('ss_rating')
-    ssplus_rating = request.args.get('ssplus_rating')
-    sss_rating = request.args.get('sss_rating')
-    sssplus_rating = request.args.get('sssplus_rating')
-    custom_rating = request.args.get('custom_rating')
-
-    header_text = "Calculation complete!"
-    #Make it insert data rather than use template or use templates exclusively
-
-    return render_template('ratingcal.html', constant=constant, achievement=achievement, rating=rating, s_rating=s_rating, splus_rating=splus_rating, ss_rating=ss_rating, ssplus_rating=ssplus_rating, sss_rating=sss_rating, sssplus_rating=sssplus_rating, custom_rating=custom_rating, header_text=header_text)
-
 @app.route('/privacy-policy')
 def privacy_policy():
     print("Received a request at /privacy-policy")
@@ -153,12 +150,49 @@ def mai_camera():
 
 #@app.route('/mai-camera/upload', methods=['POST'])
 
-@app.route('/test')
+@app.route('/manual-scrape')
 def test():
+    global data
     print("Received a request at /test")
-    data = record_master(segaid, password)
-    print(data)
+    data = scrape_records(segaid, password)
     return render_template('index.html')
+
+@app.route('/reload-records')
+def reload_records():
+    global data
+    data = []
+    print("Received a request at /reload-records")
+    with open(fr'records\{datetime.datetime.now().strftime("%Y-%m-%d")}.json', 'r') as f:
+        data = json.load(f)
+        print(data)
+    #for i in raw_data:
+        #data.append(dict(i))
+    return render_template('index.html')
+
+@app.route('/view-records')
+def view_records50():
+    print("Received a request at /view-records50")
+    return render_template('view-records50.html', data=data)
+    #if data:
+    #    return render_template('view-records50.html', data=data)
+    #else:
+        #return render_template('view-records50_nodata.html', data=data)
+
+@app.route('/view-records-search', methods=['POST'])
+def view_records_search():
+    print("Received a request at /view-records-search")
+
+    form_date = request.form['date']
+
+    print(f"Date: {form_date}")
+
+    data = records_search_data(form_date)
+
+    return data
+    if data:
+        return render_template('view-records50.html', data=data)
+    else:
+        return render_template('view-records50_nodata.html', data=data)
 
 #Scheduler routes
 #@scheduler.task('interval', id='do_job_1', seconds=30, misfire_grace_time=900)

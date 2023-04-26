@@ -13,3 +13,6 @@ Tab which you can extract all chart song information from in SQLite format or ot
 
 Idea #4
 Tab for checking completed lamps and how close each lamp is to completion (bonus to include hardest charts over set constant or default 14.0 as a seperate warning)
+
+Idea #5
+(Needs account creation) Tab thats user specific and can track what's doable and whats not, zeta like interface. Doable would be set through user.
