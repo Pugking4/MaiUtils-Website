@@ -35,19 +35,23 @@ form.addEventListener('submit', (e) => {
       for (const item of response) {
         const row = document.createElement('tr');
         row.innerHTML = `
-          <td><img src="${item.img_link}"></td>
-          <td>${item.title}</td>
-          <td>${item.type}</td>
-          <td>${item.difficulty}</td>
-          <td>${item.score}</td>
-          <td>${item.deluxe_score}</td>
-          <td>${item.combo}</td>
-          <td>${item.sync}</td>
-          <td>${item.place}</td>
-          <td>${item.players}</td>
-          <td>${item.time}</td>
-          <td>${item.track}</td>
-        `;
+        <td>
+          <div class="img-container">
+            <img id="myImage" class="hoverable-img" src="${item.img_link}">
+          </div>
+        </td>
+        <td>${item.title ? item.title : ''}</td>
+        <td>${item.type ? item.type.toUpperCase() : ''}</td>
+        <td>${item.difficulty ? item.difficulty : ''}</td>
+        <td>${item.score ? item.score : ''}</td>
+        <td>${item.deluxe_score ? item.deluxe_score : ''}</td>
+        <td>${item.combo ? item.combo : ''}</td>
+        <td>${item.sync ? item.sync : ''}</td>
+        <td>${item.place ? item.place : ''}</td>
+        <td>${item.players ? item.players : ''}</td>
+        <td>${item.time ? item.time : ''}</td>
+        <td>${item.track ? item.track : ''}</td>
+      `;      
         table.appendChild(row);
       }
     } else {

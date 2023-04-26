@@ -47,6 +47,8 @@ def records_search_data(date):
         data = json.load(f)
     return data
 
+def auto_record_scrape():
+    scrape_records(segaid, password)
 
 
 #Auth routes
@@ -151,7 +153,7 @@ def mai_camera():
 #@app.route('/mai-camera/upload', methods=['POST'])
 
 @app.route('/manual-scrape')
-def test():
+def manual_scrape():
     global data
     print("Received a request at /test")
     data = scrape_records(segaid, password)
@@ -195,11 +197,22 @@ def view_records_search():
         return render_template('view-records50_nodata.html', data=data)
 
 #Scheduler routes
-#@scheduler.task('interval', id='do_job_1', seconds=30, misfire_grace_time=900)
+#@scheduler.task('interval', id='do_job_1', seconds=300, misfire_grace_time=900)
 #def job1():
 #    print('Job 1 executed')
 
-#use_reloader=False
+@scheduler.task('interval', id='scrape_records_job', minutes=30, misfire_grace_time=900)
+def scrape_records_job():
+    #time = datetime.datetime.now().strftime("%H:%M:%S")
+    print('Auto record scraping started')
+    scrape_records(segaid, password)
+    print('Auto record scraping executed')
+    #print(f'Auto record scraping took {datetime.datetime.now().strftime("%H:%M:%S") - time}')
+
+#Misc routes
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
 
 if __name__ == '__main__':
-    app.run(debug=True, host='127.0.0.1', port=5000)
+    app.run(debug=True, host='127.0.0.1', port=5000, use_reloader=False)

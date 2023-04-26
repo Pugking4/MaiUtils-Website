@@ -56,7 +56,7 @@
             </tr>
             {% for item in data %}
             <tr>
-                <td><img src="{{ item['img_link'] }}"></td>
+                <td><img id="myImage" class="hoverable-img" src="{{ item['img_link'] }}"></td>                  
                 <td>{{ item['title'] }}</td>
                 <td>{{ item['type'] }}</td>
                 <td>{{ item['difficulty'] }}</td>

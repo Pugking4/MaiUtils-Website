@@ -8,7 +8,7 @@ table th {
 table {
   border-collapse: collapse;
   width: 100%;
-  max-width: 960px;
+  max-width: 70%;
   margin: 0 auto;
   background-color: #fff;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -42,7 +42,7 @@ tr:hover {
 }
 
 /* style for h1 header */
-h1 {
+main h1 {
   text-align: center;
   font-size: 2.5em;
   margin-top: 2em;
@@ -61,4 +61,35 @@ form {
 main p {
   text-align: center;
   font-size: 22px;
+}
+
+td img {
+  width: 120px;
+  height: 120px;
+}
+
+th:nth-child(6),
+td:nth-child(6) {
+  width: 120px; /* increase width as needed */
+}
+
+#image-container {
+  position: relative;
+  display: inline-block;
+}
+
+#image-container img {
+  max-width: 100%;
+}
+
+#hover-image-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+#hover-image-container img {
+  max-width: 100%;
 }
