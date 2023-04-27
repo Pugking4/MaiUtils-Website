@@ -42,32 +42,30 @@
         <table id="table">
             <tr>
                 <th></th>
-                <th>Title</th>
-                <th>Type</th>
-                <th>Difficulty</th>
-                <th>Score</th>
-                <th>Deluxe Score</th>
-                <th>Combo</th>
-                <th>Sync</th>
-                <th>Place</th>
-                <th>Players</th>
-                <th>Time</th>
-                <th>Track</th>
+                <th data-sort-type="title">Title</th>
+                <th data-sort-type="type">Type</th>
+                <th data-sort-type="difficulty">Difficulty</th>
+                <th data-sort-type="score">Score</th>
+                <th style="width: 3%">Combo</th>
+                <th style="width: 3%">Sync</th>
+                <th data-sort-type="place" style="width: 3%">Place</th>
+                <th data-sort-type="p2" style="width: 11%">P2</th>
+                <th data-sort-type="time">Time</th>
+                <th data-sort-type="track">Track</th>
             </tr>
             {% for item in data %}
             <tr>
-                <td><img id="myImage" class="hoverable-img" src="{{ item['img_link'] }}"></td>                  
-                <td>{{ item['title'] }}</td>
-                <td>{{ item['type'] }}</td>
-                <td>{{ item['difficulty'] }}</td>
-                <td>{{ item['score'] }}</td>
-                <td>{{ item['deluxe_score'] }}</td>
-                <td>{{ item['combo'] }}</td>
-                <td>{{ item['sync'] }}</td>
-                <td>{{ item['place'] }}</td>
-                <td>{{ item['players'] }}</td>
-                <td>{{ item['time'] }}</td>
-                <td>{{ item['track'] }}</td>
+                <td><img src="{{ item['img_link'] }}"></td>                
+                <td style="width: 30%">{% if item['title'] %}{{ item['title'] }}{% endif %}</td>
+                <td>{% if item['type'] %}{{ item['type'].upper() }}{% endif %}</td>
+                <td>{% if item['difficulty'] %}{{ item['difficulty'] }}{% endif %}</td>
+                <td>{% if item['score'] %}{{ item['score'] }}{% endif %}</td>
+                <td style="width: 3%">{% if item['combo'] %}{{ item['combo'] }}{% endif %}</td>
+                <td style="width: 3%">{% if item['sync'] %}{{ item['sync'] }}{% endif %}</td>
+                <td style="width: 3%">{% if item['place'] %}{{ item['place'] }}{% endif %}</td>
+                <td style="width: 16%">{% if item['player2'] %}{{ item['player2'] }}{% endif %}</td>
+                <td>{% if item['time'] %}{{ item['time'] }}{% endif %}</td>
+                <td>{% if item['track'] %}{{ item['track'] }}{% endif %}</td>                
             </tr>
             {% endfor %}
         </table>

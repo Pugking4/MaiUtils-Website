@@ -1,15 +1,16 @@
-from flask import Flask, render_template, request, redirect, url_for, send_from_directory, session, send_file, g
+from flask import Flask, render_template, request, send_from_directory, session, send_file, jsonify
 from flask_httpauth import HTTPBasicAuth
 from flask_apscheduler import APScheduler
 import os
 import datetime
+import json
 
 from backend_python.ratingcal import calculate_rating
-from backend_python.record_scrape import *
+#from backend_python.nested_record_scrape import *
 
 #Get .env variable
-segaid = 
-password = 
+segaid = 'pugking4'
+password = 'Cocothe4th00'
 
 
 #Init variables
@@ -164,9 +165,11 @@ def reload_records():
     global data
     data = []
     print("Received a request at /reload-records")
-    with open(fr'records\{datetime.datetime.now().strftime("%Y-%m-%d")}.json', 'r') as f:
+    time = datetime.datetime.now().strftime("%Y-%m-%d")
+    time = '2023-04-27'
+    with open(fr'records\{time}.json', 'r') as f:
         data = json.load(f)
-        print(data)
+        #print(data)
     #for i in raw_data:
         #data.append(dict(i))
     return render_template('index.html')
@@ -174,6 +177,7 @@ def reload_records():
 @app.route('/view-records')
 def view_records50():
     print("Received a request at /view-records50")
+    reload_records()
     return render_template('view-records50.html', data=data)
     #if data:
     #    return render_template('view-records50.html', data=data)
@@ -196,19 +200,57 @@ def view_records_search():
     else:
         return render_template('view-records50_nodata.html', data=data)
 
+#@app.route('/view-records/<string:segaid>')
+
+@app.route('/test', methods=['POST'])
+def test():
+    print("Received a POST request at /test")
+    # Get the values for the "Time", "Title", and "Type" fields from the POST request
+    time = request.form.get('time')
+    title = request.form.get('title')
+    type = request.form.get('type')
+
+    # Do something with the data (e.g., save to a database)
+    print(f"Time: {time}")
+    print(f"Title: {title}")
+    print(f"Type: {type}")
+    # Return the data as a JSON response
+    return jsonify({'time': time, 'title': title, 'type': type})
+
+@app.route('/display-test', methods=['GET'])
+def display_test():
+    # Get the data from the query string
+    time = request.args.get('time')
+    title = request.args.get('title')
+    type = request.args.get('type')
+
+    # Store the result in session variables
+    #session['time'] = time
+    #session['title'] = title
+    #session['type'] = type
+
+    print('time:', time)
+    print('title:', title)
+    print('type:', type)
+
+    # Render the template with the data
+    return render_template('test.html', time=time, title=title, type=type)
+
+
+
 #Scheduler routes
 #@scheduler.task('interval', id='do_job_1', seconds=300, misfire_grace_time=900)
 #def job1():
 #    print('Job 1 executed')
-
-@scheduler.task('interval', id='scrape_records_job', minutes=30, misfire_grace_time=900)
+'''
+@scheduler.task('interval', id='scrape_records_job', minutes=90, misfire_grace_time=900)
 def scrape_records_job():
     #time = datetime.datetime.now().strftime("%H:%M:%S")
     print('Auto record scraping started')
     scrape_records(segaid, password)
     print('Auto record scraping executed')
     #print(f'Auto record scraping took {datetime.datetime.now().strftime("%H:%M:%S") - time}')
-
+'''
 #Misc routes
 @app.errorhandler(404)
 def page_not_found(e):

@@ -42,27 +42,88 @@ async def scrape(segaid, password, debug=False):
 
         # wait for the page to load after clicking the button
         await page.wait_for_selector('div[class="p_10 t_l f_0 v_b"]')
-
-        # Inject and execute the script
-        #script = """
-        #    void(function(d){if(['maimaidx-eng.com','maimaidx.jp'].indexOf(d.location.host)>=0){var s=d.createElement('script');s.src='https://myjian.github.io/mai-tools/scripts/all-in-one.js?t='+Math.floor(Date.now()/60000);d.body.append(s);}})(document)
-        #"""
-        #await page.evaluate(script)
-
-        print("Waiting for page to load...")
-        await page.wait_for_load_state('load')
-        #await page.wait_for_timeout(5000)
-        print("Page loaded!")
+        await asyncio.sleep(3)
 
         # parse the HTML content
         wrapper = await page.query_selector('div.wrapper.main_wrapper.t_c')
         div_elements = await wrapper.query_selector_all('div[class="p_10 t_l f_0 v_b"]')
-        print("Gathered div elements")
-        results = []
-        for div in div_elements:
+        if debug:
+            print("Gathered div elements")
+        buttons = []
+        if debug:
+            print(f"Found {len(div_elements)} div elements.")
+        for i, div in enumerate(div_elements):
             # get the HTML content of the div element
             div_content = await div.inner_html()
-            results.append(div_content)
+            soup = BeautifulSoup(div_content, "html.parser")
+
+            # Check if the score is a new record
+            new_record = soup.find("img", {"class": "playlog_achievement_newrecord", 'src': 'https://maimaidx-eng.com/maimai-mobile/img/playlog/newrecord.png'})
+            if new_record:
+                buttons.append(f'div.p_10:nth-child({i+4}) > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > form:nth-child(7) > button:nth-child(2)')
+            else:
+                buttons.append(f'div.p_10:nth-child({i+4}) > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > form:nth-child(6) > button:nth-child(2)')
+            #print(f"New record: {new_record}")
+
+        submit_buttons = buttons
+        # get all the submit buttons
+        if debug:
+            print(f"Found {len(submit_buttons)} submit buttons.")
+            print(submit_buttons)
+
+        results = []
+        for i in range(len(submit_buttons)):
+            if debug:
+                print(f"Clicking submit button {i+1}")
+            #await page.wait_for_selector(submit_buttons[i])
+            await page.wait_for_load_state('load')
+            #await asyncio.sleep(2)
+
+            button = await page.query_selector(submit_buttons[i])
+
+            await button.click()
+
+            # wait for the page to load after clicking the button
+            await page.wait_for_selector('div[class="gray_block m_10 m_t_0 p_b_5 f_0"]')
+
+            # Inject and execute the script
+            script = """
+                javascript:void(function(){if(['maimaidx-eng.com','maimaidx.jp'].indexOf(document.location.host)>=0&&(document.location.pathname.indexOf('/maimai-mobile/record/playlogDetail')>=0))document.body.appendChild(document.createElement('script')).src='https://spiritsunite.github.io/maimai-score-details/score-details.js'})();
+            """
+            #await page.evaluate(script)
+            
+            if debug:
+                print("Waiting for the page to load")
+            await page.wait_for_load_state('load')
+            #await asyncio.sleep(1)
+            if debug:
+                print("Page loaded")
+            
+
+
+            # parse the HTML content
+            wrapper = await page.query_selector('div.wrapper.main_wrapper.t_c')
+            card_div = await wrapper.query_selector('div[class="p_10 t_l f_0 v_b"]')
+            grey_block_div = await wrapper.query_selector('div[class="gray_block m_10 m_t_0 p_b_5 f_0"]')
+            matching_div = await wrapper.query_selector('div[id="matching"][class="see_through_block m_10 p_5 t_l f_0"]')
+            if matching_div:
+                results.append(await card_div.inner_html() + '\n' + await grey_block_div.inner_html() + '\n' + await matching_div.inner_html())
+            else:
+                results.append(await card_div.inner_html() + '\n' + await grey_block_div.inner_html())
+
+            if debug:
+                print("HTML content parsed")
+                print("Waiting for the page to load (back button)")
+            #await asyncio.sleep(1)
+            if debug:
+                print("Page loaded (back button)")
+
+            # click the back button
+            await page.click('button[class="f_0"], [type="button"], [onclick="JavaScript:history.back();"]')
+            if debug:
+                print("Went back to the previous page")
+            
+            print(len(results))
 
         if debug:
             for html_block in results:
@@ -70,6 +131,8 @@ async def scrape(segaid, password, debug=False):
                     f.write(html_block)
                     f.write('|')
         return results
+
+#asyncio.run(scrape('pugking4', 'Cocothe4th00', debug=True))
 
 def get_score_data(html, debug=False):
     data_list = []
@@ -82,6 +145,9 @@ def get_score_data(html, debug=False):
         score = soup.find("div", {"class": "playlog_achievement_txt t_r"}).text
         # Get the song title
         title = soup.find("div", {"class": "basic_block m_5 p_5 p_l_10 f_13 break"}).text
+
+        print("Title: " + title)
+
         # Get the difficulty master
         diff = soup.find("img", {"class": "playlog_diff v_b", 'src': 'https://maimaidx-eng.com/maimai-mobile/img/diff_master.png'})
         if diff:
@@ -158,10 +224,72 @@ def get_score_data(html, debug=False):
         if debug:
             print(f"Sync: {sync}")
 
+        # Get table
+        td_list = soup.find_all('td')
+        if debug:
+            print(td_list)
+
+        # Get taps
+        taps = {'critical_perfect': int(td_list[5].text), 'perfect': int(td_list[6].text), 'great': int(td_list[7].text), 'good': int(td_list[8].text), 'miss': int(td_list[9].text)}
+
+        # Get holds
+        holds = {'critical_perfect': int(td_list[10].text), 'perfect': int(td_list[11].text), 'great': int(td_list[12].text), 'good': int(td_list[13].text), 'miss': int(td_list[14].text)}
+
+        # Get slides
+        slides = {'critical_perfect': int(td_list[15].text), 'perfect': int(td_list[16].text), 'great': int(td_list[17].text), 'good': int(td_list[18].text), 'miss': int(td_list[19].text)}
+
+        # Get touch
+        try:
+            touch = {'critical_perfect': int(td_list[20].text), 'perfect': int(td_list[21].text), 'great': int(td_list[22].text), 'good': int(td_list[23].text), 'miss': int(td_list[24].text)}
+        except:
+            touch = {'critical_perfect': td_list[20].text, 'perfect': td_list[21].text, 'great': td_list[22].text, 'good': td_list[23].text, 'miss': td_list[24].text}
+        # Get breaks
+        breaks = {'critical_perfect': int(td_list[25].text), 'perfect': int(td_list[26].text), 'great': int(td_list[27].text), 'good': int(td_list[28].text), 'miss': int(td_list[29].text)}
+
+        # Get 2p name
+        try:
+            player2 = soup.find('div', {'class': 'basic_block p_3 t_c f_11'}).text
+        except:
+            player2 = None
+
+        # Get max combo
+        max_combo = soup.find('div', {'class': 'f_r f_14 white'}).text
+
+        # Get max sync
+        try:
+            max_sync = soup.find('div', {'class': ' f_r f_14 white'}).text
+        except:
+            max_sync = None
+
+        # Get rating gain
+        try:
+            rating_gain = soup.find('div', {'class': 'f_l f_11 v_t'}).text
+        except:
+            rating_gain = None
+
+        # Get current rating
+        try:
+            current_rating = soup.find('div', {'class': 'rating_block'}).text
+        except:
+            current_rating = None
+
+        # Get fast/lates
+        fastlate = soup.findAll('div', {'class': 'p_t_5'})
+        try:
+            fast = fastlate[0].text
+            late = fastlate[1].text
+        except:
+            fast = None
+            late = None
+
         # Get the image link
         img_link = soup.find("img", {"class": "music_img m_5 m_r_0 f_l"})['src']
         # Get the dx score
-        dx_score = soup.find("div", {"class": "white p_r_5 f_15 f_r"}).text
+        try:
+            dx_score = soup.find("div", {"class": "white p_r_5 f_15 f_r"}).text
+        except:
+            dx_score = None
+        
         type_img = soup.find('img', {'class': 'playlog_music_kind_icon', 'src': 'https://maimaidx-eng.com/maimai-mobile/img/music_standard.png'})
         if type_img:
             type = 'standard'
@@ -170,9 +298,15 @@ def get_score_data(html, debug=False):
         # Find all span elements inside the div element with class sub_title
         span_list = soup.find('div', {'class': 'sub_title'}).find_all('span')
         # Get the time/date (second span element)
-        time = span_list[1].text
+        try:
+            time = span_list[1].text
+        except:
+            time = None
         # Get the track (first span element)
-        track = span_list[0].text
+        try:
+            track = span_list[0].text
+        except:
+            track = None
         
         if debug:
             #print(f"Difficulty: {diff.upper()}")
@@ -195,7 +329,19 @@ def get_score_data(html, debug=False):
             'place': place,
             'players': players,
             'new_record': new_record,
-            'new_record_deluxe': new_record_deluxe
+            'new_record_deluxe': new_record_deluxe,
+            'taps': taps,
+            'holds': holds,
+            'slides': slides,
+            'touch': touch,
+            'breaks': breaks,
+            'player2': player2,
+            'max_combo': max_combo,
+            'max_sync': max_sync,
+            'rating_gain': rating_gain,
+            'current_rating': current_rating,
+            'fast': fast,
+            'late': late
         }
         data_list.append(child_dict)
     return data_list
@@ -214,4 +360,4 @@ def scrape_records(segaid, password, debug=False):
         f.write(json_data)
     return filtered_data
 
-#scrape_records('pugking4', 'Cocothe4th00')
+scrape_records('pugking4', 'Cocothe4th00')

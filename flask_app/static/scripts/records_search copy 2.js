@@ -1,77 +1,74 @@
-function attachClickListenerToRows() {
-  // Get all the rows in the table
-  const rows = document.querySelectorAll('tr');
+// Get all the rows in the table
+const rows = document.querySelectorAll('tr');
 
-  // Loop through each row and attach a click event listener
-  rows.forEach(row => {
-    row.addEventListener('click', (event) => {
-      event.preventDefault();
+// Loop through each row and attach a click event listener
+rows.forEach(row => {
+  row.addEventListener('click', (event) => {
+    event.preventDefault();
 
-      console.log('clicked');
+    console.log('clicked');
 
-      // Get the values for the "Time", "Title", and "Type" columns for the clicked row
-      const time = row.cells[9].textContent;
-      const title = row.cells[1].textContent;
-      const type = row.cells[2].textContent;
+    // Get the values for the "Time", "Title", and "Type" columns for the clicked row
+    const time = row.cells[9].textContent;
+    const title = row.cells[1].textContent;
+    const type = row.cells[2].textContent;
 
-      console.log(time, title, type);
+    console.log(time, title, type);
 
-      // Create a new form element
-      const form = document.createElement('form');
+    // Create a new form element
+    const form = document.createElement('form');
 
-      // Set the attributes for the form
-      form.setAttribute('method', 'POST');
-      form.setAttribute('action', '/test');
-      form.setAttribute('target', '_blank');
+    // Set the attributes for the form
+    form.setAttribute('method', 'POST');
+    form.setAttribute('action', '/test');
+    form.setAttribute('target', '_blank');
 
-      // Create three hidden input elements for the "Time", "Title", and "Type" values
-      const timeInput = document.createElement('input');
-      timeInput.setAttribute('type', 'hidden');
-      timeInput.setAttribute('name', 'time');
-      timeInput.setAttribute('value', time);
+    // Create three hidden input elements for the "Time", "Title", and "Type" values
+    const timeInput = document.createElement('input');
+    timeInput.setAttribute('type', 'hidden');
+    timeInput.setAttribute('name', 'time');
+    timeInput.setAttribute('value', time);
 
-      const titleInput = document.createElement('input');
-      titleInput.setAttribute('type', 'hidden');
-      titleInput.setAttribute('name', 'title');
-      titleInput.setAttribute('value', title);
+    const titleInput = document.createElement('input');
+    titleInput.setAttribute('type', 'hidden');
+    titleInput.setAttribute('name', 'title');
+    titleInput.setAttribute('value', title);
 
-      const typeInput = document.createElement('input');
-      typeInput.setAttribute('type', 'hidden');
-      typeInput.setAttribute('name', 'type');
-      typeInput.setAttribute('value', type);
+    const typeInput = document.createElement('input');
+    typeInput.setAttribute('type', 'hidden');
+    typeInput.setAttribute('name', 'type');
+    typeInput.setAttribute('value', type);
 
-      // Append the input elements to the form
-      form.appendChild(timeInput);
-      form.appendChild(titleInput);
-      form.appendChild(typeInput);
+    // Append the input elements to the form
+    form.appendChild(timeInput);
+    form.appendChild(titleInput);
+    form.appendChild(typeInput);
 
-      // Serialize the form data
-      const formData = new FormData(form);
-      const formDataString = new URLSearchParams(formData).toString();
+    // Serialize the form data
+    const formData = new FormData(form);
+    const formDataString = new URLSearchParams(formData).toString();
 
-      // Submit the form to send the data via POST
-      fetch('/test', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: formDataString
-      })
-      .then(response => response.json())
-      .then(data => {
-        // Open a new page at "/display-test" with the received data
-        const params = new URLSearchParams(data);
-        window.open(`/display-test?${params.toString()}`);
-      })
-      .catch(error => console.error(error));
+    // Submit the form to send the data via POST
+    fetch('/test', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: formDataString
+    })
+    .then(response => response.json())
+    .then(data => {
+      // Open a new page at "/display-test" with the received data
+      const params = new URLSearchParams(data);
+      window.open(`/display-test?${params.toString()}`);
+    })
+    .catch(error => console.error(error));
 
-      // Reset the form for next click event
-      //form.reset();
-    });
+    // Reset the form for next click event
+    //form.reset();
   });
-}
+});
 
-attachClickListenerToRows();
 
 
 function addCustomDifficultyRows(table) {
@@ -133,10 +130,10 @@ form.addEventListener('submit', (e) => {
         <td style="width: 3%">${item.combo ? item.combo : ''}</td>
         <td style="width: 3%">${item.sync ? item.sync : ''}</td>
         <td style="width: 3%">${item.place ? item.place : ''}</td>
-        <td style="width: 16%">${item.player2 ? item.player2 : ''}</td>
+        <td style="width: 11%">${item.player2 ? item.player2 : ''}</td>
         <td>${item.time ? item.time : ''}</td>
         <td>${item.track ? item.track : ''}</td>
-      `;
+      `;      
         table.appendChild(row);
         const difficultyCell = row.querySelector('td:nth-child(4)');
         if (difficultyCell.textContent.trim().toLowerCase() === "remaster") {
@@ -164,9 +161,9 @@ form.addEventListener('submit', (e) => {
       console.error(xhr.statusText);
     }
   };
-  console.log('bruh');
   xhr.onerror = function () {
     console.error('An error occurred while sending the request.');
   };
   xhr.send(`date=${date}`);
+  
 });
