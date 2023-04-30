@@ -7,7 +7,7 @@ class overview_stats:
         self.file_path = file_path
 
     def test(self):
-        print(200)
+        print(162)
 
     def get_stats_data(self):
         data = []
@@ -23,6 +23,39 @@ class overview_stats:
     def calculate_stats(self):
         #print(len(self.data))
         c = collections.defaultdict(int)
+
+        #init count variables
+        level_count = c
+        int_level_count = c
+
+        title_count = c
+        type_count = c
+        difficulty_count = c
+
+        total_taps_count = c
+        total_holds_count = c
+        total_slides_count = c
+        total_touch_count = c
+        total_breaks_count = c
+
+        total_score_count = c
+        total_deluxe_score_count = c
+        total_combo_count = c
+        total_sync_count = c
+        total_max_combo_count = c
+        total_max_sync_count = c
+        new_record_count = c
+        new_record_deluxe_count = c
+        rating_gain_count = c
+        current_rating_count = c
+        fast_count = c
+        late_count = c
+
+        place_count = c
+        players_count = c
+        player2_count = c
+
+        track_count = c
 
         #init avg variables
         internal_level_data = []
@@ -40,7 +73,7 @@ class overview_stats:
         p2_picks_count = c
         parent_p2_picks = []
         p2_level_picks = {}
-        p2_picks_none = {}
+
 
         chart_count = 0
         for day in self.data:
@@ -103,6 +136,19 @@ class overview_stats:
                 level = chart['level']
 
 
+                #Count total charts
+                chart_count += 1
+
+                #Basic count stats
+                #Get level stats
+                level_count[level] += 1
+                int_level_count[internal_level] += 1
+
+                #Get chart stats
+                title_count[title] += 1
+                type_count[type] += 1
+                difficulty_count[difficulty] += 1
+
                 #Get note stats
                 total_taps = sum(taps.values())
                 total_holds = sum(holds.values())
@@ -110,17 +156,41 @@ class overview_stats:
                 total_touch = sum(touch.values())
                 total_breaks = sum(breaks.values())
 
+                total_taps_count[total_taps] += 1
+                total_holds_count[total_holds] += 1
+                total_slides_count[total_slides] += 1
+                total_touch_count[total_touch] += 1
+                total_breaks_count[total_breaks] += 1
+
+                #Get user play stats
+                total_score_count[score] += 1
+                total_deluxe_score_count[deluxe_score] += 1
+                total_combo_count[combo] += 1
+                total_sync_count[sync] += 1
+                total_max_combo_count[max_combo] += 1
+                total_max_sync_count[max_sync] += 1
+                new_record_count[new_record] += 1
+                new_record_deluxe_count[new_record_deluxe] += 1
+                rating_gain_count[rating_gain] += 1
+                current_rating_count[current_rating] += 1
+                fast_count[fast] += 1
+                late_count[late] += 1
+
+                #Get multiplayer stats
+                place_count[place] += 1
+                players_count[players] += 1
+                player2_count[player2] += 1
+
+                #Get misc stats
+                track_count[track] += 1
+
                 #Avg stat prep
                 #Avg internal level
                 if internal_level != None:
                     internal_level_data.append(float(internal_level))
                     internal_level_data_none.append(float(internal_level))
                 else:
-                    try:
-                        temp_level = float(level)
-                    except:
-                        temp_level = float(level.replace('+', '')) + 0.7
-                    internal_level_data_none.append(temp_level)
+                    internal_level_data_none.append(0)
                 
                 #Avg all note type ratio
                 total_notes = total_taps + total_holds + total_slides + total_touch + total_breaks
@@ -184,54 +254,20 @@ class overview_stats:
 
                 breaks_ratio_data.append([cp_breaks_ratio, p_breaks_ratio, gr_breaks_ratio, go_breaks_ratio, m_breaks_ratio])
                 
-                #p2 level and internal level picks count
-                if 'internal_level' not in p2_picks and 'level' not in p2_picks:
-                    p2_picks['internal_level'] = {}
-                    p2_picks['level'] = {}
-
-                if player2 not in p2_picks['internal_level'] and player2 not in p2_picks['level']:
-                    p2_picks['internal_level'][player2] = {}
-                    p2_picks['level'][player2] = {}
+                #Custom
+                if player2 not in p2_picks:
+                    p2_picks[player2] = {}
 
                 if player2 != None:
-                    if level not in p2_picks['level'][player2]:
-                        p2_picks['level'][player2][level] = 1
+                    if level not in p2_picks[player2]:
+                        p2_picks[player2][level] = 1
                     else:
-                        p2_picks['level'][player2][level] += 1
+                        p2_picks[player2][level] += 1
 
-                    if internal_level not in p2_picks['internal_level'][player2]:
-                        p2_picks['internal_level'][player2][internal_level] = 1
+                    if internal_level not in p2_picks[player2]:
+                        p2_picks[player2][internal_level] = 1
                     else:
-                        p2_picks['internal_level'][player2][internal_level] += 1
-
-
-
-                #Average constant level of charts I play with other people with 2. applied
-                if player2 not in p2_picks_none:
-                    p2_picks_none[player2] = {}
-
-                if player2 != None:
-                    if internal_level not in p2_picks_none[player2]:
-                        if internal_level:
-                            p2_picks_none[player2][internal_level] = 1
-                        else:
-                            try:
-                                temp_level = float(level)
-                            except:
-                                temp_level = float(level.replace('+', '')) + 0.7
-                            p2_picks_none[player2][temp_level] = 1
-                    else:
-                        if internal_level:
-                            p2_picks_none[player2][internal_level] += 1
-                        else:
-                            try:
-                                temp_level = float(level)
-                            except:
-                                temp_level = float(level.replace('+', '') + 0.7)
-                            p2_picks_none[player2][temp_level] += 1
-
-                
-
+                        p2_picks[player2][internal_level] += 1
 
 
                 
@@ -243,15 +279,12 @@ class overview_stats:
         avg_internal_level = sum(internal_level_data) / len(internal_level_data)
         avg_internal_level_none = sum(internal_level_data_none) / len(internal_level_data_none)
 
-        #this code 💀
         #all note type ratio
         avg_cp_ratio = sum([x[0] for x in all_note_type_ratio_data]) / len(all_note_type_ratio_data)
         avg_p_ratio = sum([x[1] for x in all_note_type_ratio_data]) / len(all_note_type_ratio_data)
         avg_gr_ratio = sum([x[2] for x in all_note_type_ratio_data]) / len(all_note_type_ratio_data)
         avg_go_ratio = sum([x[3] for x in all_note_type_ratio_data]) / len(all_note_type_ratio_data)
         avg_m_ratio = sum([x[4] for x in all_note_type_ratio_data]) / len(all_note_type_ratio_data)
-
-        avg_notes_ratio_dict = {'avg_cp_ratio': avg_cp_ratio, 'avg_p_ratio': avg_p_ratio, 'avg_gr_ratio': avg_gr_ratio, 'avg_go_ratio': avg_go_ratio, 'avg_m_ratio': avg_m_ratio}
 
         #taps ratio
         avg_cp_taps_ratio = sum([x[0] for x in taps_ratio_data]) / len(taps_ratio_data)
@@ -260,16 +293,12 @@ class overview_stats:
         avg_go_taps_ratio = sum([x[3] for x in taps_ratio_data]) / len(taps_ratio_data)
         avg_m_taps_ratio = sum([x[4] for x in taps_ratio_data]) / len(taps_ratio_data)
 
-        avg_taps_ratio_dict = {'avg_cp_taps_ratio': avg_cp_taps_ratio, 'avg_p_taps_ratio': avg_p_taps_ratio, 'avg_gr_taps_ratio': avg_gr_taps_ratio, 'avg_go_taps_ratio': avg_go_taps_ratio, 'avg_m_taps_ratio': avg_m_taps_ratio}
-
         #holds ratio
         avg_cp_holds_ratio = sum([x[0] for x in holds_ratio_data]) / len(holds_ratio_data)
         avg_p_holds_ratio = sum([x[1] for x in holds_ratio_data]) / len(holds_ratio_data)
         avg_gr_holds_ratio = sum([x[2] for x in holds_ratio_data]) / len(holds_ratio_data)
         avg_go_holds_ratio = sum([x[3] for x in holds_ratio_data]) / len(holds_ratio_data)
         avg_m_holds_ratio = sum([x[4] for x in holds_ratio_data]) / len(holds_ratio_data)
-
-        avg_holds_ratio_dict = {'avg_cp_holds_ratio': avg_cp_holds_ratio, 'avg_p_holds_ratio': avg_p_holds_ratio, 'avg_gr_holds_ratio': avg_gr_holds_ratio, 'avg_go_holds_ratio': avg_go_holds_ratio, 'avg_m_holds_ratio': avg_m_holds_ratio}
 
         #slides ratio
         avg_cp_slides_ratio = sum([x[0] for x in slides_ratio_data]) / len(slides_ratio_data)
@@ -278,16 +307,12 @@ class overview_stats:
         avg_go_slides_ratio = sum([x[3] for x in slides_ratio_data]) / len(slides_ratio_data)
         avg_m_slides_ratio = sum([x[4] for x in slides_ratio_data]) / len(slides_ratio_data)
 
-        avg_slides_ratio_dict = {'avg_cp_slides_ratio': avg_cp_slides_ratio, 'avg_p_slides_ratio': avg_p_slides_ratio, 'avg_gr_slides_ratio': avg_gr_slides_ratio, 'avg_go_slides_ratio': avg_go_slides_ratio, 'avg_m_slides_ratio': avg_m_slides_ratio}
-
         #touch ratio
         avg_cp_touch_ratio = sum([x[0] for x in touch_ratio_data]) / len(touch_ratio_data)
         avg_p_touch_ratio = sum([x[1] for x in touch_ratio_data]) / len(touch_ratio_data)
         avg_gr_touch_ratio = sum([x[2] for x in touch_ratio_data]) / len(touch_ratio_data)
         avg_go_touch_ratio = sum([x[3] for x in touch_ratio_data]) / len(touch_ratio_data)
         avg_m_touch_ratio = sum([x[4] for x in touch_ratio_data]) / len(touch_ratio_data)
-
-        avg_touch_ratio_dict = {'avg_cp_touch_ratio': avg_cp_touch_ratio, 'avg_p_touch_ratio': avg_p_touch_ratio, 'avg_gr_touch_ratio': avg_gr_touch_ratio, 'avg_go_touch_ratio': avg_go_touch_ratio, 'avg_m_touch_ratio': avg_m_touch_ratio}
 
         #breaks ratio
         avg_cp_breaks_ratio = sum([x[0] for x in breaks_ratio_data]) / len(breaks_ratio_data)
@@ -296,64 +321,86 @@ class overview_stats:
         avg_go_breaks_ratio = sum([x[3] for x in breaks_ratio_data]) / len(breaks_ratio_data)
         avg_m_breaks_ratio = sum([x[4] for x in breaks_ratio_data]) / len(breaks_ratio_data)
 
-        avg_breaks_ratio_dict = {'avg_cp_breaks_ratio': avg_cp_breaks_ratio, 'avg_p_breaks_ratio': avg_p_breaks_ratio, 'avg_gr_breaks_ratio': avg_gr_breaks_ratio, 'avg_go_breaks_ratio': avg_go_breaks_ratio, 'avg_m_breaks_ratio': avg_m_breaks_ratio}
-
-        #Who I play with the most
-        total_charts_played_p2 = {}
-        #most_played_p2 = max(p2_picks['level'], key=p2_picks['level'].get)
-        for player in p2_picks['level']:
-            temp_sum = 0
-            for level in p2_picks['level'][player]:
-                temp_sum += p2_picks['level'][player][level]
-            if player != None:
-                total_charts_played_p2[player] = temp_sum
-        
-        #Average constant level of charts I play with other people
-        #remove rounding at end
-        avg_internal_level_p2 = {}
-        for player in p2_picks['internal_level']:
-            temp_sum = 0
-            temp_count = 0
-            for internal_level in p2_picks['internal_level'][player]:
-                if internal_level == None:
-                    continue
-                temp_count += int(p2_picks['internal_level'][player][internal_level])
-                temp_sum += int(p2_picks['internal_level'][player][internal_level]) * float(internal_level)
-            if player != None:
-                avg_internal_level_p2[player] = round(temp_sum / temp_count, 1)
-
-
-        #Average constant level of charts I play with other people with 2. applied
-        avg_internal_level_p2_none = {}
-        for player in p2_picks_none:
-            temp_sum = 0
-            temp_count = 0
-            for internal_level in p2_picks_none[player]:
-                temp_count += int(p2_picks_none[player][internal_level])
-                temp_sum += int(p2_picks_none[player][internal_level]) * float(internal_level)
-            if player != None:
-                avg_internal_level_p2_none[player] = round(temp_sum / temp_count, 1)
-        
-
             
-        #print('avg_notes_ratio_dict:', avg_notes_ratio_dict)
-        #print('avg_taps_ratio_dict:', avg_taps_ratio_dict)
-        #print('avg_holds_ratio_dict:', avg_holds_ratio_dict)
-        #print('avg_slides_ratio_dict:', avg_slides_ratio_dict)
-        #print('avg_touch_ratio_dict:', avg_touch_ratio_dict)
-        #print('avg_breaks_ratio_dict:', avg_breaks_ratio_dict)
+        #print('Count Stats:')
+        #print('Level:', level_count)
+        #print('Internal Level:', int_level_count)
 
-        #print('internal_level p2_picks:', p2_picks['internal_level'])
-        #print('level p2_picks_none:', p2_picks['level'])
+        #print('Title:', title_count)
+        #print('Type:', type_count)
+        #print('Difficulty:', difficulty_count)
+#
+        #print('Total Taps:', total_taps_count)
+        #print('Total Holds:', total_holds_count)
+        #print('Total Slides:', total_slides_count)
+        #print('Total Touch:', total_touch_count)
+        #print('Total Breaks:', total_breaks_count)
+#
+        #print('Total Score:', total_score_count)
+        #print('Total Deluxe Score:', total_deluxe_score_count)
+        #print('Total Combo:', total_combo_count)
+        #print('Total Sync:', total_sync_count)
+        #print('Total Max Combo:', total_max_combo_count)
+        #print('Total Max Sync:', total_max_sync_count)
+        #print('New Record:', new_record_count)
+        #print('New Record Deluxe:', new_record_deluxe_count)
+        #print('Rating Gain:', rating_gain_count)
+        #print('Current Rating:', current_rating_count)
+        #print('Fast:', fast_count)
+        #print('Late:', late_count)
+#
+        #print('Place:', place_count)
+        #print('Players:', players_count)
+        #print('Player2:', player2_count)
+#
+        #print('Track:', track_count)
+#
+        #print('Avg Stats:')
+        #print('Avg Internal Level:', avg_internal_level)
+        #print('Avg Internal Level None:', avg_internal_level_none)
+#
+        #print(f'Avg Critical Perfect Ratio:{avg_cp_ratio*100}%')
+        #print(f'Avg Perfect Ratio:{round(avg_p_ratio*100, 2)}%')
+        #print(f'Avg Great Ratio:{round(avg_gr_ratio*100, 2)}%')
+        #print(f'Avg Good Ratio:{round(avg_go_ratio*100, 2)}%')
+        #print(f'Avg Miss Ratio:{round(avg_m_ratio*100, 2)}%')
+#
+        #print(f'Avg Critical Perfect Taps Ratio:{round(avg_cp_taps_ratio*100, 2)}%')
+        #print(f'Avg Perfect Taps Ratio:{round(avg_p_taps_ratio*100, 2)}%')
+        #print(f'Avg Great Taps Ratio:{round(avg_gr_taps_ratio*100, 2)}%')
+        #print(f'Avg Good Taps Ratio:{round(avg_go_taps_ratio*100, 2)}%')
+        #print(f'Avg Miss Taps Ratio:{round(avg_m_taps_ratio*100, 2)}%')
+    #
+        #print(f'Avg Critical Perfect Holds Ratio:{round(avg_cp_holds_ratio*100, 2)}%')
+        #print(f'Avg Perfect Holds Ratio:{round(avg_p_holds_ratio*100, 2)}%')
+        #print(f'Avg Great Holds Ratio:{round(avg_gr_holds_ratio*100, 2)}%')
+        #print(f'Avg Good Holds Ratio:{round(avg_go_holds_ratio*100, 2)}%')
+        #print(f'Avg Miss Holds Ratio:{round(avg_m_holds_ratio*100, 2)}%')
+#
+        #print(f'Avg Critical Perfect Slides Ratio:{round(avg_cp_slides_ratio*100, 2)}%')
+        #print(f'Avg Perfect Slides Ratio:{round(avg_p_slides_ratio*100, 2)}%')
+        #print(f'Avg Great Slides Ratio:{round(avg_gr_slides_ratio*100, 2)}%')
+        #print(f'Avg Good Slides Ratio:{round(avg_go_slides_ratio*100, 2)}%')
+        #print(f'Avg Miss Slides Ratio:{round(avg_m_slides_ratio*100, 2)}%')
+#
+        #print(f'Avg Critical Perfect Touch Ratio:{round(avg_cp_touch_ratio*100, 2)}%')
+        #print(f'Avg Perfect Touch Ratio:{round(avg_p_touch_ratio*100, 2)}%')
+        #print(f'Avg Great Touch Ratio:{round(avg_gr_touch_ratio*100, 2)}%')
+        #print(f'Avg Good Touch Ratio:{round(avg_go_touch_ratio*100, 2)}%')
+        #print(f'Avg Miss Touch Ratio:{round(avg_m_touch_ratio*100, 2)}%')
+#
+        #print(f'Avg Critical Perfect Breaks Ratio:{round(avg_cp_breaks_ratio*100, 2)}%')
+        #print(f'Avg Perfect Breaks Ratio:{round(avg_p_breaks_ratio*100, 2)}%')
+        #print(f'Avg Great Breaks Ratio:{round(avg_gr_breaks_ratio*100, 2)}%')
+        #print(f'Avg Good Breaks Ratio:{round(avg_go_breaks_ratio*100, 2)}%')
+        #print(f'Avg Miss Breaks Ratio:{round(avg_m_breaks_ratio*100, 2)}%')
+#
+        #print(f'{p2_picks}')
+#
+        #print('Total Charts:', chart_count)
 
-        #print('avg_internal_level', avg_internal_level)
-        #print('avg_internal_level_none', avg_internal_level_none)
+        print('p2_picks:', p2_picks)
 
-
-        #print(max(total_charts_played_p2, key=total_charts_played_p2.get), max(total_charts_played_p2.values()))
-
-        print(avg_internal_level_p2)
-        print(avg_internal_level_p2_none)
 
 
 
