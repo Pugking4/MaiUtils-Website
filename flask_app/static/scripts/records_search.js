@@ -61,7 +61,8 @@ function attachClickListenerToRows() {
       .then(data => {
         // Open a new page at "/display-test" with the received data
         const params = new URLSearchParams(data);
-        window.open(`/display-test?${params.toString()}`);
+        // ?${params.toString()}
+        window.open(`/display-test`);
       })
       .catch(error => console.error(error));
 

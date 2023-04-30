@@ -55,14 +55,16 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "351",
-        "late": "169"
+        "late": "169",
+        "level": "14+",
+        "internal_level": "14.8"
     },
     {
         "title": "\u30ac\u30e9\u30c6\u30a2\u306e\u87ba\u65cb",
         "difficulty": "REMASTER",
         "score": "98.0967%",
         "deluxe_score": "2,177 / 2,697",
-        "type": "standard",
+        "type": "std",
         "time": "2023/04/27 13:54",
         "track": "TRACK 03",
         "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/0c110a5873857c5f.png",
@@ -94,11 +96,11 @@
             "miss": 1
         },
         "touch": {
-            "critical_perfect": "\u3000",
-            "perfect": "",
-            "great": "",
-            "good": "",
-            "miss": ""
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
         },
         "breaks": {
             "critical_perfect": 7,
@@ -113,7 +115,9 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "270",
-        "late": "127"
+        "late": "127",
+        "level": "14+",
+        "internal_level": "14.7"
     },
     {
         "title": "\u8eaf\u6a39\u306e\u5893\u5b88",
@@ -171,7 +175,9 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "284",
-        "late": "188"
+        "late": "188",
+        "level": "14+",
+        "internal_level": "14.9"
     },
     {
         "title": "Regulus",
@@ -229,14 +235,16 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "196",
-        "late": "202"
+        "late": "202",
+        "level": "14+",
+        "internal_level": "14.7"
     },
     {
         "title": "ULTRA B+K",
         "difficulty": "MASTER",
         "score": "99.2126%",
         "deluxe_score": "2,120 / 2,535",
-        "type": "standard",
+        "type": "std",
         "time": "2023/04/27 13:26",
         "track": "TRACK 04",
         "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/e3c0402ef104b11f.png",
@@ -268,11 +276,11 @@
             "miss": 0
         },
         "touch": {
-            "critical_perfect": "\u3000",
-            "perfect": "",
-            "great": "",
-            "good": "",
-            "miss": ""
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
         },
         "breaks": {
             "critical_perfect": 14,
@@ -287,14 +295,16 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "292",
-        "late": "59"
+        "late": "59",
+        "level": "13+",
+        "internal_level": "13.8"
     },
     {
         "title": "We Gonna Party",
         "difficulty": "REMASTER",
         "score": "96.4184%",
         "deluxe_score": "1,454 / 1,824",
-        "type": "standard",
+        "type": "std",
         "time": "2023/04/27 13:23",
         "track": "TRACK 03",
         "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/a29a68c61ddd6e50.png",
@@ -326,11 +336,11 @@
             "miss": 1
         },
         "touch": {
-            "critical_perfect": "\u3000",
-            "perfect": "",
-            "great": "",
-            "good": "",
-            "miss": ""
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
         },
         "breaks": {
             "critical_perfect": 21,
@@ -345,14 +355,16 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "186",
-        "late": "94"
+        "late": "94",
+        "level": "13+",
+        "internal_level": "13.7"
     },
     {
         "title": "magician's operation",
         "difficulty": "MASTER",
         "score": "99.9661%",
         "deluxe_score": "1,453 / 1,671",
-        "type": "standard",
+        "type": "std",
         "time": "2023/04/27 13:20",
         "track": "TRACK 02",
         "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/9e5d4466d8429a5b.png",
@@ -384,11 +396,11 @@
             "miss": 0
         },
         "touch": {
-            "critical_perfect": "\u3000",
-            "perfect": "",
-            "great": "",
-            "good": "",
-            "miss": ""
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
         },
         "breaks": {
             "critical_perfect": 5,
@@ -403,14 +415,16 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "97",
-        "late": "87"
+        "late": "87",
+        "level": "13+",
+        "internal_level": "13.7"
     },
     {
         "title": "Last Brave \uff5e Go to zero",
         "difficulty": "EXPERT",
         "score": "100.8416%",
         "deluxe_score": "1,614 / 1,755",
-        "type": "standard",
+        "type": "std",
         "time": "2023/04/27 13:16",
         "track": "TRACK 01",
         "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/c86fa66b7e7641aa.png",
@@ -442,11 +456,11 @@
             "miss": 0
         },
         "touch": {
-            "critical_perfect": "\u3000",
-            "perfect": "",
-            "great": "",
-            "good": "",
-            "miss": ""
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
         },
         "breaks": {
             "critical_perfect": 22,
@@ -461,14 +475,16 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "81",
-        "late": "57"
+        "late": "57",
+        "level": "11+",
+        "internal_level": null
     },
     {
         "title": "CYBER Sparks",
         "difficulty": "REMASTER",
         "score": "98.7300%",
         "deluxe_score": "2,354 / 2,835",
-        "type": "standard",
+        "type": "std",
         "time": "2023/04/27 13:12",
         "track": "TRACK 04",
         "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/cdbb2243b8abcdae.png",
@@ -500,11 +516,11 @@
             "miss": 1
         },
         "touch": {
-            "critical_perfect": "\u3000",
-            "perfect": "",
-            "great": "",
-            "good": "",
-            "miss": ""
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
         },
         "breaks": {
             "critical_perfect": 16,
@@ -519,14 +535,16 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "283",
-        "late": "116"
+        "late": "116",
+        "level": "13+",
+        "internal_level": "13.7"
     },
     {
         "title": "\u6700\u7d42\u9b3c\u755c\u59b9\u30fb\u4e00\u90e8\u58f0",
         "difficulty": "MASTER",
         "score": "98.8019%",
         "deluxe_score": "2,142 / 2,523",
-        "type": "standard",
+        "type": "std",
         "time": "2023/04/27 13:08",
         "track": "TRACK 03",
         "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/1f5a7a553d6dd749.png",
@@ -558,11 +576,11 @@
             "miss": 0
         },
         "touch": {
-            "critical_perfect": "\u3000",
-            "perfect": "",
-            "great": "",
-            "good": "",
-            "miss": ""
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
         },
         "breaks": {
             "critical_perfect": 19,
@@ -577,7 +595,9 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "228",
-        "late": "76"
+        "late": "76",
+        "level": "13+",
+        "internal_level": "13.8"
     },
     {
         "title": "Bad Apple!! feat.nomico (REDALiCE Remix)",
@@ -635,14 +655,16 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "84",
-        "late": "58"
+        "late": "58",
+        "level": "12",
+        "internal_level": null
     },
     {
         "title": "FEEL the BEATS",
         "difficulty": "REMASTER",
         "score": "98.1877%",
         "deluxe_score": "2,462 / 3,000",
-        "type": "standard",
+        "type": "std",
         "time": "2023/04/27 13:01",
         "track": "TRACK 01",
         "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/aeebc3dec7433096.png",
@@ -674,11 +696,11 @@
             "miss": 0
         },
         "touch": {
-            "critical_perfect": "\u3000",
-            "perfect": "",
-            "great": "",
-            "good": "",
-            "miss": ""
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
         },
         "breaks": {
             "critical_perfect": 55,
@@ -693,14 +715,16 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "250",
-        "late": "176"
+        "late": "176",
+        "level": "13+",
+        "internal_level": "13.9"
     },
     {
         "title": "\u706b\u708e\u5730\u7344",
         "difficulty": "MASTER",
         "score": "98.3214%",
         "deluxe_score": "1,715 / 2,055",
-        "type": "standard",
+        "type": "std",
         "time": "2023/04/27 12:56",
         "track": "TRACK 04",
         "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/4f5af85242e1b088.png",
@@ -732,11 +756,11 @@
             "miss": 1
         },
         "touch": {
-            "critical_perfect": "\u3000",
-            "perfect": "",
-            "great": "",
-            "good": "",
-            "miss": ""
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
         },
         "breaks": {
             "critical_perfect": 26,
@@ -751,14 +775,16 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "215",
-        "late": "54"
+        "late": "54",
+        "level": "13+",
+        "internal_level": "13.8"
     },
     {
         "title": "Our Wrenally",
         "difficulty": "MASTER",
         "score": "71.8342%",
         "deluxe_score": "1,713 / 2,997",
-        "type": "standard",
+        "type": "std",
         "time": "2023/04/27 12:52",
         "track": "TRACK 03",
         "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/cde51cc89f91dd8a.png",
@@ -790,11 +816,11 @@
             "miss": 28
         },
         "touch": {
-            "critical_perfect": "\u3000",
-            "perfect": "",
-            "great": "",
-            "good": "",
-            "miss": ""
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
         },
         "breaks": {
             "critical_perfect": 6,
@@ -809,7 +835,9 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "205",
-        "late": "159"
+        "late": "159",
+        "level": "14+",
+        "internal_level": "14.8"
     },
     {
         "title": "TEmPTaTiON",
@@ -867,7 +895,9 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "405",
-        "late": "90"
+        "late": "90",
+        "level": "14+",
+        "internal_level": "14.7"
     },
     {
         "title": "Trick tear",
@@ -925,14 +955,16 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "182",
-        "late": "72"
+        "late": "72",
+        "level": "14",
+        "internal_level": "14.4"
     },
     {
         "title": "PANDORA PARADOXXX",
         "difficulty": "EXPERT",
         "score": "99.0661%",
         "deluxe_score": "2,179 / 2,565",
-        "type": "standard",
+        "type": "std",
         "time": "2023/04/27 12:39",
         "track": "TRACK 04",
         "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/35b2760a42a8eebe.png",
@@ -964,11 +996,11 @@
             "miss": 0
         },
         "touch": {
-            "critical_perfect": "\u3000",
-            "perfect": "",
-            "great": "",
-            "good": "",
-            "miss": ""
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
         },
         "breaks": {
             "critical_perfect": 30,
@@ -983,14 +1015,16 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "199",
-        "late": "114"
+        "late": "114",
+        "level": "13+",
+        "internal_level": "13.9"
     },
     {
         "title": "DRAGONLADY",
         "difficulty": "EXPERT",
         "score": "99.9300%",
         "deluxe_score": "1,020 / 1,173",
-        "type": "standard",
+        "type": "std",
         "time": "2023/04/27 12:36",
         "track": "TRACK 03",
         "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/59a5b2945d35ee7a.png",
@@ -1022,11 +1056,11 @@
             "miss": 0
         },
         "touch": {
-            "critical_perfect": "\u3000",
-            "perfect": "",
-            "great": "",
-            "good": "",
-            "miss": ""
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
         },
         "breaks": {
             "critical_perfect": 18,
@@ -1041,14 +1075,16 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "47",
-        "late": "89"
+        "late": "89",
+        "level": "12+",
+        "internal_level": "12.8"
     },
     {
         "title": "\u30b9\u30ea\u30c3\u30d7\u30d5\u30ea\u30c3\u30d7",
         "difficulty": "MASTER",
         "score": "99.4222%",
         "deluxe_score": "2,230 / 2,496",
-        "type": "standard",
+        "type": "std",
         "time": "2023/04/27 12:33",
         "track": "TRACK 02",
         "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/cae6cc3ea0d93a64.png",
@@ -1080,11 +1116,11 @@
             "miss": 1
         },
         "touch": {
-            "critical_perfect": "\u3000",
-            "perfect": "",
-            "great": "",
-            "good": "",
-            "miss": ""
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
         },
         "breaks": {
             "critical_perfect": 9,
@@ -1099,14 +1135,16 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "168",
-        "late": "57"
+        "late": "57",
+        "level": "13+",
+        "internal_level": "13.8"
     },
     {
         "title": "\u82b1\u3068\u3001\u96ea\u3068\u3001\u30c9\u30e9\u30e0\u30f3\u30d9\u30fc\u30b9\u3002",
         "difficulty": "MASTER",
         "score": "96.7685%",
         "deluxe_score": "2,121 / 2,628",
-        "type": "standard",
+        "type": "std",
         "time": "2023/04/27 12:29",
         "track": "TRACK 01",
         "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/52e9a79b5e6a2ef5.png",
@@ -1138,11 +1176,11 @@
             "miss": 1
         },
         "touch": {
-            "critical_perfect": "\u3000",
-            "perfect": "",
-            "great": "",
-            "good": "",
-            "miss": ""
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
         },
         "breaks": {
             "critical_perfect": 24,
@@ -1157,7 +1195,9 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "232",
-        "late": "137"
+        "late": "137",
+        "level": "14",
+        "internal_level": "14.3"
     },
     {
         "title": "taboo tears you up",
@@ -1215,7 +1255,9 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "231",
-        "late": "97"
+        "late": "97",
+        "level": "13+",
+        "internal_level": "13.9"
     },
     {
         "title": "M.S.S.Planet",
@@ -1273,7 +1315,9 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "20",
-        "late": "29"
+        "late": "29",
+        "level": "9+",
+        "internal_level": "9.7"
     },
     {
         "title": "Secret Sleuth",
@@ -1331,7 +1375,9 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "224",
-        "late": "87"
+        "late": "87",
+        "level": "13+",
+        "internal_level": "13.7"
     },
     {
         "title": "Falsum Atlantis.",
@@ -1389,14 +1435,16 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "260",
-        "late": "112"
+        "late": "112",
+        "level": "14",
+        "internal_level": "14.5"
     },
     {
         "title": "My First Phone",
         "difficulty": "MASTER",
         "score": "97.8108%",
         "deluxe_score": "1,413 / 1,596",
-        "type": "standard",
+        "type": "std",
         "time": "2023/04/27 12:07",
         "track": "TRACK 04",
         "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/1c9958b5ebafff62.png",
@@ -1428,11 +1476,11 @@
             "miss": 0
         },
         "touch": {
-            "critical_perfect": "\u3000",
-            "perfect": "",
-            "great": "",
-            "good": "",
-            "miss": ""
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
         },
         "breaks": {
             "critical_perfect": 0,
@@ -1447,14 +1495,16 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "74",
-        "late": "67"
+        "late": "67",
+        "level": "13+",
+        "internal_level": "13.8"
     },
     {
         "title": "Ignis Danse",
         "difficulty": "MASTER",
         "score": "97.3113%",
         "deluxe_score": "2,475 / 2,997",
-        "type": "standard",
+        "type": "std",
         "time": "2023/04/27 12:04",
         "track": "TRACK 03",
         "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/8de7dd8b8e1c1016.png",
@@ -1486,11 +1536,11 @@
             "miss": 2
         },
         "touch": {
-            "critical_perfect": "\u3000",
-            "perfect": "",
-            "great": "",
-            "good": "",
-            "miss": ""
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
         },
         "breaks": {
             "critical_perfect": 54,
@@ -1505,7 +1555,9 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "266",
-        "late": "140"
+        "late": "140",
+        "level": "14",
+        "internal_level": "14.6"
     },
     {
         "title": "AMABIE",
@@ -1563,14 +1615,16 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "283",
-        "late": "140"
+        "late": "140",
+        "level": "14",
+        "internal_level": "14.6"
     },
     {
         "title": "FFT",
         "difficulty": "MASTER",
         "score": "99.2594%",
         "deluxe_score": "2,188 / 2,547",
-        "type": "standard",
+        "type": "std",
         "time": "2023/04/27 11:56",
         "track": "TRACK 01",
         "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/866ca42598db8c01.png",
@@ -1602,11 +1656,11 @@
             "miss": 1
         },
         "touch": {
-            "critical_perfect": "\u3000",
-            "perfect": "",
-            "great": "",
-            "good": "",
-            "miss": ""
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
         },
         "breaks": {
             "critical_perfect": 28,
@@ -1621,7 +1675,9 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "215",
-        "late": "83"
+        "late": "83",
+        "level": "14",
+        "internal_level": "14.0"
     },
     {
         "title": "Never Give Up!",
@@ -1679,7 +1735,9 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "154",
-        "late": "55"
+        "late": "55",
+        "level": "13+",
+        "internal_level": "13.8"
     },
     {
         "title": "MEGATON BLAST",
@@ -1737,14 +1795,16 @@
         "rating_gain": null,
         "current_rating": "15017",
         "fast": "296",
-        "late": "113"
+        "late": "113",
+        "level": "14",
+        "internal_level": "14.3"
     },
     {
         "title": "Outlaw's Lullaby",
         "difficulty": "MASTER",
         "score": "97.6007%",
         "deluxe_score": "1,664 / 2,082",
-        "type": "standard",
+        "type": "std",
         "time": "2023/04/27 11:43",
         "track": "TRACK 02",
         "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/d54f61d4d4db472a.png",
@@ -1776,11 +1836,11 @@
             "miss": 0
         },
         "touch": {
-            "critical_perfect": "\u3000",
-            "perfect": "",
-            "great": "",
-            "good": "",
-            "miss": ""
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
         },
         "breaks": {
             "critical_perfect": 17,
@@ -1795,7 +1855,9 @@
         "rating_gain": null,
         "current_rating": "15010",
         "fast": "203",
-        "late": "110"
+        "late": "110",
+        "level": "13+",
+        "internal_level": "13.9"
     },
     {
         "title": "U&iVERSE -\u9280\u6cb3\u9e1e\u7fd4-",
@@ -1853,7 +1915,9 @@
         "rating_gain": null,
         "current_rating": "15010",
         "fast": "242",
-        "late": "138"
+        "late": "138",
+        "level": "14",
+        "internal_level": "14.4"
     },
     {
         "title": "M.S.S.Planet",
@@ -1911,7 +1975,9 @@
         "rating_gain": null,
         "current_rating": "15010",
         "fast": "0",
-        "late": "18"
+        "late": "18",
+        "level": "3",
+        "internal_level": null
     },
     {
         "title": "M.S.S.Planet",
@@ -1969,7 +2035,9 @@
         "rating_gain": null,
         "current_rating": "15010",
         "fast": "4",
-        "late": "49"
+        "late": "49",
+        "level": "7",
+        "internal_level": null
     },
     {
         "title": "M.S.S.Planet",
@@ -2027,7 +2095,9 @@
         "rating_gain": null,
         "current_rating": "15010",
         "fast": "31",
-        "late": "48"
+        "late": "48",
+        "level": "9+",
+        "internal_level": "9.7"
     },
     {
         "title": "#\u72c2\u3063\u305f\u6c11\u65cf\uff12 PRAVARGYAZOOQA",
@@ -2085,14 +2155,16 @@
         "rating_gain": null,
         "current_rating": "15010",
         "fast": "280",
-        "late": "73"
+        "late": "73",
+        "level": "14",
+        "internal_level": "14.4"
     },
     {
         "title": "\u9e92\u9e9f",
         "difficulty": "MASTER",
         "score": "99.2319%",
         "deluxe_score": "2,133 / 2,511",
-        "type": "standard",
+        "type": "std",
         "time": "2023/04/27 11:02",
         "track": "TRACK 03",
         "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/88185a61da17d947.png",
@@ -2124,11 +2196,11 @@
             "miss": 0
         },
         "touch": {
-            "critical_perfect": "\u3000",
-            "perfect": "",
-            "great": "",
-            "good": "",
-            "miss": ""
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
         },
         "breaks": {
             "critical_perfect": 6,
@@ -2143,14 +2215,16 @@
         "rating_gain": null,
         "current_rating": "15002",
         "fast": "172",
-        "late": "144"
+        "late": "144",
+        "level": "14",
+        "internal_level": "14.0"
     },
     {
         "title": "\u30bb\u30a4\u30af\u30ea\u30c3\u30c9\u3000\u30eb\u30a4\u30f3",
         "difficulty": "MASTER",
         "score": "99.1728%",
         "deluxe_score": "2,492 / 2,913",
-        "type": "standard",
+        "type": "std",
         "time": "2023/04/27 10:58",
         "track": "TRACK 02",
         "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/4f11befbc2464811.png",
@@ -2182,11 +2256,11 @@
             "miss": 0
         },
         "touch": {
-            "critical_perfect": "\u3000",
-            "perfect": "",
-            "great": "",
-            "good": "",
-            "miss": ""
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
         },
         "breaks": {
             "critical_perfect": 18,
@@ -2201,7 +2275,9 @@
         "rating_gain": null,
         "current_rating": "15002",
         "fast": "283",
-        "late": "70"
+        "late": "70",
+        "level": "13+",
+        "internal_level": "13.8"
     },
     {
         "title": "Catch Me If You Can",
@@ -2259,6 +2335,8 @@
         "rating_gain": null,
         "current_rating": "15002",
         "fast": "95",
-        "late": "113"
+        "late": "113",
+        "level": "13",
+        "internal_level": "13.2"
     }
 ]

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MaiUtils</title>
+	<link rel="stylesheet" href="static/styles.css">
+	<link rel="stylesheet" href="static/view-records-stats-overall.css">
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-HPHDZG3MYW"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-HPHDZG3MYW');
+	</script>
+	<link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+</head>
+<body>
+	<!-- header section -->
+	<header>
+		<h1>pugking4.me (MaiUtils)</h1>
+	</header>
+
+	<!-- navigation section -->
+	<nav>
+		<ul>
+			<li><a href="index">Index</a></li>
+			<li><a href="rating-calculator">Rating Calculator</a></li>
+			<li><a href="db-export">Song Database Export</a></li>
+			<li><a href="mai-camera">MaiMai Camera Gallery</a></li>
+			<li><a href="view-records">Daily Records</a></li>
+			<li class="dropdown">
+				<a href="#">Records Stats▾</a>
+                <ul class="dropdown-content">
+                	<li><a href="view-records/stats/overall">Overall</a></li>
+                	<li><a href="view-records/stats/today">Today</a></li>
+                	<li><a href="view-records/stats/date">Date</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+	<!-- main content section -->
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Time</td>
+            <td>{{ time }}</td>
+        </tr>
+        <tr>
+            <td>Title</td>
+            <td>{{ title }}</td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>{{ type }}</td>
+        </tr>
+        <tr>
+            <td>Difficulty</td>
+            <td>{{ difficulty }}</td>
+        </tr>
+        <tr>
+            <td>Score</td>
+            <td>{{ score }}</td>
+        </tr>
+        <tr>
+            <td>Deluxe Score</td>
+            <td>{{ deluxe_score }}</td>
+        </tr>
+        <tr>
+            <td>Track</td>
+            <td>{{ track }}</td>
+        </tr>
+        <tr>
+            <td>Image Link</td>
+            <td>{{ img_link }}</td>
+        </tr>
+        <tr>
+            <td>Combo</td>
+            <td>{{ combo }}</td>
+        </tr>
+        <tr>
+            <td>Sync</td>
+            <td>{{ sync }}</td>
+        </tr>
+        <tr>
+            <td>Place</td>
+            <td>{{ place }}</td>
+        </tr>
+        <tr>
+            <td>Players</td>
+            <td>{{ players }}</td>
+        </tr>
+        <tr>
+            <td>New Record</td>
+            <td>{{ new_record }}</td>
+        </tr>
+        <tr>
+            <td>New Record Deluxe</td>
+            <td>{{ new_record_deluxe }}</td>
+        </tr>
+        <tr>
+            <td>Taps</td>
+            <td>{{ taps }}</td>
+        </tr>
+        <tr>
+            <td>Holds</td>
+            <td>{{ holds }}</td>
+        </tr>
+        <tr>
+            <td>Slides</td>
+            <td>{{ slides }}</td>
+        </tr>
+        <tr>
+            <td>Touch</td>
+            <td>{{ touch }}</td>
+        </tr>
+        <tr>
+            <td>Breaks</td>
+            <td>{{ breaks }}</td>
+        </tr>
+        <tr>
+            <td>Player 2</td>
+            <td>{{ player2 }}</td>
+        </tr>
+        <tr>
+            <td>Max Combo</td>
+            <td>{{ max_combo }}</td>
+        </tr>
+        <tr>
+            <td>Max Sync</td>
+            <td>{{ max_sync }}</td>
+        </tr>
+        <tr>
+            <td>Rating Gain</td>
+            <td>{{ rating_gain }}</td>
+        </tr>
+        <tr>
+            <td>Current Rating</td>
+            <td>{{ current_rating }}</td>
+        </tr>
+        <tr>
+            <td>Fast</td>
+            <td>{{ fast }}</td>
+        </tr>
+        <tr>
+            <td>Late</td>
+            <td>{{ late }}</td>
+        </tr>
+    </table>
+</body>
+</html>

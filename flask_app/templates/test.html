@@ -1,22 +1,280 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Test Page</title>
+	<meta charset="UTF-8">
+	<title>MaiUtils</title>
+	<link rel="stylesheet" href="static/styles.css">
+	<link rel="stylesheet" href="static/test.css">
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-HPHDZG3MYW"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-HPHDZG3MYW');
+	</script>
+	<link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
 </head>
 <body>
-	<h1>Test Page</h1>
+	<!-- header section -->
+	<header>
+		<h1>pugking4.me (MaiUtils)</h1>
+	</header>
+
+	<!-- navigation section -->
+	<nav>
+		<ul>
+			<li><a href="index">Index</a></li>
+			<li><a href="rating-calculator">Rating Calculator</a></li>
+			<li><a href="db-export">Song Database Export</a></li>
+			<li><a href="mai-camera">MaiMai Camera Gallery</a></li>
+			<li><a href="view-records">Daily Records</a></li>
+			<li class="dropdown">
+				<a href="#">Records Stats▾</a>
+                <ul class="dropdown-content">
+                	<li><a href="view-records/stats/overall">Overall</a></li>
+                	<li><a href="view-records/stats/today">Today</a></li>
+                	<li><a href="view-records/stats/date">Date</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+	<!-- main content section -->
+	<h1>Detailed play info</h1>
+
+	<div class="chart_jacket">
+		<img src="{{ img_link }}" alt="Jacket">
+	</div>
+
+	<div class="chart_info">
+		<div id="label" class="title_label">Title</div>
+		<div class="title">{{ title }}</div>
+		<div id="label" class="type_label">Type</div>
+		<div class="type">{{ type }}</div>
+		<div id="label" class="difficulty_label">Difficulty</div>
+		<div class="difficulty">{{ difficulty }}</div>
+	</div>
+
+	<div class="play_info">
+		<div id="label" class="score_label">Score</div>
+		<div class="score">{{ score }}</div>
+		<div id="label" class="deluxe_score_label">Deluxe Score</div>
+		<div class="deluxe_score">{{ deluxe_score }}</div>
+		<div id="label" class="combo_label">Combo</div>
+		<div class="combo">{{ combo }}</div>
+		<div id="label" class="new_record_label">New Record</div>
+		<div class="new_record">{{ new_record }}</div>
+		<div id="label" class="new_record_deluxe_label">New Record Deluxe</div>
+		<div class="new_record_deluxe">{{ new_record_deluxe }}</div>
+		<div id="label" class="fast_label">Fast</div>
+		<div class="fast">{{ fast }}</div>
+		<div id="label" class="late_label">Late</div>
+		<div class="late">{{ late }}</div>
+	</div>
+
+	<table class="total_notes">
+		<tr>
+			<th id="label" class="total_taps_label">Total Taps</th>
+			<th id="label" class="total_holds_label">Total Holds</th>
+			<th id="label" class="total_slides_label">Total Slides</th>
+			<th id="label" class="total_touches_label">Total Touches</th>
+			<th id="label" class="total_breaks_label">Total Breaks</th>
+		</tr>
+		<tr>
+			<td class="total_taps">{{ taps.values()|sum }}</td>
+			<td class="total_holds">{{ holds.values()|sum }}</td>
+			<td class="total_slides">{{ slides.values()|sum }}</td>
+			<td class="total_touches">{{ touch.values()|sum }}</td>
+			<td class="total_breaks">{{ breaks.values()|sum }}</td>
+		</tr>
+	</table>
+
+	<div class="multi_info">
+		<div id="label" class="sync_label">Sync</div>
+		<div class="sync">{{ sync }}</div>
+		<div id="label" class="place_label">Place</div>
+		<div class="place">{{ place }}</div>
+		<div id="label" class="players_label">Players</div>
+		<div class="players">{{ players }}</div>
+		<div id="label" class="max_sync_label">Max Sync</div>
+		<div class="max_sync">{{ max_sync }}</div>
+		<div id="label" class="player2_label">Player 2</div>
+		<div class="player2">{{ player2 }}</div>
+	</div>
+
+	<div class="rating_info">
+		<div class="current_rating_label">Rating</div>
+		<div class="current_rating">{{ current_rating }}</div>
+		<div class="rating_change_label">Rating Change</div>
+		<div class="rating_change">{{ rating_change }}</div>
+	</div>
+
+	<div class="misc_info">
+		<div class="track">{{ track }}</div>
+		<div class="time">{{ time }}</div>
+	</div>
 
 	<table>
 		<tr>
-			<th>Time</th>
-			<th>Title</th>
-			<th>Type</th>
+			<th>Field</th>
+			<th>Value</th>
 		</tr>
 		<tr>
+			<td>Time</td>
 			<td>{{ time }}</td>
+		</tr>
+		<tr>
+			<td>Title</td>
 			<td>{{ title }}</td>
+		</tr>
+		<tr>
+			<td>Type</td>
 			<td>{{ type }}</td>
 		</tr>
+		<tr>
+			<td>Difficulty</td>
+			<td>{{ difficulty }}</td>
+		</tr>
+		<tr>
+			<td>Score</td>
+			<td>{{ score }}</td>
+		</tr>
+		<tr>
+			<td>Deluxe Score</td>
+			<td>{{ deluxe_score }}</td>
+		</tr>
+		<tr>
+			<td>Track</td>
+			<td>{{ track }}</td>
+		</tr>
+		<tr>
+			<td>Image Link</td>
+			<td>{{ img_link }}</td>
+		</tr>
+		<tr>
+			<td>Combo</td>
+			<td>{{ combo }}</td>
+		</tr>
+		<tr>
+			<td>Sync</td>
+			<td>{{ sync }}</td>
+		</tr>
+		<tr>
+			<td>Place</td>
+			<td>{{ place }}</td>
+		</tr>
+		<tr>
+			<td>Players</td>
+			<td>{{ players }}</td>
+		</tr>
+		<tr>
+			<td>New Record</td>
+			<td>{{ new_record }}</td>
+		</tr>
+		<tr>
+			<td>New Record Deluxe</td>
+			<td>{{ new_record_deluxe }}</td>
+		</tr>
+		<tr>
+			<td>Taps</td>
+			<td>{{ taps }}</td>
+		</tr>
+		<tr>
+			<td>Holds</td>
+			<td>{{ holds }}</td>
+		</tr>
+		<tr>
+			<td>Slides</td>
+			<td>{{ slides }}</td>
+		</tr>
+		<tr>
+			<td>Touch</td>
+			<td>{{ touch }}</td>
+		</tr>
+		<tr>
+			<td>Breaks</td>
+			<td>{{ breaks }}</td>
+		</tr>
+		<tr>
+			<td>Player 2</td>
+			<td>{{ player2 }}</td>
+		</tr>
+		<tr>
+			<td>Max Combo</td>
+			<td>{{ max_combo }}</td>
+		</tr>
+		<tr>
+			<td>Max Sync</td>
+			<td>{{ max_sync }}</td>
+		</tr>
+		<tr>
+			<td>Rating Gain</td>
+			<td>{{ rating_gain }}</td>
+		</tr>
+		<tr>
+			<td>Current Rating</td>
+			<td>{{ current_rating }}</td>
+		</tr>
+		<tr>
+			<td>Fast</td>
+			<td>{{ fast }}</td>
+		</tr>
+		<tr>
+			<td>Late</td>
+			<td>{{ late }}</td>
+		</tr>
+	</table>
+	<table class="notes">
+		<tr>
+			<th></th>
+			<th>Critical Perfect</th>
+			<th>Perfect</th>
+			<th>Great</th>
+			<th>Good</th>
+			<th>Miss</th>
+		</tr>
+		<tr>
+			<th>Taps</th>
+			<td>{{ taps['critical_perfect'] }}</td>
+			<td>{{ taps['perfect'] }}</td>
+			<td>{{ taps['great'] }}</td>
+			<td>{{ taps['good'] }}</td>
+			<td>{{ taps['miss'] }}</td>
+		</tr>
+		<tr>
+			<th>Holds</th>
+			<td>{{ holds['critical_perfect'] }}</td>
+			<td>{{ holds['perfect'] }}</td>
+			<td>{{ holds['great'] }}</td>
+			<td>{{ holds['good'] }}</td>
+			<td>{{ holds['miss'] }}</td>
+		</tr>
+		<tr>
+			<th>Slides</th>
+			<td>{{ slides['critical_perfect'] }}</td>
+			<td>{{ slides['perfect'] }}</td>
+			<td>{{ slides['great'] }}</td>
+			<td>{{ slides['good'] }}</td>
+			<td>{{ slides['miss'] }}</td>
+		</tr>
+		<tr>
+			<th>Touches</th>
+			<td>{{ touch['critical_perfect'] }}</td>
+			<td>{{ touch['perfect'] }}</td>
+			<td>{{ touch['great'] }}</td>
+			<td>{{ touch['good'] }}</td>
+			<td>{{ touch['miss'] }}</td>
+		</tr>
+		<tr>
+			<th>Breaks</th>
+			<td>{{ breaks['critical_perfect'] }}</td>
+			<td>{{ breaks['perfect'] }}</td>
+			<td>{{ breaks['great'] }}</td>
+			<td>{{ breaks['good'] }}</td>
+			<td>{{ breaks['miss'] }}</td>
+	</tr>
 	</table>
 </body>
 </html>

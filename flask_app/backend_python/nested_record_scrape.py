@@ -59,10 +59,18 @@ async def scrape(segaid, password, debug=False):
 
             # Check if the score is a new record
             new_record = soup.find("img", {"class": "playlog_achievement_newrecord", 'src': 'https://maimaidx-eng.com/maimai-mobile/img/playlog/newrecord.png'})
+            dojo = soup.find("img", {"class": "h_30 p_l_5", 'src': 'https://maimaidx-eng.com/maimai-mobile/img/course/icon_course.png'})
             if new_record:
-                buttons.append(f'div.p_10:nth-child({i+4}) > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > form:nth-child(7) > button:nth-child(2)')
+                if dojo:
+                    buttons.append(f'div.p_10:nth-child({i+4}) > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > form:nth-child(8) > button:nth-child(2)')
+                else:
+                    buttons.append(f'div.p_10:nth-child({i+4}) > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > form:nth-child(7) > button:nth-child(2)')
             else:
-                buttons.append(f'div.p_10:nth-child({i+4}) > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > form:nth-child(6) > button:nth-child(2)')
+                if dojo:
+                    buttons.append(f'div.p_10:nth-child({i+4}) > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > form:nth-child(7) > button:nth-child(2)')
+                else:
+                    buttons.append(f'div.p_10:nth-child({i+4}) > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > form:nth-child(6) > button:nth-child(2)')
+            
             #print(f"New record: {new_record}")
 
         submit_buttons = buttons
@@ -75,6 +83,7 @@ async def scrape(segaid, password, debug=False):
         for i in range(len(submit_buttons)):
             if debug:
                 print(f"Clicking submit button {i+1}")
+                print(submit_buttons[i])
             #await page.wait_for_selector(submit_buttons[i])
             await page.wait_for_load_state('load')
             #await asyncio.sleep(2)
@@ -242,7 +251,7 @@ def get_score_data(html, debug=False):
         try:
             touch = {'critical_perfect': int(td_list[20].text), 'perfect': int(td_list[21].text), 'great': int(td_list[22].text), 'good': int(td_list[23].text), 'miss': int(td_list[24].text)}
         except:
-            touch = {'critical_perfect': td_list[20].text, 'perfect': td_list[21].text, 'great': td_list[22].text, 'good': td_list[23].text, 'miss': td_list[24].text}
+            touch = {'critical_perfect': 0, 'perfect': 0, 'great': 0, 'good': 0, 'miss': 0}
         # Get breaks
         breaks = {'critical_perfect': int(td_list[25].text), 'perfect': int(td_list[26].text), 'great': int(td_list[27].text), 'good': int(td_list[28].text), 'miss': int(td_list[29].text)}
 
@@ -292,7 +301,7 @@ def get_score_data(html, debug=False):
         
         type_img = soup.find('img', {'class': 'playlog_music_kind_icon', 'src': 'https://maimaidx-eng.com/maimai-mobile/img/music_standard.png'})
         if type_img:
-            type = 'standard'
+            type = 'std'
         else:
             type = 'dx'
         # Find all span elements inside the div element with class sub_title
@@ -347,11 +356,11 @@ def get_score_data(html, debug=False):
     return data_list
 
 def scrape_records(segaid, password, debug=False):
-    data = get_score_data(asyncio.run(scrape(segaid, password)))
+    data = get_score_data(asyncio.run(scrape(segaid, password, debug=debug)), debug=debug)
     today = datetime.datetime.now().strftime('%Y/%m/%d')
     file = datetime.datetime.now().strftime('%Y-%m-%d')
-    #today = '2023/04/25'
-    #file = '2023-04-25'
+    today = '2023/04/29'
+    file = '2023-04-29'
     filtered_data = [item for item in data if item['time'].startswith(today)]
     if debug:
         print(data)
@@ -360,4 +369,4 @@ def scrape_records(segaid, password, debug=False):
         f.write(json_data)
     return filtered_data
 
-scrape_records('pugking4', 'Cocothe4th00')
+#scrape_records('pugking4', 'Cocothe4th00', debug=True)
