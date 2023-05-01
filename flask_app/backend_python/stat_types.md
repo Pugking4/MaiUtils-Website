@@ -28,3 +28,71 @@
 100.8914% on 12.3 | constant baseline: (13.316161616161619 + 13.74666666666667) / 2 = 13.5314141414
 (100.8914 * 12.3) / 13.5314141414
 = 91.7098691262
+
+
+~~23. Weighted average~~ [pichu] (use constant inverse for weighted average) (scrapped)
+
+ex 1:
+100.8914% on 12.3 | weight: 1/12.3 = 0.081300813
+100.8914 * 0.081300813
+= 8.20255284471
+
+98.7514% on 14.4 | weight: 1/14.4 = 0.06944444444
+98.7514 * 0.06944444444
+= 6.85773611067
+
+sum of weights: 0.15074525744 
+sum of weighted score: 15.0602889554 
+
+weighted avg: 15.0602889554 / 0.15074525744
+= 99.9056
+
+ex 2:
+100.0000% on 13.0 | weight: 1/13.0 = 0.07692307692
+100.0000 * 0.07692307692
+= 7.692307692 
+
+99.0000% on 14.0 | weight: 1/14.0 = 0.07142857142
+99.0000 * 0.07142857142
+= 7.07142857058
+
+sum of weights: 0.14835164834
+sum of weighted score: 14.7637362626
+
+weighted avg: 14.7637362626 / 0.14835164834
+= 99.5185
+
+23. Weighted average [pichu] (use constant for weighted average)
+
+score * constant = weighted score
+sum of weighted scores / sum of constants = weighted average
+
+ex 1:
+100.8914% on 12.3
+100.8914 * 12.3
+= 1240.96422
+
+98.7514% on 14.4
+98.7514 * 14.4
+= 1422.02016
+
+sum of weights: 26.7
+sum of weighted score: 2662.98438
+
+weighted avg: 2662.98438 / 26.7
+= 99.7372426966
+
+ex 2:
+100.0000% on 13.0
+100.0000 * 13.0
+= 1300.0000
+
+99.0000% on 14.0
+99.0000 * 14.0
+= 1386.0000
+
+sum of weights: 27.0
+sum of weighted score: 2686
+
+weighted avg: 2686 / 27.0
+= 99.4814814815
