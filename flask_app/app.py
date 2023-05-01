@@ -58,10 +58,14 @@ def records_search_data(date):
 def auto_record_scrape():
     scrape_records(segaid, password, debug=debug)
     my_class = add_external_data(r'C:\Users\joshu\Documents\GitHub\Projects-Website\flask_app\db\20230423db.sqlite3')
+    date = datetime.datetime.now().strftime('%Y-%m-%d')
+    date = '2023-04-29'
     my_class.get_sql_data_intern()
-    my_class.insert_sql_data_intern(datetime.datetime.now().strftime('%Y-%m-%d'))
+    my_class.insert_sql_data_intern(date)
     my_class.get_sql_data_level()
-    my_class.insert_sql_data_level(datetime.datetime.now().strftime('%Y-%m-%d'))
+    my_class.insert_sql_data_level(date)
+    my_class.get_sql_data_genre_artist()
+    my_class.insert_sql_data_genre_artist(date)
 
 
 #Auth routes
@@ -175,20 +179,28 @@ def manual_scrape():
     print("Received a request at /manual-scrape")
     data = scrape_records(segaid, password, debug=debug)
     my_class = add_external_data(r'C:\Users\joshu\Documents\GitHub\Projects-Website\flask_app\db\20230423db.sqlite3')
+    date = datetime.datetime.now().strftime('%Y-%m-%d')
+    date = '2023-04-29'
     my_class.get_sql_data_intern()
-    my_class.insert_sql_data_intern(datetime.datetime.now().strftime('%Y-%m-%d'))
+    my_class.insert_sql_data_intern(date)
     my_class.get_sql_data_level()
-    my_class.insert_sql_data_level(datetime.datetime.now().strftime('%Y-%m-%d'))
+    my_class.insert_sql_data_level(date)
+    my_class.get_sql_data_genre_artist()
+    my_class.insert_sql_data_genre_artist(date)
     return render_template('index.html')
 
 @app.route('/manual-insert')
 def manual_insert():
     print("Received a request at /manual-insert")
     my_class = add_external_data(r'C:\Users\joshu\Documents\GitHub\Projects-Website\flask_app\db\20230423db.sqlite3')
+    date = datetime.datetime.now().strftime('%Y-%m-%d')
+    date = '2023-04-29'
     my_class.get_sql_data_intern()
-    my_class.insert_sql_data_intern('2023-04-29')
+    my_class.insert_sql_data_intern(date)
     my_class.get_sql_data_level()
-    my_class.insert_sql_data_level('2023-04-29')
+    my_class.insert_sql_data_level(date)
+    my_class.get_sql_data_genre_artist()
+    my_class.insert_sql_data_genre_artist(date)
     return render_template('index.html')
 
 @app.route('/reload-records')
@@ -359,6 +371,6 @@ def page_not_found(e):
     return render_template('404.html'), 404
 
 # use_reloader=False
-
+#127.0.0.1
 if __name__ == '__main__':
     app.run(debug=True, host='127.0.0.1', port=5000, use_reloader=True)

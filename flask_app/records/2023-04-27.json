@@ -57,7 +57,9 @@
         "fast": "351",
         "late": "169",
         "level": "14+",
-        "internal_level": "14.8"
+        "internal_level": "14.8",
+        "artist": "xi",
+        "genre": "maimai"
     },
     {
         "title": "\u30ac\u30e9\u30c6\u30a2\u306e\u87ba\u65cb",
@@ -117,7 +119,9 @@
         "fast": "270",
         "late": "127",
         "level": "14+",
-        "internal_level": "14.7"
+        "internal_level": "14.7",
+        "artist": "sasakure.UK",
+        "genre": "maimai"
     },
     {
         "title": "\u8eaf\u6a39\u306e\u5893\u5b88",
@@ -177,7 +181,9 @@
         "fast": "284",
         "late": "188",
         "level": "14+",
-        "internal_level": "14.9"
+        "internal_level": "14.9",
+        "artist": "\u96a3\u306e\u5ead\u306f\u9752\u3044(\u5ead\u5e2b+Aoi)",
+        "genre": "maimai"
     },
     {
         "title": "Regulus",
@@ -237,7 +243,9 @@
         "fast": "196",
         "late": "202",
         "level": "14+",
-        "internal_level": "14.7"
+        "internal_level": "14.7",
+        "artist": "\u304a\u6708\u3055\u307e\u4ea4\u97ff\u66f2",
+        "genre": "maimai"
     },
     {
         "title": "ULTRA B+K",
@@ -297,7 +305,9 @@
         "fast": "292",
         "late": "59",
         "level": "13+",
-        "internal_level": "13.8"
+        "internal_level": "13.8",
+        "artist": "nora2r",
+        "genre": "\u30b2\u30fc\u30e0\uff06\u30d0\u30e9\u30a8\u30c6\u30a3"
     },
     {
         "title": "We Gonna Party",
@@ -357,7 +367,9 @@
         "fast": "186",
         "late": "94",
         "level": "13+",
-        "internal_level": "13.7"
+        "internal_level": "13.7",
+        "artist": "Cranky",
+        "genre": "maimai"
     },
     {
         "title": "magician's operation",
@@ -417,7 +429,9 @@
         "fast": "97",
         "late": "87",
         "level": "13+",
-        "internal_level": "13.7"
+        "internal_level": "13.7",
+        "artist": "EZFG",
+        "genre": "niconico\uff06\u30dc\u30fc\u30ab\u30ed\u30a4\u30c9"
     },
     {
         "title": "Last Brave \uff5e Go to zero",
@@ -477,7 +491,9 @@
         "fast": "81",
         "late": "57",
         "level": "11+",
-        "internal_level": null
+        "internal_level": null,
+        "artist": "MECHANiCAL PANDA\u300cBORDER BREAK\u300d",
+        "genre": "\u30b2\u30fc\u30e0\uff06\u30d0\u30e9\u30a8\u30c6\u30a3"
     },
     {
         "title": "CYBER Sparks",
@@ -537,7 +553,9 @@
         "fast": "283",
         "late": "116",
         "level": "13+",
-        "internal_level": "13.7"
+        "internal_level": "13.7",
+        "artist": "Tatsh",
+        "genre": "\u6771\u65b9Project"
     },
     {
         "title": "\u6700\u7d42\u9b3c\u755c\u59b9\u30fb\u4e00\u90e8\u58f0",
@@ -597,7 +615,9 @@
         "fast": "228",
         "late": "76",
         "level": "13+",
-        "internal_level": "13.8"
+        "internal_level": "13.8",
+        "artist": "\u30d3\u30fc\u30c8\u307e\u308a\u304a",
+        "genre": "\u6771\u65b9Project"
     },
     {
         "title": "Bad Apple!! feat.nomico (REDALiCE Remix)",
@@ -657,7 +677,9 @@
         "fast": "84",
         "late": "58",
         "level": "12",
-        "internal_level": null
+        "internal_level": null,
+        "artist": "Masayoshi Minoshima \u00d7 REDALiCE",
+        "genre": "\u6771\u65b9Project"
     },
     {
         "title": "FEEL the BEATS",
@@ -717,7 +739,9 @@
         "fast": "250",
         "late": "176",
         "level": "13+",
-        "internal_level": "13.9"
+        "internal_level": "13.9",
+        "artist": "A-One",
+        "genre": "maimai"
     },
     {
         "title": "\u706b\u708e\u5730\u7344",
@@ -777,7 +801,9 @@
         "fast": "215",
         "late": "54",
         "level": "13+",
-        "internal_level": "13.8"
+        "internal_level": "13.8",
+        "artist": "\u5c71\u6839\u30df\u30c1\u30eb",
+        "genre": "maimai"
     },
     {
         "title": "Our Wrenally",
@@ -837,7 +863,9 @@
         "fast": "205",
         "late": "159",
         "level": "14+",
-        "internal_level": "14.8"
+        "internal_level": "14.8",
+        "artist": "t+pazolite",
+        "genre": "maimai"
     },
     {
         "title": "TEmPTaTiON",
@@ -897,7 +925,9 @@
         "fast": "405",
         "late": "90",
         "level": "14+",
-        "internal_level": "14.7"
+        "internal_level": "14.7",
+        "artist": "\u304b\u306d\u3053\u3061\u306f\u308b",
+        "genre": "maimai"
     },
     {
         "title": "Trick tear",
@@ -957,7 +987,9 @@
         "fast": "182",
         "late": "72",
         "level": "14",
-        "internal_level": "14.4"
+        "internal_level": "14.4",
+        "artist": "\u3057\u30fc\u3051\u30fc",
+        "genre": "maimai"
     },
     {
         "title": "PANDORA PARADOXXX",
@@ -1017,7 +1049,9 @@
         "fast": "199",
         "late": "114",
         "level": "13+",
-        "internal_level": "13.9"
+        "internal_level": "13.9",
+        "artist": "\u524a\u9664",
+        "genre": "maimai"
     },
     {
         "title": "DRAGONLADY",
@@ -1077,7 +1111,9 @@
         "fast": "47",
         "late": "89",
         "level": "12+",
-        "internal_level": "12.8"
+        "internal_level": "12.8",
+        "artist": "Nankumo/CUBE3",
+        "genre": "\u30b2\u30fc\u30e0\uff06\u30d0\u30e9\u30a8\u30c6\u30a3"
     },
     {
         "title": "\u30b9\u30ea\u30c3\u30d7\u30d5\u30ea\u30c3\u30d7",
@@ -1137,7 +1173,9 @@
         "fast": "168",
         "late": "57",
         "level": "13+",
-        "internal_level": "13.8"
+        "internal_level": "13.8",
+        "artist": "tilt-six feat.\u4e32\u4f0a\u30c8\u30e2\u30df",
+        "genre": "maimai"
     },
     {
         "title": "\u82b1\u3068\u3001\u96ea\u3068\u3001\u30c9\u30e9\u30e0\u30f3\u30d9\u30fc\u30b9\u3002",
@@ -1197,7 +1235,9 @@
         "fast": "232",
         "late": "137",
         "level": "14",
-        "internal_level": "14.3"
+        "internal_level": "14.3",
+        "artist": "kanone feat. \u305b\u3093\u3056\u3044",
+        "genre": "maimai"
     },
     {
         "title": "taboo tears you up",
@@ -1257,7 +1297,9 @@
         "fast": "231",
         "late": "97",
         "level": "13+",
-        "internal_level": "13.9"
+        "internal_level": "13.9",
+        "artist": "REDALiCE (HARDCORE TANO*C)",
+        "genre": "\u6771\u65b9Project"
     },
     {
         "title": "M.S.S.Planet",
@@ -1317,7 +1359,9 @@
         "fast": "20",
         "late": "29",
         "level": "9+",
-        "internal_level": "9.7"
+        "internal_level": "9.7",
+        "artist": "M.S.S Project",
+        "genre": "niconico\uff06\u30dc\u30fc\u30ab\u30ed\u30a4\u30c9"
     },
     {
         "title": "Secret Sleuth",
@@ -1377,7 +1421,9 @@
         "fast": "224",
         "late": "87",
         "level": "13+",
-        "internal_level": "13.7"
+        "internal_level": "13.7",
+        "artist": "\u5cf6\u723a\u00d7\u8702\u5c4b\u306a\u306a\u3057",
+        "genre": "maimai"
     },
     {
         "title": "Falsum Atlantis.",
@@ -1437,7 +1483,9 @@
         "fast": "260",
         "late": "112",
         "level": "14",
-        "internal_level": "14.5"
+        "internal_level": "14.5",
+        "artist": "kanone",
+        "genre": "\u30aa\u30f3\u30b2\u30ad\uff06CHUNITHM"
     },
     {
         "title": "My First Phone",
@@ -1497,7 +1545,9 @@
         "fast": "74",
         "late": "67",
         "level": "13+",
-        "internal_level": "13.8"
+        "internal_level": "13.8",
+        "artist": "cubesato",
+        "genre": "\u30aa\u30f3\u30b2\u30ad\uff06CHUNITHM"
     },
     {
         "title": "Ignis Danse",
@@ -1557,7 +1607,9 @@
         "fast": "266",
         "late": "140",
         "level": "14",
-        "internal_level": "14.6"
+        "internal_level": "14.6",
+        "artist": "Yuji Masubuchi\u300c\u592a\u9f13\u306e\u9054\u4eba\u300d\u3088\u308a",
+        "genre": "\u30b2\u30fc\u30e0\uff06\u30d0\u30e9\u30a8\u30c6\u30a3"
     },
     {
         "title": "AMABIE",
@@ -1617,7 +1669,9 @@
         "fast": "283",
         "late": "140",
         "level": "14",
-        "internal_level": "14.6"
+        "internal_level": "14.6",
+        "artist": "OSTER project",
+        "genre": "maimai"
     },
     {
         "title": "FFT",
@@ -1677,7 +1731,9 @@
         "fast": "215",
         "late": "83",
         "level": "14",
-        "internal_level": "14.0"
+        "internal_level": "14.0",
+        "artist": "cybermiso",
+        "genre": "maimai"
     },
     {
         "title": "Never Give Up!",
@@ -1737,7 +1793,9 @@
         "fast": "154",
         "late": "55",
         "level": "13+",
-        "internal_level": "13.8"
+        "internal_level": "13.8",
+        "artist": "nanobii",
+        "genre": "maimai"
     },
     {
         "title": "MEGATON BLAST",
@@ -1797,7 +1855,9 @@
         "fast": "296",
         "late": "113",
         "level": "14",
-        "internal_level": "14.3"
+        "internal_level": "14.3",
+        "artist": "BlackY vs. Yooh",
+        "genre": "\u30aa\u30f3\u30b2\u30ad\uff06CHUNITHM"
     },
     {
         "title": "Outlaw's Lullaby",
@@ -1857,7 +1917,9 @@
         "fast": "203",
         "late": "110",
         "level": "13+",
-        "internal_level": "13.9"
+        "internal_level": "13.9",
+        "artist": "\u300c\u9f8d\u304c\u5982\u304f\uff12\u300d",
+        "genre": "\u30b2\u30fc\u30e0\uff06\u30d0\u30e9\u30a8\u30c6\u30a3"
     },
     {
         "title": "U&iVERSE -\u9280\u6cb3\u9e1e\u7fd4-",
@@ -1917,7 +1979,9 @@
         "fast": "242",
         "late": "138",
         "level": "14",
-        "internal_level": "14.4"
+        "internal_level": "14.4",
+        "artist": "Kai VS \u5927\u56fd\u594f\u97f3 VS \u6c34\u91ce\u5065\u6cbb",
+        "genre": "maimai"
     },
     {
         "title": "M.S.S.Planet",
@@ -1977,7 +2041,9 @@
         "fast": "0",
         "late": "18",
         "level": "3",
-        "internal_level": null
+        "internal_level": null,
+        "artist": "M.S.S Project",
+        "genre": "niconico\uff06\u30dc\u30fc\u30ab\u30ed\u30a4\u30c9"
     },
     {
         "title": "M.S.S.Planet",
@@ -2037,7 +2103,9 @@
         "fast": "4",
         "late": "49",
         "level": "7",
-        "internal_level": null
+        "internal_level": null,
+        "artist": "M.S.S Project",
+        "genre": "niconico\uff06\u30dc\u30fc\u30ab\u30ed\u30a4\u30c9"
     },
     {
         "title": "M.S.S.Planet",
@@ -2097,7 +2165,9 @@
         "fast": "31",
         "late": "48",
         "level": "9+",
-        "internal_level": "9.7"
+        "internal_level": "9.7",
+        "artist": "M.S.S Project",
+        "genre": "niconico\uff06\u30dc\u30fc\u30ab\u30ed\u30a4\u30c9"
     },
     {
         "title": "#\u72c2\u3063\u305f\u6c11\u65cf\uff12 PRAVARGYAZOOQA",
@@ -2157,7 +2227,9 @@
         "fast": "280",
         "late": "73",
         "level": "14",
-        "internal_level": "14.4"
+        "internal_level": "14.4",
+        "artist": "DJ Raisei",
+        "genre": "maimai"
     },
     {
         "title": "\u9e92\u9e9f",
@@ -2217,7 +2289,9 @@
         "fast": "172",
         "late": "144",
         "level": "14",
-        "internal_level": "14.0"
+        "internal_level": "14.0",
+        "artist": "sasakure.UK",
+        "genre": "\u30b2\u30fc\u30e0\uff06\u30d0\u30e9\u30a8\u30c6\u30a3"
     },
     {
         "title": "\u30bb\u30a4\u30af\u30ea\u30c3\u30c9\u3000\u30eb\u30a4\u30f3",
@@ -2277,7 +2351,9 @@
         "fast": "283",
         "late": "70",
         "level": "13+",
-        "internal_level": "13.8"
+        "internal_level": "13.8",
+        "artist": "Drop\uff06\u7947\u7fbd feat. \u8449\u6708\u3086\u3089\u300c\u592a\u9f13\u306e\u9054\u4eba\u300d\u3088\u308a",
+        "genre": "\u30b2\u30fc\u30e0\uff06\u30d0\u30e9\u30a8\u30c6\u30a3"
     },
     {
         "title": "Catch Me If You Can",
@@ -2337,6 +2413,8 @@
         "fast": "95",
         "late": "113",
         "level": "13",
-        "internal_level": "13.2"
+        "internal_level": "13.2",
+        "artist": "\u66f2\uff1aTAKU INOUE\uff0f\u6b4c\uff1a\u65e9\u4e59\u5973 \u5f69\u83ef(CV\uff1a\u4e2d\u5cf6 \u552f)",
+        "genre": "\u30aa\u30f3\u30b2\u30ad\uff06CHUNITHM"
     }
 ]

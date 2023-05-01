@@ -57,7 +57,9 @@
         "fast": "264",
         "late": "109",
         "internal_level": "14.3",
-        "level": "14"
+        "level": "14",
+        "artist": "Juggernaut.",
+        "genre": "maimai"
     },
     {
         "title": "Maxi",
@@ -117,7 +119,9 @@
         "fast": "116",
         "late": "88",
         "internal_level": "13.9",
-        "level": "13+"
+        "level": "13+",
+        "artist": "Nizikawa",
+        "genre": "\u30b2\u30fc\u30e0\uff06\u30d0\u30e9\u30a8\u30c6\u30a3"
     },
     {
         "title": "\u30a8\u30fc\u30bf\u30fb\u30d9\u30fc\u30bf\u30fb\u30a4\u30fc\u30bf",
@@ -177,7 +181,9 @@
         "fast": "140",
         "late": "249",
         "internal_level": "14.2",
-        "level": "14"
+        "level": "14",
+        "artist": "\u30eb\u30bc",
+        "genre": "\u30aa\u30f3\u30b2\u30ad\uff06CHUNITHM"
     },
     {
         "title": "\u30a8\u30ca\u30c9\u30ea\u304a\u3044\u3057\u3044\u30bd\u30f3\u30b0",
@@ -237,7 +243,9 @@
         "fast": "151",
         "late": "94",
         "internal_level": "14.0",
-        "level": "14"
+        "level": "14",
+        "artist": "\u51a5\u5802\u9662\u30fb\u30a2\u30ec\u30af\u30b5\u30f3\u30c9\u30eb\u30fb\u30f4\u30a3\u30af\u30c8\u30ea\u30a2\u30fb\u30ea\u30d2\u30c6\u30f3\u30b7\u30e5\u30bf\u30a4\u30f3\u30fb\u8056\u6597 feat.TINOP",
+        "genre": "\u30b2\u30fc\u30e0\uff06\u30d0\u30e9\u30a8\u30c6\u30a3"
     },
     {
         "title": "Maxi",
@@ -297,7 +305,9 @@
         "fast": "22",
         "late": "97",
         "internal_level": null,
-        "level": "11+"
+        "level": "11+",
+        "artist": "Nizikawa",
+        "genre": "\u30b2\u30fc\u30e0\uff06\u30d0\u30e9\u30a8\u30c6\u30a3"
     },
     {
         "title": "\u30a8\u30b4\u30ed\u30c3\u30af",
@@ -357,7 +367,9 @@
         "fast": "78",
         "late": "50",
         "internal_level": "13.7",
-        "level": "13+"
+        "level": "13+",
+        "artist": "\u3059\u308a\u3043",
+        "genre": "niconico\uff06\u30dc\u30fc\u30ab\u30ed\u30a4\u30c9"
     },
     {
         "title": "\u30a8\u30ca\u30c9\u30ea\u304a\u3044\u3057\u3044\u30bd\u30f3\u30b0",
@@ -417,7 +429,9 @@
         "fast": "58",
         "late": "91",
         "internal_level": "12.8",
-        "level": "12+"
+        "level": "12+",
+        "artist": "\u51a5\u5802\u9662\u30fb\u30a2\u30ec\u30af\u30b5\u30f3\u30c9\u30eb\u30fb\u30f4\u30a3\u30af\u30c8\u30ea\u30a2\u30fb\u30ea\u30d2\u30c6\u30f3\u30b7\u30e5\u30bf\u30a4\u30f3\u30fb\u8056\u6597 feat.TINOP",
+        "genre": "\u30b2\u30fc\u30e0\uff06\u30d0\u30e9\u30a8\u30c6\u30a3"
     },
     {
         "title": "INTERNET OVERDOSE",
@@ -477,7 +491,9 @@
         "fast": "11",
         "late": "17",
         "internal_level": null,
-        "level": "4"
+        "level": "4",
+        "artist": "Aiobahn feat. KOTOKO",
+        "genre": "\u30b2\u30fc\u30e0\uff06\u30d0\u30e9\u30a8\u30c6\u30a3"
     },
     {
         "title": "\u96f7\u5207-RAIKIRI-",
@@ -537,7 +553,9 @@
         "fast": "366",
         "late": "197",
         "internal_level": "14.6",
-        "level": "14"
+        "level": "14",
+        "artist": "kanone",
+        "genre": "maimai"
     },
     {
         "title": "\u30c8\u30e9\u30f3\u30b9\u30c0\u30f3\u30b9\u30a2\u30ca\u30fc\u30ad\u30fc",
@@ -597,7 +615,9 @@
         "fast": "171",
         "late": "89",
         "internal_level": "13.5",
-        "level": "13"
+        "level": "13",
+        "artist": "\u6681Records",
+        "genre": "\u6771\u65b9Project"
     },
     {
         "title": "BLACK SWAN",
@@ -657,7 +677,9 @@
         "fast": "191",
         "late": "160",
         "internal_level": "14.6",
-        "level": "14"
+        "level": "14",
+        "artist": "\u307a\u306e\u308c\u308a",
+        "genre": "maimai"
     },
     {
         "title": "\u3069\u3045\u30fc\u307e\u3044\u3079\u3059\u3068\uff01",
@@ -717,7 +739,9 @@
         "fast": "30",
         "late": "79",
         "internal_level": null,
-        "level": "9+"
+        "level": "9+",
+        "artist": "\u30ad\u30ce\u30b7\u30bf",
+        "genre": "niconico\uff06\u30dc\u30fc\u30ab\u30ed\u30a4\u30c9"
     },
     {
         "title": "\u8718\u86db\u306e\u7cf8",
@@ -777,7 +801,9 @@
         "fast": "171",
         "late": "187",
         "internal_level": "14.0",
-        "level": "14"
+        "level": "14",
+        "artist": "\u304d\u304f\u304a\u00d7cosMo\uff20\u66b4\u8d70P feat.\u5f71\u7e2b\u82f1",
+        "genre": "\u30aa\u30f3\u30b2\u30ad\uff06CHUNITHM"
     },
     {
         "title": "NightTheater",
@@ -837,7 +863,9 @@
         "fast": "209",
         "late": "64",
         "internal_level": "13.9",
-        "level": "13+"
+        "level": "13+",
+        "artist": "\u308f\u304b\u3069\u308a",
+        "genre": "\u30b2\u30fc\u30e0\uff06\u30d0\u30e9\u30a8\u30c6\u30a3"
     },
     {
         "title": "\u8d64\u5fc3\u6027\uff1a\u30ab\u30de\u30c8\u30c8\u8352\u7642\u6cbb",
@@ -897,7 +925,9 @@
         "fast": "159",
         "late": "78",
         "internal_level": "13.7",
-        "level": "13+"
+        "level": "13+",
+        "artist": "\u30b9\u30ba\u30e0",
+        "genre": "niconico\uff06\u30dc\u30fc\u30ab\u30ed\u30a4\u30c9"
     },
     {
         "title": "Good Bye, Mr. Jack",
@@ -957,6 +987,8 @@
         "fast": "170",
         "late": "144",
         "internal_level": "13.8",
-        "level": "13+"
+        "level": "13+",
+        "artist": "sasakure.UK",
+        "genre": "\u30b2\u30fc\u30e0\uff06\u30d0\u30e9\u30a8\u30c6\u30a3"
     }
 ]
