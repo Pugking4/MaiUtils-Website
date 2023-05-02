@@ -115,7 +115,7 @@ class overview_stats:
                 artist = chart['artist']
                 genre = chart['genre']
 
-
+                
 
                 #Get note stats
                 total_taps = sum(taps.values())
@@ -154,31 +154,34 @@ class overview_stats:
                 all_note_type_ratio_data.append([cp_ratio, p_ratio, gr_ratio, go_ratio, m_ratio])
 
                 #Avg taps ratio
-                cp_taps_ratio = cp_taps / total_taps
-                p_taps_ratio = p_taps / total_taps
-                gr_taps_ratio = gr_taps / total_taps
-                go_taps_ratio = go_taps / total_taps
-                m_taps_ratio = m_taps / total_taps
+                if total_taps > 0:
+                    cp_taps_ratio = cp_taps / total_taps
+                    p_taps_ratio = p_taps / total_taps
+                    gr_taps_ratio = gr_taps / total_taps
+                    go_taps_ratio = go_taps / total_taps
+                    m_taps_ratio = m_taps / total_taps
 
-                taps_ratio_data.append([cp_taps_ratio, p_taps_ratio, gr_taps_ratio, go_taps_ratio, m_taps_ratio])
+                    taps_ratio_data.append([cp_taps_ratio, p_taps_ratio, gr_taps_ratio, go_taps_ratio, m_taps_ratio])
 
                 #Avg holds ratio
-                cp_holds_ratio = cp_holds / total_holds
-                p_holds_ratio = p_holds / total_holds
-                gr_holds_ratio = gr_holds / total_holds
-                go_holds_ratio = go_holds / total_holds
-                m_holds_ratio = m_holds / total_holds
+                if total_holds > 0:
+                    cp_holds_ratio = cp_holds / total_holds
+                    p_holds_ratio = p_holds / total_holds
+                    gr_holds_ratio = gr_holds / total_holds
+                    go_holds_ratio = go_holds / total_holds
+                    m_holds_ratio = m_holds / total_holds
 
-                holds_ratio_data.append([cp_holds_ratio, p_holds_ratio, gr_holds_ratio, go_holds_ratio, m_holds_ratio])
+                    holds_ratio_data.append([cp_holds_ratio, p_holds_ratio, gr_holds_ratio, go_holds_ratio, m_holds_ratio])
 
                 #Avg slides ratio
-                cp_slides_ratio = cp_slides / total_slides
-                p_slides_ratio = p_slides / total_slides
-                gr_slides_ratio = gr_slides / total_slides
-                go_slides_ratio = go_slides / total_slides
-                m_slides_ratio = m_slides / total_slides
+                if total_slides > 0:
+                    cp_slides_ratio = cp_slides / total_slides
+                    p_slides_ratio = p_slides / total_slides
+                    gr_slides_ratio = gr_slides / total_slides
+                    go_slides_ratio = go_slides / total_slides
+                    m_slides_ratio = m_slides / total_slides
 
-                slides_ratio_data.append([cp_slides_ratio, p_slides_ratio, gr_slides_ratio, go_slides_ratio, m_slides_ratio])
+                    slides_ratio_data.append([cp_slides_ratio, p_slides_ratio, gr_slides_ratio, go_slides_ratio, m_slides_ratio])
 
                 #Avg touch ratio
                 if total_touch > 0:
@@ -191,13 +194,14 @@ class overview_stats:
                     touch_ratio_data.append([cp_touch_ratio, p_touch_ratio, gr_touch_ratio, go_touch_ratio, m_touch_ratio])
 
                 #Avg breaks ratio
-                cp_breaks_ratio = cp_breaks / total_breaks
-                p_breaks_ratio = p_breaks / total_breaks
-                gr_breaks_ratio = gr_breaks / total_breaks
-                go_breaks_ratio = go_breaks / total_breaks
-                m_breaks_ratio = m_breaks / total_breaks
+                if total_breaks > 0:
+                    cp_breaks_ratio = cp_breaks / total_breaks
+                    p_breaks_ratio = p_breaks / total_breaks
+                    gr_breaks_ratio = gr_breaks / total_breaks
+                    go_breaks_ratio = go_breaks / total_breaks
+                    m_breaks_ratio = m_breaks / total_breaks
 
-                breaks_ratio_data.append([cp_breaks_ratio, p_breaks_ratio, gr_breaks_ratio, go_breaks_ratio, m_breaks_ratio])
+                    breaks_ratio_data.append([cp_breaks_ratio, p_breaks_ratio, gr_breaks_ratio, go_breaks_ratio, m_breaks_ratio])
                 
                 #p2 level and internal level picks count
                 if 'internal_level' not in p2_picks and 'level' not in p2_picks:

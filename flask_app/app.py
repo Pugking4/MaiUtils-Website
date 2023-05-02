@@ -15,8 +15,8 @@ from backend_python.ratingcal import calculate_rating
 from backend_python.nested_record_scrape import get_score_data, scrape, scrape_records
 
 #Get .env variable
-segaid = 'pugking4'
-password = 'Cocothe4th00'
+segaid = os.getenv("SEGAID")
+password = os.getenv("PASSWORD")
 
 
 #Init variables
@@ -59,7 +59,7 @@ def auto_record_scrape():
     scrape_records(segaid, password, debug=debug)
     my_class = add_external_data(r'C:\Users\joshu\Documents\GitHub\Projects-Website\flask_app\db\20230423db.sqlite3')
     date = datetime.datetime.now().strftime('%Y-%m-%d')
-    date = '2023-04-29'
+    #date = '2023-04-29'
     my_class.get_sql_data_intern()
     my_class.insert_sql_data_intern(date)
     my_class.get_sql_data_level()
@@ -180,7 +180,7 @@ def manual_scrape():
     data = scrape_records(segaid, password, debug=debug)
     my_class = add_external_data(r'C:\Users\joshu\Documents\GitHub\Projects-Website\flask_app\db\20230423db.sqlite3')
     date = datetime.datetime.now().strftime('%Y-%m-%d')
-    date = '2023-04-29'
+    #date = '2023-04-29'
     my_class.get_sql_data_intern()
     my_class.insert_sql_data_intern(date)
     my_class.get_sql_data_level()
@@ -194,7 +194,7 @@ def manual_insert():
     print("Received a request at /manual-insert")
     my_class = add_external_data(r'C:\Users\joshu\Documents\GitHub\Projects-Website\flask_app\db\20230423db.sqlite3')
     date = datetime.datetime.now().strftime('%Y-%m-%d')
-    date = '2023-04-29'
+    #date = '2023-04-29'
     my_class.get_sql_data_intern()
     my_class.insert_sql_data_intern(date)
     my_class.get_sql_data_level()
@@ -209,7 +209,7 @@ def reload_records():
     data = []
     print("Received a request at /reload-records")
     time = datetime.datetime.now().strftime("%Y-%m-%d")
-    time = '2023-04-29'
+    #time = '2023-04-29'
     with open(fr'records\{time}.json', 'r') as f:
         data = json.load(f)
         #print(data)
@@ -283,7 +283,7 @@ def test():
     print(f"Type: {type}")
 
     date = datetime.datetime.now().strftime("%Y-%m-%d")
-    date = '2023-04-29'
+    #date = '2023-04-29'
 
     with open(f'records/{date}.json', 'r') as f:
         data = json.load(f)

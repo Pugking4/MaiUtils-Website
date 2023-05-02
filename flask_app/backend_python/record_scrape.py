@@ -213,5 +213,3 @@ def scrape_records(segaid, password, debug=False):
     with open(fr'records\{file}.json', "w", encoding='utf-8') as f:
         f.write(json_data)
     return filtered_data
-
-#scrape_records('pugking4', 'Cocothe4th00')

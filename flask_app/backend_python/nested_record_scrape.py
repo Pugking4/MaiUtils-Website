@@ -239,21 +239,34 @@ def get_score_data(html, debug=False):
             print(td_list)
 
         # Get taps
-        taps = {'critical_perfect': int(td_list[5].text), 'perfect': int(td_list[6].text), 'great': int(td_list[7].text), 'good': int(td_list[8].text), 'miss': int(td_list[9].text)}
+        try:
+            taps = {'critical_perfect': int(td_list[5].text), 'perfect': int(td_list[6].text), 'great': int(td_list[7].text), 'good': int(td_list[8].text), 'miss': int(td_list[9].text)}
+        except:
+            taps = {'critical_perfect': 0, 'perfect': 0, 'great': 0, 'good': 0, 'miss': 0}
 
         # Get holds
-        holds = {'critical_perfect': int(td_list[10].text), 'perfect': int(td_list[11].text), 'great': int(td_list[12].text), 'good': int(td_list[13].text), 'miss': int(td_list[14].text)}
-
+        try:
+            holds = {'critical_perfect': int(td_list[10].text), 'perfect': int(td_list[11].text), 'great': int(td_list[12].text), 'good': int(td_list[13].text), 'miss': int(td_list[14].text)}
+        except:
+            holds = {'critical_perfect': 0, 'perfect': 0, 'great': 0, 'good': 0, 'miss': 0}
+        
         # Get slides
-        slides = {'critical_perfect': int(td_list[15].text), 'perfect': int(td_list[16].text), 'great': int(td_list[17].text), 'good': int(td_list[18].text), 'miss': int(td_list[19].text)}
+        try:
+            slides = {'critical_perfect': int(td_list[15].text), 'perfect': int(td_list[16].text), 'great': int(td_list[17].text), 'good': int(td_list[18].text), 'miss': int(td_list[19].text)}
+        except:
+            slides = {'critical_perfect': 0, 'perfect': 0, 'great': 0, 'good': 0, 'miss': 0}
 
         # Get touch
         try:
             touch = {'critical_perfect': int(td_list[20].text), 'perfect': int(td_list[21].text), 'great': int(td_list[22].text), 'good': int(td_list[23].text), 'miss': int(td_list[24].text)}
         except:
             touch = {'critical_perfect': 0, 'perfect': 0, 'great': 0, 'good': 0, 'miss': 0}
+
         # Get breaks
-        breaks = {'critical_perfect': int(td_list[25].text), 'perfect': int(td_list[26].text), 'great': int(td_list[27].text), 'good': int(td_list[28].text), 'miss': int(td_list[29].text)}
+        try:
+            breaks = {'critical_perfect': int(td_list[25].text), 'perfect': int(td_list[26].text), 'great': int(td_list[27].text), 'good': int(td_list[28].text), 'miss': int(td_list[29].text)}
+        except:
+            breaks = {'critical_perfect': 0, 'perfect': 0, 'great': 0, 'good': 0, 'miss': 0}
 
         # Get 2p name
         try:
@@ -359,8 +372,8 @@ def scrape_records(segaid, password, debug=False):
     data = get_score_data(asyncio.run(scrape(segaid, password, debug=debug)), debug=debug)
     today = datetime.datetime.now().strftime('%Y/%m/%d')
     file = datetime.datetime.now().strftime('%Y-%m-%d')
-    today = '2023/04/29'
-    file = '2023-04-29'
+    #today = '2023/04/29'
+    #file = '2023-04-29'
     filtered_data = [item for item in data if item['time'].startswith(today)]
     if debug:
         print(data)
@@ -368,5 +381,3 @@ def scrape_records(segaid, password, debug=False):
     with open(fr'records\{file}.json', "w", encoding='utf-8') as f:
         f.write(json_data)
     return filtered_data
-
-#scrape_records('pugking4', 'Cocothe4th00', debug=True)

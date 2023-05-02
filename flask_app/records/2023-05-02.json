@@ -1,0 +1,2090 @@
+[
+    {
+        "title": "Life Feels Good",
+        "difficulty": "MASTER",
+        "score": "99.2701%",
+        "deluxe_score": "1,753 / 2,079",
+        "type": "std",
+        "time": "2023/05/02 14:06",
+        "track": "TRACK 04",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/cdf0971ddf086c2d.png",
+        "combo": null,
+        "sync": null,
+        "place": "1st",
+        "players": 2,
+        "new_record": true,
+        "new_record_deluxe": true,
+        "taps": {
+            "critical_perfect": 328,
+            "perfect": 238,
+            "great": 18,
+            "good": 5,
+            "miss": 5
+        },
+        "holds": {
+            "critical_perfect": 9,
+            "perfect": 7,
+            "great": 1,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 68,
+            "perfect": 0,
+            "great": 4,
+            "good": 0,
+            "miss": 0
+        },
+        "touch": {
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 5,
+            "perfect": 5,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "player2": "\uff21",
+        "max_combo": "432/693",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15056",
+        "fast": "196",
+        "late": "82"
+    },
+    {
+        "title": "LiftOff",
+        "difficulty": "MASTER",
+        "score": "98.7734%",
+        "deluxe_score": "1,938 / 2,301",
+        "type": "dx",
+        "time": "2023/05/02 14:02",
+        "track": "TRACK 03",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/75f148963308b860.png",
+        "combo": null,
+        "sync": null,
+        "place": "2nd",
+        "players": 2,
+        "new_record": true,
+        "new_record_deluxe": true,
+        "taps": {
+            "critical_perfect": 342,
+            "perfect": 220,
+            "great": 34,
+            "good": 4,
+            "miss": 5
+        },
+        "holds": {
+            "critical_perfect": 24,
+            "perfect": 17,
+            "great": 7,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 73,
+            "perfect": 0,
+            "great": 3,
+            "good": 2,
+            "miss": 0
+        },
+        "touch": {
+            "critical_perfect": 23,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 8,
+            "perfect": 5,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "player2": "\uff21",
+        "max_combo": "399/767",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15056",
+        "fast": "197",
+        "late": "95"
+    },
+    {
+        "title": "Maxi",
+        "difficulty": "MASTER",
+        "score": "98.3134%",
+        "deluxe_score": "2,289 / 2,742",
+        "type": "std",
+        "time": "2023/05/02 13:59",
+        "track": "TRACK 02",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/5cb01ca719a56bb5.png",
+        "combo": null,
+        "sync": null,
+        "place": "2nd",
+        "players": 2,
+        "new_record": false,
+        "new_record_deluxe": true,
+        "taps": {
+            "critical_perfect": 384,
+            "perfect": 256,
+            "great": 57,
+            "good": 7,
+            "miss": 3
+        },
+        "holds": {
+            "critical_perfect": 44,
+            "perfect": 13,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 77,
+            "perfect": 0,
+            "great": 1,
+            "good": 1,
+            "miss": 0
+        },
+        "touch": {
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 44,
+            "perfect": 21,
+            "great": 4,
+            "good": 1,
+            "miss": 1
+        },
+        "player2": "\uff21",
+        "max_combo": "477/914",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15056",
+        "fast": "246",
+        "late": "115"
+    },
+    {
+        "title": "HAGAKIRI",
+        "difficulty": "MASTER",
+        "score": "98.3591%",
+        "deluxe_score": "1,846 / 2,199",
+        "type": "dx",
+        "time": "2023/05/02 13:56",
+        "track": "TRACK 01",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/6efe955c46de9657.png",
+        "combo": null,
+        "sync": null,
+        "place": "2nd",
+        "players": 2,
+        "new_record": true,
+        "new_record_deluxe": true,
+        "taps": {
+            "critical_perfect": 230,
+            "perfect": 191,
+            "great": 36,
+            "good": 4,
+            "miss": 3
+        },
+        "holds": {
+            "critical_perfect": 41,
+            "perfect": 27,
+            "great": 3,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 57,
+            "perfect": 0,
+            "great": 2,
+            "good": 0,
+            "miss": 0
+        },
+        "touch": {
+            "critical_perfect": 95,
+            "perfect": 0,
+            "great": 1,
+            "good": 0,
+            "miss": 1
+        },
+        "breaks": {
+            "critical_perfect": 21,
+            "perfect": 17,
+            "great": 2,
+            "good": 1,
+            "miss": 1
+        },
+        "player2": "\uff21",
+        "max_combo": "321/733",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15056",
+        "fast": "179",
+        "late": "105"
+    },
+    {
+        "title": "Burning Hearts \uff5e\u708e\u306eANGEL\uff5e",
+        "difficulty": "REMASTER",
+        "score": "98.4830%",
+        "deluxe_score": "1,440 / 1,671",
+        "type": "std",
+        "time": "2023/05/02 13:50",
+        "track": "TRACK 04",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/243925fb558d75b6.png",
+        "combo": null,
+        "sync": null,
+        "place": "2nd",
+        "players": 2,
+        "new_record": true,
+        "new_record_deluxe": true,
+        "taps": {
+            "critical_perfect": 227,
+            "perfect": 122,
+            "great": 22,
+            "good": 0,
+            "miss": 1
+        },
+        "holds": {
+            "critical_perfect": 27,
+            "perfect": 9,
+            "great": 1,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 92,
+            "perfect": 0,
+            "great": 4,
+            "good": 2,
+            "miss": 0
+        },
+        "touch": {
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 20,
+            "perfect": 23,
+            "great": 7,
+            "good": 0,
+            "miss": 0
+        },
+        "player2": "\uff2c\uff45\uff4e\u266a",
+        "max_combo": "543/557",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15056",
+        "fast": "121",
+        "late": "69"
+    },
+    {
+        "title": "\u5206\u304b\u3089\u306a\u3044",
+        "difficulty": "MASTER",
+        "score": "99.9113%",
+        "deluxe_score": "2,385 / 2,859",
+        "type": "std",
+        "time": "2023/05/02 13:47",
+        "track": "TRACK 03",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/d8bcd053f3741728.png",
+        "combo": null,
+        "sync": null,
+        "place": "1st",
+        "players": 2,
+        "new_record": true,
+        "new_record_deluxe": true,
+        "taps": {
+            "critical_perfect": 400,
+            "perfect": 372,
+            "great": 31,
+            "good": 1,
+            "miss": 5
+        },
+        "holds": {
+            "critical_perfect": 16,
+            "perfect": 9,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 79,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "touch": {
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 28,
+            "perfect": 11,
+            "great": 1,
+            "good": 0,
+            "miss": 0
+        },
+        "player2": "\uff2c\uff45\uff4e\u266a",
+        "max_combo": "339/953",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15056",
+        "fast": "275",
+        "late": "150"
+    },
+    {
+        "title": "\u7acb\u3061\u5165\u308a\u7981\u6b62",
+        "difficulty": "REMASTER",
+        "score": "98.7538%",
+        "deluxe_score": "2,350 / 2,859",
+        "type": "std",
+        "time": "2023/05/02 13:43",
+        "track": "TRACK 02",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/e1eb6ad1e4e1345c.png",
+        "combo": null,
+        "sync": null,
+        "place": "1st",
+        "players": 2,
+        "new_record": true,
+        "new_record_deluxe": true,
+        "taps": {
+            "critical_perfect": 417,
+            "perfect": 316,
+            "great": 54,
+            "good": 7,
+            "miss": 7
+        },
+        "holds": {
+            "critical_perfect": 12,
+            "perfect": 11,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 73,
+            "perfect": 0,
+            "great": 2,
+            "good": 1,
+            "miss": 0
+        },
+        "touch": {
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 31,
+            "perfect": 20,
+            "great": 1,
+            "good": 1,
+            "miss": 0
+        },
+        "player2": "\uff2c\uff45\uff4e\u266a",
+        "max_combo": "573/953",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15056",
+        "fast": "304",
+        "late": "109"
+    },
+    {
+        "title": "RIDGE RACER STEPS -GMT remix-",
+        "difficulty": "MASTER",
+        "score": "100.3348%",
+        "deluxe_score": "1,716 / 1,920",
+        "type": "std",
+        "time": "2023/05/02 13:40",
+        "track": "TRACK 01",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/489d5189ec8e2a11.png",
+        "combo": null,
+        "sync": null,
+        "place": "1st",
+        "players": 2,
+        "new_record": false,
+        "new_record_deluxe": false,
+        "taps": {
+            "critical_perfect": 335,
+            "perfect": 162,
+            "great": 9,
+            "good": 2,
+            "miss": 1
+        },
+        "holds": {
+            "critical_perfect": 12,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 84,
+            "perfect": 0,
+            "great": 3,
+            "good": 0,
+            "miss": 0
+        },
+        "touch": {
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 23,
+            "perfect": 9,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "player2": "\uff2c\uff45\uff4e\u266a",
+        "max_combo": "403/640",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15056",
+        "fast": "74",
+        "late": "111"
+    },
+    {
+        "title": "\u30a4\u30e4\u30db\u30f3\u30ed\u30de\u30f3\u30b9",
+        "difficulty": "MASTER",
+        "score": "100.7214%",
+        "deluxe_score": "2,061 / 2,277",
+        "type": "dx",
+        "time": "2023/05/02 13:16",
+        "track": "TRACK 04",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/ecfd9fddb7a9f687.png",
+        "combo": "FC+",
+        "sync": null,
+        "place": "1st",
+        "players": 2,
+        "new_record": true,
+        "new_record_deluxe": true,
+        "taps": {
+            "critical_perfect": 381,
+            "perfect": 159,
+            "great": 7,
+            "good": 0,
+            "miss": 0
+        },
+        "holds": {
+            "critical_perfect": 72,
+            "perfect": 33,
+            "great": 2,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 46,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "touch": {
+            "critical_perfect": 37,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 16,
+            "perfect": 6,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "player2": "\uff30\uff32\uff2f\uff34\uff2f",
+        "max_combo": "759/759",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15056",
+        "fast": "114",
+        "late": "93"
+    },
+    {
+        "title": "\u30d5\u30a9\u30cb\u30a4",
+        "difficulty": "EXPERT",
+        "score": "100.6837%",
+        "deluxe_score": "1,454 / 1,560",
+        "type": "dx",
+        "time": "2023/05/02 13:13",
+        "track": "TRACK 03",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/e6f1a560ee4c29d9.png",
+        "combo": null,
+        "sync": null,
+        "place": "1st",
+        "players": 2,
+        "new_record": true,
+        "new_record_deluxe": true,
+        "taps": {
+            "critical_perfect": 287,
+            "perfect": 81,
+            "great": 1,
+            "good": 0,
+            "miss": 1
+        },
+        "holds": {
+            "critical_perfect": 45,
+            "perfect": 8,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 9,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "touch": {
+            "critical_perfect": 62,
+            "perfect": 0,
+            "great": 2,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 16,
+            "perfect": 8,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "player2": "\uff30\uff32\uff2f\uff34\uff2f",
+        "max_combo": "296/520",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15056",
+        "fast": "33",
+        "late": "67"
+    },
+    {
+        "title": "Mj\u00f6lnir",
+        "difficulty": "MASTER",
+        "score": "95.9803%",
+        "deluxe_score": "3,035 / 3,723",
+        "type": "dx",
+        "time": "2023/05/02 13:08",
+        "track": "TRACK 02",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/21b9cc9519eab016.png",
+        "combo": null,
+        "sync": null,
+        "place": "1st",
+        "players": 2,
+        "new_record": false,
+        "new_record_deluxe": false,
+        "taps": {
+            "critical_perfect": 461,
+            "perfect": 275,
+            "great": 55,
+            "good": 9,
+            "miss": 34
+        },
+        "holds": {
+            "critical_perfect": 102,
+            "perfect": 80,
+            "great": 19,
+            "good": 2,
+            "miss": 4
+        },
+        "slides": {
+            "critical_perfect": 88,
+            "perfect": 0,
+            "great": 3,
+            "good": 2,
+            "miss": 0
+        },
+        "touch": {
+            "critical_perfect": 74,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 2
+        },
+        "breaks": {
+            "critical_perfect": 17,
+            "perfect": 10,
+            "great": 2,
+            "good": 1,
+            "miss": 1
+        },
+        "player2": "\uff30\uff32\uff2f\uff34\uff2f",
+        "max_combo": "385/1241",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15056",
+        "fast": "286",
+        "late": "172"
+    },
+    {
+        "title": "\u30d2\u30d3\u30ab\u30bb",
+        "difficulty": "MASTER",
+        "score": "55.3540%",
+        "deluxe_score": "1,165 / 2,301",
+        "type": "std",
+        "time": "2023/05/02 13:04",
+        "track": "TRACK 01",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/51c57344a3158454.png",
+        "combo": null,
+        "sync": null,
+        "place": "2nd",
+        "players": 2,
+        "new_record": false,
+        "new_record_deluxe": false,
+        "taps": {
+            "critical_perfect": 240,
+            "perfect": 112,
+            "great": 2,
+            "good": 0,
+            "miss": 261
+        },
+        "holds": {
+            "critical_perfect": 22,
+            "perfect": 9,
+            "great": 1,
+            "good": 0,
+            "miss": 35
+        },
+        "slides": {
+            "critical_perfect": 39,
+            "perfect": 0,
+            "great": 0,
+            "good": 2,
+            "miss": 30
+        },
+        "touch": {
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 5,
+            "perfect": 1,
+            "great": 0,
+            "good": 0,
+            "miss": 8
+        },
+        "player2": "\uff30\uff32\uff2f\uff34\uff2f",
+        "max_combo": "256/767",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15056",
+        "fast": "80",
+        "late": "47"
+    },
+    {
+        "title": "\u52a3\u7b49\u4e0a\u7b49",
+        "difficulty": "EXPERT",
+        "score": "101.0000%",
+        "deluxe_score": "1,048 / 1,107",
+        "type": "dx",
+        "time": "2023/05/02 12:44",
+        "track": "TRACK 04",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/f84641830aac8678.png",
+        "combo": "AP+",
+        "sync": null,
+        "place": "1st",
+        "players": 2,
+        "new_record": true,
+        "new_record_deluxe": true,
+        "taps": {
+            "critical_perfect": 169,
+            "perfect": 53,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "holds": {
+            "critical_perfect": 22,
+            "perfect": 6,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 37,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "touch": {
+            "critical_perfect": 68,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 14,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "player2": "\uff30\uff32\uff2f\uff34\uff2f",
+        "max_combo": "369/369",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15056",
+        "fast": "48",
+        "late": "11"
+    },
+    {
+        "title": "Oshama Scramble!",
+        "difficulty": "MASTER",
+        "score": "97.9195%",
+        "deluxe_score": "2,690 / 3,333",
+        "type": "std",
+        "time": "2023/05/02 12:41",
+        "track": "TRACK 03",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/64635a3534ce788a.png",
+        "combo": null,
+        "sync": null,
+        "place": "1st",
+        "players": 2,
+        "new_record": true,
+        "new_record_deluxe": true,
+        "taps": {
+            "critical_perfect": 440,
+            "perfect": 447,
+            "great": 51,
+            "good": 0,
+            "miss": 6
+        },
+        "holds": {
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 60,
+            "perfect": 0,
+            "great": 5,
+            "good": 2,
+            "miss": 1
+        },
+        "touch": {
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 54,
+            "perfect": 36,
+            "great": 6,
+            "good": 1,
+            "miss": 2
+        },
+        "player2": "\uff30\uff32\uff2f\uff34\uff2f",
+        "max_combo": "520/1111",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15056",
+        "fast": "453",
+        "late": "95"
+    },
+    {
+        "title": "Seyana. \uff5e\u4f55\u3067\u3082\u8a00\u3046\u3053\u3068\u3092\u805e\u3044\u3066\u304f\u308c\u308b\u30a2\u30ab\u30cd\u30c1\u30e3\u30f3\uff5e",
+        "difficulty": "EXPERT",
+        "score": "100.9324%",
+        "deluxe_score": "1,221 / 1,323",
+        "type": "std",
+        "time": "2023/05/02 12:37",
+        "track": "TRACK 02",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/ac704a32c62481ed.png",
+        "combo": "AP",
+        "sync": null,
+        "place": "1st",
+        "players": 2,
+        "new_record": true,
+        "new_record_deluxe": true,
+        "taps": {
+            "critical_perfect": 226,
+            "perfect": 79,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "holds": {
+            "critical_perfect": 30,
+            "perfect": 13,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 56,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "touch": {
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 27,
+            "perfect": 10,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "player2": "\uff30\uff32\uff2f\uff34\uff2f",
+        "max_combo": "441/441",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15056",
+        "fast": "27",
+        "late": "75"
+    },
+    {
+        "title": "U&iVERSE -\u9280\u6cb3\u9e1e\u7fd4-",
+        "difficulty": "MASTER",
+        "score": "97.0528%",
+        "deluxe_score": "2,508 / 3,045",
+        "type": "dx",
+        "time": "2023/05/02 12:33",
+        "track": "TRACK 01",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/6cc01bbad2650c50.png",
+        "combo": null,
+        "sync": null,
+        "place": "1st",
+        "players": 2,
+        "new_record": false,
+        "new_record_deluxe": false,
+        "taps": {
+            "critical_perfect": 304,
+            "perfect": 287,
+            "great": 48,
+            "good": 7,
+            "miss": 14
+        },
+        "holds": {
+            "critical_perfect": 16,
+            "perfect": 12,
+            "great": 1,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 93,
+            "perfect": 0,
+            "great": 2,
+            "good": 3,
+            "miss": 3
+        },
+        "touch": {
+            "critical_perfect": 123,
+            "perfect": 2,
+            "great": 0,
+            "good": 0,
+            "miss": 1
+        },
+        "breaks": {
+            "critical_perfect": 58,
+            "perfect": 34,
+            "great": 5,
+            "good": 0,
+            "miss": 2
+        },
+        "player2": "\uff30\uff32\uff2f\uff34\uff2f",
+        "max_combo": "193/1015",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15056",
+        "fast": "285",
+        "late": "116"
+    },
+    {
+        "title": "\u30a8\u30f3\u30c9\u30de\u30fc\u30af\u306b\u5e0c\u671b\u3068\u6d99\u3092\u6dfb\u3048\u3066",
+        "difficulty": "MASTER",
+        "score": "98.0591%",
+        "deluxe_score": "2,713 / 3,315",
+        "type": "std",
+        "time": "2023/05/02 12:14",
+        "track": "TRACK 04",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/944deaf220b28eb0.png",
+        "combo": null,
+        "sync": null,
+        "place": "2nd",
+        "players": 2,
+        "new_record": false,
+        "new_record_deluxe": false,
+        "taps": {
+            "critical_perfect": 436,
+            "perfect": 383,
+            "great": 66,
+            "good": 6,
+            "miss": 7
+        },
+        "holds": {
+            "critical_perfect": 24,
+            "perfect": 16,
+            "great": 2,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 134,
+            "perfect": 0,
+            "great": 1,
+            "good": 1,
+            "miss": 1
+        },
+        "touch": {
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 15,
+            "perfect": 8,
+            "great": 3,
+            "good": 2,
+            "miss": 0
+        },
+        "player2": "\uff5e\uff34\u03b1\uff2b\u03b1\uff32\u03b1\uff5e",
+        "max_combo": "378/1105",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15056",
+        "fast": "376",
+        "late": "112"
+    },
+    {
+        "title": "Valsqotch",
+        "difficulty": "MASTER",
+        "score": "97.2584%",
+        "deluxe_score": "2,905 / 3,582",
+        "type": "dx",
+        "time": "2023/05/02 12:10",
+        "track": "TRACK 03",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/d394210103ee76c3.png",
+        "combo": null,
+        "sync": null,
+        "place": "2nd",
+        "players": 2,
+        "new_record": true,
+        "new_record_deluxe": true,
+        "taps": {
+            "critical_perfect": 432,
+            "perfect": 351,
+            "great": 81,
+            "good": 14,
+            "miss": 17
+        },
+        "holds": {
+            "critical_perfect": 24,
+            "perfect": 10,
+            "great": 2,
+            "good": 0,
+            "miss": 1
+        },
+        "slides": {
+            "critical_perfect": 88,
+            "perfect": 0,
+            "great": 3,
+            "good": 3,
+            "miss": 0
+        },
+        "touch": {
+            "critical_perfect": 124,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 7
+        },
+        "breaks": {
+            "critical_perfect": 19,
+            "perfect": 18,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "player2": "\uff5e\uff34\u03b1\uff2b\u03b1\uff32\u03b1\uff5e",
+        "max_combo": "282/1194",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15056",
+        "fast": "329",
+        "late": "153"
+    },
+    {
+        "title": "ARAIS",
+        "difficulty": "MASTER",
+        "score": "98.4532%",
+        "deluxe_score": "2,493 / 3,000",
+        "type": "dx",
+        "time": "2023/05/02 12:06",
+        "track": "TRACK 02",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/63687937bbd3b9f4.png",
+        "combo": null,
+        "sync": null,
+        "place": "1st",
+        "players": 2,
+        "new_record": true,
+        "new_record_deluxe": false,
+        "taps": {
+            "critical_perfect": 458,
+            "perfect": 319,
+            "great": 55,
+            "good": 9,
+            "miss": 10
+        },
+        "holds": {
+            "critical_perfect": 13,
+            "perfect": 0,
+            "great": 0,
+            "good": 1,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 58,
+            "perfect": 0,
+            "great": 1,
+            "good": 0,
+            "miss": 0
+        },
+        "touch": {
+            "critical_perfect": 51,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 3
+        },
+        "breaks": {
+            "critical_perfect": 15,
+            "perfect": 7,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "player2": "\uff5e\uff34\u03b1\uff2b\u03b1\uff32\u03b1\uff5e",
+        "max_combo": "305/1000",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15056",
+        "fast": "329",
+        "late": "63"
+    },
+    {
+        "title": "the EmpErroR",
+        "difficulty": "REMASTER",
+        "score": "94.2714%",
+        "deluxe_score": "2,444 / 3,171",
+        "type": "std",
+        "time": "2023/05/02 12:03",
+        "track": "TRACK 01",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/e5a64880bc872e8b.png",
+        "combo": null,
+        "sync": null,
+        "place": "2nd",
+        "players": 2,
+        "new_record": false,
+        "new_record_deluxe": false,
+        "taps": {
+            "critical_perfect": 378,
+            "perfect": 317,
+            "great": 80,
+            "good": 19,
+            "miss": 42
+        },
+        "holds": {
+            "critical_perfect": 66,
+            "perfect": 34,
+            "great": 4,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 98,
+            "perfect": 0,
+            "great": 2,
+            "good": 1,
+            "miss": 1
+        },
+        "touch": {
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 7,
+            "perfect": 4,
+            "great": 1,
+            "good": 0,
+            "miss": 3
+        },
+        "player2": "\uff5e\uff34\u03b1\uff2b\u03b1\uff32\u03b1\uff5e",
+        "max_combo": "160/1057",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15056",
+        "fast": "251",
+        "late": "211"
+    },
+    {
+        "title": "Strive against fate",
+        "difficulty": "MASTER",
+        "score": "97.1035%",
+        "deluxe_score": "2,577 / 3,213",
+        "type": "dx",
+        "time": "2023/05/02 11:12",
+        "track": "TRACK 04",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/c22b6708af0c7a69.png",
+        "combo": null,
+        "sync": null,
+        "place": "2nd",
+        "players": 2,
+        "new_record": false,
+        "new_record_deluxe": false,
+        "taps": {
+            "critical_perfect": 371,
+            "perfect": 323,
+            "great": 75,
+            "good": 18,
+            "miss": 18
+        },
+        "holds": {
+            "critical_perfect": 44,
+            "perfect": 16,
+            "great": 2,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 104,
+            "perfect": 0,
+            "great": 0,
+            "good": 2,
+            "miss": 1
+        },
+        "touch": {
+            "critical_perfect": 57,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 19,
+            "perfect": 18,
+            "great": 1,
+            "good": 2,
+            "miss": 0
+        },
+        "player2": "\uff5e\uff34\u03b1\uff2b\u03b1\uff32\u03b1\uff5e",
+        "max_combo": "271/1071",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15056",
+        "fast": "351",
+        "late": "106"
+    },
+    {
+        "title": "\u8a18\u61b6\u3001\u8a18\u9332",
+        "difficulty": "MASTER",
+        "score": "99.6334%",
+        "deluxe_score": "1,712 / 1,953",
+        "type": "std",
+        "time": "2023/05/02 11:08",
+        "track": "TRACK 03",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/d3b6c643833fed2b.png",
+        "combo": null,
+        "sync": null,
+        "place": "2nd",
+        "players": 2,
+        "new_record": true,
+        "new_record_deluxe": true,
+        "taps": {
+            "critical_perfect": 287,
+            "perfect": 161,
+            "great": 8,
+            "good": 5,
+            "miss": 0
+        },
+        "holds": {
+            "critical_perfect": 20,
+            "perfect": 6,
+            "great": 1,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 76,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "touch": {
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 51,
+            "perfect": 33,
+            "great": 1,
+            "good": 1,
+            "miss": 1
+        },
+        "player2": "\uff5e\uff34\u03b1\uff2b\u03b1\uff32\u03b1\uff5e",
+        "max_combo": "645/651",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15056",
+        "fast": "158",
+        "late": "58"
+    },
+    {
+        "title": "\u30a8\u30ca\u30c9\u30ea\u304a\u3044\u3057\u3044\u30bd\u30f3\u30b0",
+        "difficulty": "MASTER",
+        "score": "98.6389%",
+        "deluxe_score": "1,695 / 2,031",
+        "type": "dx",
+        "time": "2023/05/02 11:05",
+        "track": "TRACK 02",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/5c0759a40fa1a178.png",
+        "combo": null,
+        "sync": null,
+        "place": "2nd",
+        "players": 2,
+        "new_record": false,
+        "new_record_deluxe": false,
+        "taps": {
+            "critical_perfect": 271,
+            "perfect": 188,
+            "great": 38,
+            "good": 7,
+            "miss": 6
+        },
+        "holds": {
+            "critical_perfect": 15,
+            "perfect": 7,
+            "great": 1,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 87,
+            "perfect": 0,
+            "great": 0,
+            "good": 3,
+            "miss": 0
+        },
+        "touch": {
+            "critical_perfect": 8,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 32,
+            "perfect": 13,
+            "great": 1,
+            "good": 0,
+            "miss": 0
+        },
+        "player2": "\uff5e\uff34\u03b1\uff2b\u03b1\uff32\u03b1\uff5e",
+        "max_combo": "347/677",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15056",
+        "fast": "161",
+        "late": "97"
+    },
+    {
+        "title": "My Dearest Song",
+        "difficulty": "EXPERT",
+        "score": "100.9333%",
+        "deluxe_score": "1,320 / 1,425",
+        "type": "std",
+        "time": "2023/05/02 11:02",
+        "track": "TRACK 01",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/a5661a71bd73d723.png",
+        "combo": "AP",
+        "sync": "FSD",
+        "place": "1st",
+        "players": 2,
+        "new_record": true,
+        "new_record_deluxe": true,
+        "taps": {
+            "critical_perfect": 240,
+            "perfect": 94,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "holds": {
+            "critical_perfect": 41,
+            "perfect": 8,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 77,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "touch": {
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 12,
+            "perfect": 3,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "player2": "\uff5e\uff34\u03b1\uff2b\u03b1\uff32\u03b1\uff5e",
+        "max_combo": "475/475",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15056",
+        "fast": "27",
+        "late": "78"
+    },
+    {
+        "title": "J\u00f6rqer",
+        "difficulty": "MASTER",
+        "score": "100.3619%",
+        "deluxe_score": "2,131 / 2,409",
+        "type": "dx",
+        "time": "2023/05/02 10:39",
+        "track": "TRACK 04",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/6371b8c7d2c59e7f.png",
+        "combo": "FC",
+        "sync": null,
+        "place": "2nd",
+        "players": 2,
+        "new_record": true,
+        "new_record_deluxe": true,
+        "taps": {
+            "critical_perfect": 376,
+            "perfect": 227,
+            "great": 12,
+            "good": 1,
+            "miss": 0
+        },
+        "holds": {
+            "critical_perfect": 19,
+            "perfect": 8,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 61,
+            "perfect": 0,
+            "great": 1,
+            "good": 1,
+            "miss": 0
+        },
+        "touch": {
+            "critical_perfect": 75,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 11,
+            "perfect": 11,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "player2": "\uff5e\uff34\u03b1\uff2b\u03b1\uff32\u03b1\uff5e",
+        "max_combo": "803/803",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15056",
+        "fast": "147",
+        "late": "114"
+    },
+    {
+        "title": "EVERGREEN",
+        "difficulty": "MASTER",
+        "score": "100.5084%",
+        "deluxe_score": "1,702 / 1,956",
+        "type": "std",
+        "time": "2023/05/02 10:36",
+        "track": "TRACK 03",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/e969be670313581f.png",
+        "combo": "FC",
+        "sync": "FS+",
+        "place": "2nd",
+        "players": 2,
+        "new_record": true,
+        "new_record_deluxe": true,
+        "taps": {
+            "critical_perfect": 323,
+            "perfect": 192,
+            "great": 9,
+            "good": 1,
+            "miss": 0
+        },
+        "holds": {
+            "critical_perfect": 37,
+            "perfect": 28,
+            "great": 2,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 37,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "touch": {
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 14,
+            "perfect": 9,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "player2": "\uff5e\uff34\u03b1\uff2b\u03b1\uff32\u03b1\uff5e",
+        "max_combo": "652/652",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15056",
+        "fast": "147",
+        "late": "94"
+    },
+    {
+        "title": "Streak",
+        "difficulty": "MASTER",
+        "score": "100.0041%",
+        "deluxe_score": "872 / 996",
+        "type": "std",
+        "time": "2023/05/02 10:33",
+        "track": "TRACK 02",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/3cb7213bbbf15068.png",
+        "combo": "FC",
+        "sync": "FS+",
+        "place": "2nd",
+        "players": 2,
+        "new_record": true,
+        "new_record_deluxe": true,
+        "taps": {
+            "critical_perfect": 129,
+            "perfect": 80,
+            "great": 12,
+            "good": 1,
+            "miss": 0
+        },
+        "holds": {
+            "critical_perfect": 25,
+            "perfect": 8,
+            "great": 2,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 69,
+            "perfect": 0,
+            "great": 2,
+            "good": 0,
+            "miss": 0
+        },
+        "touch": {
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 3,
+            "perfect": 1,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "player2": "\uff5e\uff34\u03b1\uff2b\u03b1\uff32\u03b1\uff5e",
+        "max_combo": "332/332",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15054",
+        "fast": "37",
+        "late": "69"
+    },
+    {
+        "title": "\u9f13\u52d5",
+        "difficulty": "EXPERT",
+        "score": "100.5349%",
+        "deluxe_score": "1,000 / 1,137",
+        "type": "std",
+        "time": "2023/05/02 10:31",
+        "track": "TRACK 01",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/10233a1022cd8bb8.png",
+        "combo": null,
+        "sync": null,
+        "place": "1st",
+        "players": 2,
+        "new_record": true,
+        "new_record_deluxe": true,
+        "taps": {
+            "critical_perfect": 233,
+            "perfect": 121,
+            "great": 4,
+            "good": 0,
+            "miss": 1
+        },
+        "holds": {
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 2,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "touch": {
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 13,
+            "perfect": 5,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "player2": "\uff5e\uff34\u03b1\uff2b\u03b1\uff32\u03b1\uff5e",
+        "max_combo": "344/379",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15054",
+        "fast": "29",
+        "late": "101"
+    },
+    {
+        "title": "\u30a2\u30f3\u30af\u30ed\u30fc\u30ba\u30fb\u30d2\u30e5\u30fc\u30de\u30f3",
+        "difficulty": "MASTER",
+        "score": "99.9531%",
+        "deluxe_score": "2,397 / 2,691",
+        "type": "dx",
+        "time": "2023/05/02 10:10",
+        "track": "TRACK 04",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/0641b4abd73b15ea.png",
+        "combo": null,
+        "sync": null,
+        "place": "2nd",
+        "players": 2,
+        "new_record": true,
+        "new_record_deluxe": true,
+        "taps": {
+            "critical_perfect": 397,
+            "perfect": 230,
+            "great": 5,
+            "good": 2,
+            "miss": 1
+        },
+        "holds": {
+            "critical_perfect": 41,
+            "perfect": 11,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 141,
+            "perfect": 0,
+            "great": 5,
+            "good": 5,
+            "miss": 0
+        },
+        "touch": {
+            "critical_perfect": 25,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 25,
+            "perfect": 9,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "player2": "\uff5e\uff34\u03b1\uff2b\u03b1\uff32\u03b1\uff5e",
+        "max_combo": "576/897",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15054",
+        "fast": "185",
+        "late": "82"
+    },
+    {
+        "title": "Danza zandA",
+        "difficulty": "MASTER",
+        "score": "99.4484%",
+        "deluxe_score": "1,682 / 1,914",
+        "type": "std",
+        "time": "2023/05/02 10:06",
+        "track": "TRACK 03",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/94647b34168e743e.png",
+        "combo": null,
+        "sync": null,
+        "place": "2nd",
+        "players": 2,
+        "new_record": false,
+        "new_record_deluxe": true,
+        "taps": {
+            "critical_perfect": 342,
+            "perfect": 175,
+            "great": 11,
+            "good": 2,
+            "miss": 0
+        },
+        "holds": {
+            "critical_perfect": 16,
+            "perfect": 6,
+            "great": 1,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 55,
+            "perfect": 0,
+            "great": 0,
+            "good": 2,
+            "miss": 1
+        },
+        "touch": {
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 17,
+            "perfect": 9,
+            "great": 0,
+            "good": 1,
+            "miss": 0
+        },
+        "player2": "\uff5e\uff34\u03b1\uff2b\u03b1\uff32\u03b1\uff5e",
+        "max_combo": "604/638",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15054",
+        "fast": "137",
+        "late": "70"
+    },
+    {
+        "title": "Still",
+        "difficulty": "MASTER",
+        "score": "100.1486%",
+        "deluxe_score": "2,092 / 2,379",
+        "type": "std",
+        "time": "2023/05/02 10:03",
+        "track": "TRACK 02",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/18b14187eb4df723.png",
+        "combo": null,
+        "sync": null,
+        "place": "2nd",
+        "players": 2,
+        "new_record": true,
+        "new_record_deluxe": true,
+        "taps": {
+            "critical_perfect": 349,
+            "perfect": 226,
+            "great": 11,
+            "good": 2,
+            "miss": 0
+        },
+        "holds": {
+            "critical_perfect": 30,
+            "perfect": 13,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 138,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 1
+        },
+        "touch": {
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 7,
+            "perfect": 15,
+            "great": 1,
+            "good": 0,
+            "miss": 0
+        },
+        "player2": "\uff5e\uff34\u03b1\uff2b\u03b1\uff32\u03b1\uff5e",
+        "max_combo": "614/793",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15054",
+        "fast": "214",
+        "late": "54"
+    },
+    {
+        "title": "\u5263\u3092\u629c\u3051\uff01GCCX MAX",
+        "difficulty": "MASTER",
+        "score": "100.6897%",
+        "deluxe_score": "2,226 / 2,364",
+        "type": "dx",
+        "time": "2023/05/02 09:58",
+        "track": "TRACK 01",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/26c750b9768fcca5.png",
+        "combo": "FC",
+        "sync": "FS+",
+        "place": "2nd",
+        "players": 2,
+        "new_record": true,
+        "new_record_deluxe": true,
+        "taps": {
+            "critical_perfect": 277,
+            "perfect": 81,
+            "great": 1,
+            "good": 0,
+            "miss": 0
+        },
+        "holds": {
+            "critical_perfect": 70,
+            "perfect": 24,
+            "great": 1,
+            "good": 1,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 99,
+            "perfect": 0,
+            "great": 2,
+            "good": 0,
+            "miss": 0
+        },
+        "touch": {
+            "critical_perfect": 168,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 42,
+            "perfect": 22,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "player2": "\uff5e\uff34\u03b1\uff2b\u03b1\uff32\u03b1\uff5e",
+        "max_combo": "788/788",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15054",
+        "fast": "73",
+        "late": "59"
+    },
+    {
+        "title": "\u82b1\u3068\u3001\u96ea\u3068\u3001\u30c9\u30e9\u30e0\u30f3\u30d9\u30fc\u30b9\u3002",
+        "difficulty": "REMASTER",
+        "score": "99.3237%",
+        "deluxe_score": "1,058 / 1,194",
+        "type": "std",
+        "time": "2023/05/02 09:53",
+        "track": "TRACK 04",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/52e9a79b5e6a2ef5.png",
+        "combo": null,
+        "sync": null,
+        "place": "1st",
+        "players": 2,
+        "new_record": true,
+        "new_record_deluxe": true,
+        "taps": {
+            "critical_perfect": 159,
+            "perfect": 86,
+            "great": 3,
+            "good": 1,
+            "miss": 1
+        },
+        "holds": {
+            "critical_perfect": 19,
+            "perfect": 10,
+            "great": 2,
+            "good": 1,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 99,
+            "perfect": 0,
+            "great": 6,
+            "good": 1,
+            "miss": 0
+        },
+        "touch": {
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 5,
+            "perfect": 4,
+            "great": 1,
+            "good": 0,
+            "miss": 0
+        },
+        "player2": "\uff21",
+        "max_combo": "283/398",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15054",
+        "fast": "57",
+        "late": "58"
+    },
+    {
+        "title": "\u9ad8\u6c17\u5727\u306d\u3053\u30ed\u30c3\u30af",
+        "difficulty": "MASTER",
+        "score": "99.6550%",
+        "deluxe_score": "2,344 / 2,718",
+        "type": "std",
+        "time": "2023/05/02 09:50",
+        "track": "TRACK 03",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/91e7bba0add6385c.png",
+        "combo": null,
+        "sync": null,
+        "place": "2nd",
+        "players": 2,
+        "new_record": true,
+        "new_record_deluxe": true,
+        "taps": {
+            "critical_perfect": 435,
+            "perfect": 281,
+            "great": 21,
+            "good": 4,
+            "miss": 2
+        },
+        "holds": {
+            "critical_perfect": 24,
+            "perfect": 9,
+            "great": 1,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 101,
+            "perfect": 0,
+            "great": 1,
+            "good": 2,
+            "miss": 1
+        },
+        "touch": {
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 13,
+            "perfect": 11,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "player2": "\uff21",
+        "max_combo": "369/906",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15054",
+        "fast": "218",
+        "late": "112"
+    },
+    {
+        "title": "\u5e78\u305b\u306b\u306a\u308c\u308b\u96a0\u3057\u30b3\u30de\u30f3\u30c9\u304c\u3042\u308b\u3089\u3057\u3044",
+        "difficulty": "MASTER",
+        "score": "98.1461%",
+        "deluxe_score": "2,192 / 2,550",
+        "type": "std",
+        "time": "2023/05/02 09:46",
+        "track": "TRACK 02",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/a1da6a4bdebaf419.png",
+        "combo": null,
+        "sync": null,
+        "place": "2nd",
+        "players": 2,
+        "new_record": false,
+        "new_record_deluxe": true,
+        "taps": {
+            "critical_perfect": 381,
+            "perfect": 211,
+            "great": 19,
+            "good": 5,
+            "miss": 5
+        },
+        "holds": {
+            "critical_perfect": 23,
+            "perfect": 14,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 150,
+            "perfect": 0,
+            "great": 16,
+            "good": 8,
+            "miss": 1
+        },
+        "touch": {
+            "critical_perfect": 0,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 11,
+            "perfect": 6,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "player2": "\uff21",
+        "max_combo": "350/850",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15054",
+        "fast": "147",
+        "late": "132"
+    },
+    {
+        "title": "Big Daddy",
+        "difficulty": "MASTER",
+        "score": "99.8958%",
+        "deluxe_score": "2,710 / 3,000",
+        "type": "dx",
+        "time": "2023/05/02 09:43",
+        "track": "TRACK 01",
+        "img_link": "https://maimaidx-eng.com/maimai-mobile/img/Music/74fa058f35dd3ba4.png",
+        "combo": null,
+        "sync": null,
+        "place": "2nd",
+        "players": 2,
+        "new_record": false,
+        "new_record_deluxe": true,
+        "taps": {
+            "critical_perfect": 457,
+            "perfect": 203,
+            "great": 10,
+            "good": 6,
+            "miss": 1
+        },
+        "holds": {
+            "critical_perfect": 64,
+            "perfect": 13,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "slides": {
+            "critical_perfect": 137,
+            "perfect": 0,
+            "great": 1,
+            "good": 6,
+            "miss": 0
+        },
+        "touch": {
+            "critical_perfect": 57,
+            "perfect": 0,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "breaks": {
+            "critical_perfect": 32,
+            "perfect": 13,
+            "great": 0,
+            "good": 0,
+            "miss": 0
+        },
+        "player2": "\uff21",
+        "max_combo": "920/1000",
+        "max_sync": null,
+        "rating_gain": null,
+        "current_rating": "15054",
+        "fast": "140",
+        "late": "112"
+    }
+]
