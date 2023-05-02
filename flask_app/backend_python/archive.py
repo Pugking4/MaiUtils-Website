@@ -111,7 +111,7 @@ def add_data_to_sqlite3_db(data=None):
     existing_columns = []
     for column in c.execute("PRAGMA table_info({})".format(table_name)):
         existing_columns.append(column[1])
-        c.execute(f'SELECT * FROM {table_name}')
+        #c.execute(f'SELECT * FROM {table_name}')
 
     if len(existing_columns) != len(record_headers):
         for attribute in record_headers:
@@ -122,10 +122,12 @@ def add_data_to_sqlite3_db(data=None):
 
     c.execute(f"SELECT time FROM {table_name};")
     existing_data = c.fetchall()
+    print(existing_data[1][0])
+    print(existing_data[3][0])
     for day in json_data:
         for chart in day:
-            print(chart['time'])
-            if chart['time'] not in existing_data:
+            if chart['time'] not in [data[0] for data in existing_data]:
+                print(chart['time'])
                 c.execute(f"INSERT INTO {table_name} (time) VALUES ('{chart['time']}');")
                 conn.commit()
                 for attribute in record_headers:
@@ -135,13 +137,18 @@ def add_data_to_sqlite3_db(data=None):
                     else:
                         c.execute(f"UPDATE {table_name} SET {attribute} = ? WHERE time = ?", (chart[attribute], chart['time']))
                         conn.commit()
+            else:
+                    print('already exists')
                     '''
+            
             else:
                 for attribute in record_headers:
                     c.execute(f"UPDATE {table_name} SET {attribute} = '{chart[attribute]}' WHERE time = '{chart['time']}';")
                     conn.commit()
                     '''
 
-
+#todo:
+#1. add function to search for broken records
+#2. add function to fix broken records by reinserting the data
 
 add_data_to_sqlite3_db()
