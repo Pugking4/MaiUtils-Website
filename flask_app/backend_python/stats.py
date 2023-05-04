@@ -637,7 +637,7 @@ class overview_stats:
         return master_dict
 
 
-instance = overview_stats(r'~/Projects-Website/flask_app/records')
+instance = overview_stats(r'~/MaiUtils-Website/flask_app/records')
 
 instance.get_stats_data()
 

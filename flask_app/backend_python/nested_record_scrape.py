@@ -379,12 +379,8 @@ def scrape_records(segaid, password, debug=False):
     if debug:
         print(data)
     json_data = json.dumps(filtered_data, indent=4)
-    with open(os.path.expanduser(fr'~/Projects-Website/flask_app/records/{file}.json'), "w", encoding='utf-8') as f:
+    with open(os.path.expanduser(fr'~/MaiUtils-Website/flask_app/records/{file}.json'), "w", encoding='utf-8') as f:
         f.write(json_data)
     return filtered_data
 
-
-
-
-
-scrape_records('pugking4', 'Cocothe4th00', debug=False)
+scrape_records(os.getenv("SEGAID"), os.getenv("PASSWORD"), debug=False)

@@ -54,14 +54,14 @@ scheduler.start()
 #Functions
 def records_search_data(date):
     data = []
-    print(f"~/Projects-Website/flask_app/records/{date}.json")
-    with open(os.path.expanduser(fr'~/Projects-Website/flask_app/records/{date}.json'), 'r') as f:
+    print(f"~/MaiUtils-Website/flask_app/records/{date}.json")
+    with open(os.path.expanduser(fr'~/MaiUtils-Website/flask_app/records/{date}.json'), 'r') as f:
         data = json.load(f)
     return data
 '''
 def auto_record_scrape():
     scrape_records(segaid, password, debug=debug)
-    my_class = add_external_data(r'~/Projects-Website/flask_app/db/20230423db.sqlite3')
+    my_class = add_external_data(r'~/MaiUtils-Website/flask_app/db/20230423db.sqlite3')
     date = datetime.datetime.now().strftime('%Y-%m-%d')
     #date = '2023-04-29'
     my_class.get_sql_data_intern()
@@ -160,7 +160,7 @@ def db_export():
 @app.route('/db-export/download')
 def db_export_download():
     print("Received a request at /db-export/download")
-    path = "/home/admin/Desktop/Projects-Website/flask_app/db/20230423db.sqlite3"
+    path = os.path.expanduser("/home/admin/Desktop/MaiUtils-Website/flask_app/db/20230423db.sqlite3")
     return send_file(path, as_attachment=True)
 
 @app.route('/mai-camera')
@@ -181,7 +181,7 @@ def manual_scrape():
     global data
     print("Received a request at /manual-scrape")
     data = scrape_records(segaid, password, debug=debug)
-    my_class = add_external_data(r'~/Projects-Website/flask_app/db/20230423db.sqlite3')
+    my_class = add_external_data(r'~/MaiUtils-Website/flask_app/db/20230423db.sqlite3')
     date = datetime.datetime.now().strftime('%Y-%m-%d')
     #date = '2023-04-29'
     my_class.get_sql_data_intern()
@@ -195,7 +195,7 @@ def manual_scrape():
 @app.route('/manual-insert')
 def manual_insert():
     print("Received a request at /manual-insert")
-    my_class = add_external_data(os.path.expanduser(r'~/Projects-Website/flask_app/db/20230423db.sqlite3'))
+    my_class = add_external_data(os.path.expanduser(r'~/MaiUtils-Website/flask_app/db/20230423db.sqlite3'))
     date = datetime.datetime.now().strftime('%Y-%m-%d')
     #date = '2023-04-29'
     my_class.get_sql_data_intern()
@@ -213,7 +213,7 @@ def reload_records():
     print("Received a request at /reload-records")
     time = datetime.datetime.now().strftime("%Y-%m-%d")
     #time = '2023-04-29'
-    with open(os.path.expanduser(os.path.expanduser(fr'~/Projects-Website/flask_app/records/{time}.json')), 'r') as f:
+    with open(os.path.expanduser(os.path.expanduser(fr'~/MaiUtils-Website/flask_app/records/{time}.json')), 'r') as f:
         data = json.load(f)
         #print(data)
     #for i in raw_data:
@@ -272,7 +272,7 @@ def test():
     date = datetime.datetime.now().strftime("%Y-%m-%d")
     #date = '2023-04-29'
 
-    with open(os.path.expanduser(fr'~/Projects-Website/flask_app/records/{date}.json'), 'r') as f:
+    with open(os.path.expanduser(fr'~/MaiUtils-Website/flask_app/records/{date}.json'), 'r') as f:
         data = json.load(f)
         
 
