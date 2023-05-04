@@ -5,38 +5,41 @@ import os
 import datetime
 import json
 import sqlite3
-from playwright.async_api import async_playwright
+#from playwright.async_api import async_playwright
 import asyncio
 from bs4 import BeautifulSoup
+import logging
+from logging.handlers import RotatingFileHandler
 
 
 from backend_python.add_external_data import add_external_data
 from backend_python.ratingcal import calculate_rating
-from backend_python.nested_record_scrape import get_score_data, scrape, scrape_records
+#from backend_python.nested_record_scrape import get_score_data, scrape, scrape_records
 
 #Get .env variable
 segaid = os.getenv("SEGAID")
 password = os.getenv("PASSWORD")
 
-
 #Init variables
-
 app = Flask(__name__)
+
 scheduler = APScheduler()
 auth = HTTPBasicAuth()
 
-app.secret_key = 'maimai'
-
+app.secret_key = os.getenv("KEY")
 
 users = {
-    "admin": "rats",
-    "guest": "temp",
+    "admin": os.getenv('ADMIN'),
+    "guest": os.getenv('GUEST'),
 }
 
 #Config
 scheduler.api_enabled = True
-
-
+# Configure the log handler
+handler = RotatingFileHandler('flask.log', maxBytes=10000, backupCount=1)
+handler.setLevel(logging.INFO)
+# Add the log handler to the Flask app
+app.logger.addHandler(handler)
 #Variables
 #data = []
 #with open(r'C:\Users\joshu\Documents\GitHub\Projects-Website\flask_app\output_gen.txt', 'r', encoding='utf-8') as f:
@@ -51,13 +54,14 @@ scheduler.start()
 #Functions
 def records_search_data(date):
     data = []
-    with open(fr'records\{date}.json', 'r') as f:
+    print(f"~/Projects-Website/flask_app/records/{date}.json")
+    with open(os.path.expanduser(fr'~/Projects-Website/flask_app/records/{date}.json'), 'r') as f:
         data = json.load(f)
     return data
-
+'''
 def auto_record_scrape():
     scrape_records(segaid, password, debug=debug)
-    my_class = add_external_data(r'C:\Users\joshu\Documents\GitHub\Projects-Website\flask_app\db\20230423db.sqlite3')
+    my_class = add_external_data(r'~/Projects-Website/flask_app/db/20230423db.sqlite3')
     date = datetime.datetime.now().strftime('%Y-%m-%d')
     #date = '2023-04-29'
     my_class.get_sql_data_intern()
@@ -66,8 +70,7 @@ def auto_record_scrape():
     my_class.insert_sql_data_level(date)
     my_class.get_sql_data_genre_artist()
     my_class.insert_sql_data_genre_artist(date)
-
-
+'''
 #Auth routes
 @auth.verify_password
 def check_auth(username, password):
@@ -121,7 +124,7 @@ def calculate():
         rating = request.form['rating']
     else:
         rating = 0
-    
+
     print(f"Constant: {constant}")
     print(f"Achievement: {achievement}")
     print(f"Rating: {rating}")
@@ -172,13 +175,13 @@ def mai_camera():
     return render_template('mai-camera.html', username=username, image_files=image_files)
 
 #@app.route('/mai-camera/upload', methods=['POST'])
-
+'''
 @app.route('/manual-scrape')
 def manual_scrape():
     global data
     print("Received a request at /manual-scrape")
     data = scrape_records(segaid, password, debug=debug)
-    my_class = add_external_data(r'C:\Users\joshu\Documents\GitHub\Projects-Website\flask_app\db\20230423db.sqlite3')
+    my_class = add_external_data(r'~/Projects-Website/flask_app/db/20230423db.sqlite3')
     date = datetime.datetime.now().strftime('%Y-%m-%d')
     #date = '2023-04-29'
     my_class.get_sql_data_intern()
@@ -188,11 +191,11 @@ def manual_scrape():
     my_class.get_sql_data_genre_artist()
     my_class.insert_sql_data_genre_artist(date)
     return render_template('index.html')
-
+'''
 @app.route('/manual-insert')
 def manual_insert():
     print("Received a request at /manual-insert")
-    my_class = add_external_data(r'C:\Users\joshu\Documents\GitHub\Projects-Website\flask_app\db\20230423db.sqlite3')
+    my_class = add_external_data(os.path.expanduser(r'~/Projects-Website/flask_app/db/20230423db.sqlite3'))
     date = datetime.datetime.now().strftime('%Y-%m-%d')
     #date = '2023-04-29'
     my_class.get_sql_data_intern()
@@ -210,7 +213,7 @@ def reload_records():
     print("Received a request at /reload-records")
     time = datetime.datetime.now().strftime("%Y-%m-%d")
     #time = '2023-04-29'
-    with open(fr'records\{time}.json', 'r') as f:
+    with open(os.path.expanduser(os.path.expanduser(fr'~/Projects-Website/flask_app/records/{time}.json')), 'r') as f:
         data = json.load(f)
         #print(data)
     #for i in raw_data:
@@ -250,21 +253,15 @@ def view_records_stats_date():
 @app.route('/view-records-search', methods=['POST'])
 def view_records_search():
     print("Received a request at /view-records-search")
-
     form_date = request.form['date']
-
     print(f"Date: {form_date}")
-
     data = records_search_data(form_date)
-
     return data
     if data:
         return render_template('view-records50.html', data=data)
     else:
         return render_template('view-records50_nodata.html', data=data)
-
 #@app.route('/view-records/<string:segaid>')
-
 @app.route('/test', methods=['POST'])
 def test():
     print("Received a POST request at /test")
@@ -272,45 +269,26 @@ def test():
     time = request.form.get('time')
     title = request.form.get('title')
     type = request.form.get('type')
-
-    #session['time'] = time
-    #session['title'] = title
-    #session['type'] = type
-
-    # Do something with the data (e.g., save to a database)
-    print(f"Time: {time}")
-    print(f"Title: {title}")
-    print(f"Type: {type}")
-
     date = datetime.datetime.now().strftime("%Y-%m-%d")
     #date = '2023-04-29'
 
-    with open(f'records/{date}.json', 'r') as f:
+    with open(os.path.expanduser(fr'~/Projects-Website/flask_app/records/{date}.json'), 'r') as f:
         data = json.load(f)
-        #print(data)
-    
+        
+
     for play in data:
-        #print(play['time'].lower(), play['title'].lower(), play['type'].lower())
-        #print(time.lower(), title.lower(), type.lower())
         if play['time'].lower() == time.lower() and play['title'].lower() == title.lower() and play['type'].lower() == type.lower():
             print("Found a match!")
             for key in play:
                 session[key] = play[key]
             print(session)
             break
-
-
+    
     # Return the data as a JSON response
-    #return redirect(url_for('display_test'))
     return jsonify({'time': time, 'title': title, 'type': type})
 
 @app.route('/display-test')
 def display_test():
-    # Get the data from the query string
-    #time = request.args.get('time')
-    #title = request.args.get('title')
-    #type = request.args.get('type')
-
     # Store the result in session variables
     title = session.get('title')
     difficulty = session.get('difficulty')
@@ -339,30 +317,20 @@ def display_test():
     fast = session.get('fast')
     late = session.get('late')
 
-
-
-    print('time:', time)
-    print('title:', title)
-    print('type:', type)
-
     # Render the template with the data
     return render_template('test.html', time=time, title=title, type=type, difficulty=difficulty, score=score, deluxe_score=deluxe_score, track=track, img_link=img_link, combo=combo, sync=sync, place=place, players=players, new_record=new_record, new_record_deluxe=new_record_deluxe, taps=taps, holds=holds, slides=slides, touch=touch, breaks=breaks, player2=player2, max_combo=max_combo, max_sync=max_sync, rating_gain=rating_gain, current_rating=current_rating, fast=fast, late=late)
 
 #@app.route('/')
-
-
-
 #Scheduler routes
 #@scheduler.task('interval', id='do_job_1', seconds=300, misfire_grace_time=900)
 #def job1():
 #    print('Job 1 executed')
-
-@scheduler.task('interval', id='scrape_records_job', minutes=90, misfire_grace_time=900)
-def scrape_records_job():
-    #time = datetime.datetime.now().strftime("%H:%M:%S")
-    print('Auto record scraping started')
-    scrape_records(segaid, password, debug=debug)
-    print('Auto record scraping executed')
+#@scheduler.task('interval', id='scrape_records_job', minutes=90, misfire_grace_time=900)
+#def scrape_records_job():
+#    #time = datetime.datetime.now().strftime("%H:%M:%S")
+#    print('Auto record scraping started')
+#    scrape_records(segaid, password, debug=debug)
+#    print('Auto record scraping executed')
     #print(f'Auto record scraping took {datetime.datetime.now().strftime("%H:%M:%S") - time}')
 
 #Misc routes

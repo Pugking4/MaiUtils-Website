@@ -99,7 +99,7 @@ const dateInput = document.getElementById('date-input');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   const date = dateInput.value;
-  const url = `http://127.0.0.1:5000/view-records-search`;
+  const url = `http://pugking4.me/view-records-search`;
   const xhr = new XMLHttpRequest();
   xhr.open('POST', url);
   xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');

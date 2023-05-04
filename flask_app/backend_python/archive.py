@@ -90,15 +90,15 @@ def add_data_to_sqlite3_db(data=None):
     }
 
     json_data = []
-    files = os.listdir(r'C:\Users\joshu\Documents\GitHub\Projects-Website\flask_app\records')
+    files = os.listdir(r'~/Projects-Website/flask_app/records')
     for date in files:
         if date.endswith('.json'):
-            with open(r'C:\Users\joshu\Documents\GitHub\Projects-Website\flask_app\records' + '\\' + date, 'r') as f:
+            with open(r'~/Projects-Website/flask_app/records' + '/' + date, 'r') as f:
                     json_data.append(json.load(f))
     
 
     # Connect to the database
-    conn = sqlite3.connect(r'C:\Users\joshu\Documents\GitHub\Projects-Website\flask_app\db\playdata.sqlite3')
+    conn = sqlite3.connect(r'~/Projects-Website/flask_app/db/playdata.sqlite3')
     # Create a cursor
     c = conn.cursor()
     # Insert data into table

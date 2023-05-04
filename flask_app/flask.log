@@ -1,0 +1,93 @@
+Exception on /db-export/download [GET]
+Traceback (most recent call last):
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/pugking4/Projects-Website/flask_app/app.py", line 142, in db_export_download
+    return send_file(path, as_attachment=True)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/helpers.py", line 504, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/home/pugking4/.local/lib/python3.9/site-packages/werkzeug/utils.py", line 431, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/admin/Desktop/Projects-Website/flask_app/db/20230423db.sqlite3'
+Exception on /view-records/stats/today [GET]
+Traceback (most recent call last):
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/pugking4/Projects-Website/flask_app/app.py", line 216, in view_records_stats_today
+    return render_template('view-records-stats.html')
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/pugking4/.local/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: view-records-stats.html
+Exception on /scheduler [GET]
+Traceback (most recent call last):
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask_apscheduler/scheduler.py", line 381, in decorated
+    return view_func(*args, **kwargs)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask_apscheduler/api.py", line 34, in get_scheduler_info
+    return jsonify(d)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask_apscheduler/json.py", line 21, in jsonify
+    if flask.current_app.config['JSONIFY_PRETTYPRINT_REGULAR']:
+KeyError: 'JSONIFY_PRETTYPRINT_REGULAR'
+Exception on /scheduler [GET]
+Traceback (most recent call last):
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask_apscheduler/scheduler.py", line 381, in decorated
+    return view_func(*args, **kwargs)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask_apscheduler/api.py", line 34, in get_scheduler_info
+    return jsonify(d)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask_apscheduler/json.py", line 21, in jsonify
+    if flask.current_app.config['JSONIFY_PRETTYPRINT_REGULAR']:
+KeyError: 'JSONIFY_PRETTYPRINT_REGULAR'
+Exception on /view-records [GET]
+Traceback (most recent call last):
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/pugking4/Projects-Website/flask_app/app.py", line 199, in view_records50
+    reload_records()
+  File "/home/pugking4/Projects-Website/flask_app/app.py", line 190, in reload_records
+    with open(os.path.expanduser(os.path.expanduser(fr'~/Projects-Website/flask_app/records/{time}.json')), 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/pugking4/Projects-Website/flask_app/records/2023-05-04.json'

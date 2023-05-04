@@ -1,5 +1,6 @@
 import sqlite3
 import json
+import os
 
 class add_external_data:
     def __init__(self, sql_path: str):
@@ -20,7 +21,7 @@ class add_external_data:
         self.data = parent_dict
     
     def insert_sql_data_intern(self, date_requested: str):
-        with open(r'C:\Users\joshu\Documents\GitHub\Projects-Website\flask_app\records' + '\\' + date_requested + '.json', 'r') as f:
+        with open(os.path.expanduser(r'~/Projects-Website/flask_app/records') + '/' + date_requested + '.json', 'r') as f:
             raw_data = json.load(f)
         #print(raw_data)
         #print('test')
@@ -30,7 +31,7 @@ class add_external_data:
                     i_raw['internal_level'] = i_sql['internal_level']
                     break
                 i_raw['internal_level'] = None
-        with open(r'C:\Users\joshu\Documents\GitHub\Projects-Website\flask_app\records' + '\\' + date_requested + '.json', 'w') as f:
+        with open(os.path.expanduser(r'~/Projects-Website/flask_app/records') + '/' + date_requested + '.json', 'w') as f:
             json.dump(raw_data, f, indent=4)
 
     def get_sql_data_level(self) -> dict:
@@ -48,7 +49,7 @@ class add_external_data:
         self.data = parent_dict
         
     def insert_sql_data_level(self, date_requested: str):
-        with open(r'C:\Users\joshu\Documents\GitHub\Projects-Website\flask_app\records' + '\\' + date_requested + '.json', 'r') as f:
+        with open(os.path.expanduser(r'~/Projects-Website/flask_app/records') + '/' + date_requested + '.json', 'r') as f:
             raw_data = json.load(f)
         for i_raw in raw_data:
             for i_sql in self.data:
@@ -56,7 +57,7 @@ class add_external_data:
                     i_raw['level'] = i_sql['level']
                     break
                 i_raw['level'] = None
-        with open(r'C:\Users\joshu\Documents\GitHub\Projects-Website\flask_app\records' + '\\' + date_requested + '.json', 'w') as f:
+        with open(os.path.expanduser(r'~/Projects-Website/flask_app/records') + '/' + date_requested + '.json', 'w') as f:
             json.dump(raw_data, f, indent=4)
     
     def get_sql_data_genre_artist(self) -> dict:
@@ -73,7 +74,7 @@ class add_external_data:
         self.data = parent_dict
     
     def insert_sql_data_genre_artist(self, date_requested: str):
-        with open(r'C:\Users\joshu\Documents\GitHub\Projects-Website\flask_app\records' + '\\' + date_requested + '.json', 'r') as f:
+        with open(os.path.expanduser(r'~/Projects-Website/flask_app/records') + '/' + date_requested + '.json', 'r') as f:
             raw_data = json.load(f)
         for i_raw in raw_data:
             for i_sql in self.data:
@@ -83,7 +84,7 @@ class add_external_data:
                     break
                 i_raw['artist'] = None
                 i_raw['genre'] = None
-        with open(r'C:\Users\joshu\Documents\GitHub\Projects-Website\flask_app\records' + '\\' + date_requested + '.json', 'w') as f:
+        with open(os.path.expanduser(r'~/Projects-Website/flask_app/records') + '/' + date_requested + '.json', 'w') as f:
             json.dump(raw_data, f, indent=4)
         
 

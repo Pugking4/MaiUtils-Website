@@ -3,6 +3,7 @@ import asyncio
 import datetime
 from bs4 import BeautifulSoup
 import json
+import os
 
 async def scrape(segaid, password, debug=False):
     async with async_playwright() as p:
@@ -378,6 +379,12 @@ def scrape_records(segaid, password, debug=False):
     if debug:
         print(data)
     json_data = json.dumps(filtered_data, indent=4)
-    with open(fr'records\{file}.json', "w", encoding='utf-8') as f:
+    with open(os.path.expanduser(fr'~/Projects-Website/flask_app/records/{file}.json'), "w", encoding='utf-8') as f:
         f.write(json_data)
     return filtered_data
+
+
+
+
+
+scrape_records('pugking4', 'Cocothe4th00', debug=False)

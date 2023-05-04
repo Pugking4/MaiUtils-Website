@@ -16,7 +16,7 @@ class overview_stats:
         for file in files:
             if file.endswith('.json'):
                 #print(file)
-                with open(self.file_path + '\\' + file, 'r') as f:
+                with open(self.file_path + '/' + file, 'r') as f:
                     data.append(json.load(f))
         self.data = data
     
@@ -406,7 +406,7 @@ class overview_stats:
 
         
 
-instance = overview_stats(r'C:\Users\joshu\Documents\GitHub\Projects-Website\flask_app\records')
+instance = overview_stats(r'~/Projects-Website/flask_app/records')
 
 instance.get_stats_data()
 
