@@ -58,20 +58,21 @@ async def scrape(segaid, password, debug=False):
             div_content = await div.inner_html()
             soup = BeautifulSoup(div_content, "html.parser")
 
+            j = 6
+
             # Check if the score is a new record
             new_record = soup.find("img", {"class": "playlog_achievement_newrecord", 'src': 'https://maimaidx-eng.com/maimai-mobile/img/playlog/newrecord.png'})
             dojo = soup.find("img", {"class": "h_30 p_l_5", 'src': 'https://maimaidx-eng.com/maimai-mobile/img/course/icon_course.png'})
+            perfect_chal = soup.find("img", {"class": "h_30 p_l_5", 'src': 'https://maimaidx-eng.com/maimai-mobile/img/icon_perfectchallenge.png'})
+
             if new_record:
-                if dojo:
-                    buttons.append(f'div.p_10:nth-child({i+4}) > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > form:nth-child(8) > button:nth-child(2)')
-                else:
-                    buttons.append(f'div.p_10:nth-child({i+4}) > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > form:nth-child(7) > button:nth-child(2)')
-            else:
-                if dojo:
-                    buttons.append(f'div.p_10:nth-child({i+4}) > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > form:nth-child(7) > button:nth-child(2)')
-                else:
-                    buttons.append(f'div.p_10:nth-child({i+4}) > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > form:nth-child(6) > button:nth-child(2)')
-            
+                j += 1
+            if dojo:
+                j += 1
+            if perfect_chal:
+                j += 1
+
+            buttons.append(f'div.p_10:nth-child({i+4}) > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > form:nth-child({j}) > button:nth-child(2)')
             #print(f"New record: {new_record}")
 
         submit_buttons = buttons
@@ -369,12 +370,16 @@ def get_score_data(html, debug=False):
         data_list.append(child_dict)
     return data_list
 
-def scrape_records(segaid, password, debug=False):
+def scrape_records(segaid, password, debug=False, date=None):
     data = get_score_data(asyncio.run(scrape(segaid, password, debug=debug)), debug=debug)
-    today = datetime.datetime.now().strftime('%Y/%m/%d')
-    file = datetime.datetime.now().strftime('%Y-%m-%d')
-    #today = '2023/04/29'
-    #file = '2023-04-29'
+    if date:
+        file = date
+        date = date.split('-')
+        today = f'{date[0]}/{date[1]}/{date[2]}'
+    else:
+        today = datetime.datetime.now().strftime('%Y/%m/%d')
+        file = datetime.datetime.now().strftime('%Y-%m-%d')
+
     filtered_data = [item for item in data if item['time'].startswith(today)]
     if debug:
         print(data)
@@ -383,4 +388,6 @@ def scrape_records(segaid, password, debug=False):
         f.write(json_data)
     return filtered_data
 
-scrape_records(os.getenv("SEGAID"), os.getenv("PASSWORD"), debug=False)
+#print(os.getenv("SEGAID"), os.getenv("PASSWORD"))
+
+scrape_records('username', 'password', False, None)

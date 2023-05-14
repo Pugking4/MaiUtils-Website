@@ -15,6 +15,8 @@ from logging.handlers import RotatingFileHandler
 from backend_python.add_external_data import add_external_data
 from backend_python.ratingcal import calculate_rating
 #from backend_python.nested_record_scrape import get_score_data, scrape, scrape_records
+from backend_python.archive import add_data_to_sqlite3_db
+from backend_python.stats import overview_stats
 
 #Get .env variable
 segaid = os.getenv("SEGAID")
@@ -95,6 +97,10 @@ def send_static(path):
 def send_static_records(path):
     return send_from_directory('static', path)
 
+@app.route('/view-records/stats/static/<path:path>')
+def send_static_records_stats(path):
+    return send_from_directory('static', path)
+
 @app.route('/index')
 def index():
     print("Received a request at /index")
@@ -160,7 +166,7 @@ def db_export():
 @app.route('/db-export/download')
 def db_export_download():
     print("Received a request at /db-export/download")
-    path = os.path.expanduser("/home/admin/Desktop/MaiUtils-Website/flask_app/db/20230423db.sqlite3")
+    path = os.path.expanduser("/home/pugking4/MaiUtils-Website/flask_app/db/20230423db.sqlite3")
     return send_file(path, as_attachment=True)
 
 @app.route('/mai-camera')
@@ -197,7 +203,7 @@ def manual_insert():
     print("Received a request at /manual-insert")
     my_class = add_external_data(os.path.expanduser(r'~/MaiUtils-Website/flask_app/db/20230423db.sqlite3'))
     date = datetime.datetime.now().strftime('%Y-%m-%d')
-    #date = '2023-04-29'
+    #date = '2023-05-12'
     my_class.get_sql_data_intern()
     my_class.insert_sql_data_intern(date)
     my_class.get_sql_data_level()
@@ -238,7 +244,12 @@ def view_records_stats_index():
 @app.route('/view-records/stats/overall')
 def view_records_stats_overall():
     print("Received a request at /view-records/stats/overall")
-    return render_template('view-records-stats-overall.html')
+
+    stat = overview_stats(os.path.expanduser(r'~/MaiUtils-Website/flask_app/records'))
+    stat.get_stats_data()
+    stats = stat.calculate_stats()
+
+    return render_template('view-records-stats-overall.html', stats=stats, jsstats=json.dumps(stats))
 
 @app.route('/view-records/stats/today')
 def view_records_stats_today():
@@ -320,11 +331,7 @@ def display_test():
     # Render the template with the data
     return render_template('test.html', time=time, title=title, type=type, difficulty=difficulty, score=score, deluxe_score=deluxe_score, track=track, img_link=img_link, combo=combo, sync=sync, place=place, players=players, new_record=new_record, new_record_deluxe=new_record_deluxe, taps=taps, holds=holds, slides=slides, touch=touch, breaks=breaks, player2=player2, max_combo=max_combo, max_sync=max_sync, rating_gain=rating_gain, current_rating=current_rating, fast=fast, late=late)
 
-#@app.route('/')
 #Scheduler routes
-#@scheduler.task('interval', id='do_job_1', seconds=300, misfire_grace_time=900)
-#def job1():
-#    print('Job 1 executed')
 #@scheduler.task('interval', id='scrape_records_job', minutes=90, misfire_grace_time=900)
 #def scrape_records_job():
 #    #time = datetime.datetime.now().strftime("%H:%M:%S")
@@ -332,6 +339,26 @@ def display_test():
 #    scrape_records(segaid, password, debug=debug)
 #    print('Auto record scraping executed')
     #print(f'Auto record scraping took {datetime.datetime.now().strftime("%H:%M:%S") - time}')
+
+@scheduler.task('interval', id='auto_external_data_job', minutes=30, misfire_grace_time=900)
+def auto_external_data():
+    print('Auto external data started')
+    my_class = add_external_data(os.path.expanduser(r'~/MaiUtils-Website/flask_app/db/20230423db.sqlite3'))
+    date = datetime.datetime.now().strftime('%Y-%m-%d')
+    #date = '2023-05-02'
+    my_class.get_sql_data_intern()
+    my_class.insert_sql_data_intern(date)
+    my_class.get_sql_data_level()
+    my_class.insert_sql_data_level(date)
+    my_class.get_sql_data_genre_artist()
+    my_class.insert_sql_data_genre_artist(date)
+    print('Auto external data executed')
+
+@scheduler.task('interval', id='auto_db_archive_job', minutes=60, misfire_grace_time=900)
+def auto_db_archive():
+    print('Auto db archive started')
+    add_data_to_sqlite3_db()
+    print('Auto db archive executed')
 
 #Misc routes
 @app.errorhandler(404)
@@ -341,4 +368,4 @@ def page_not_found(e):
 # use_reloader=False
 #127.0.0.1
 if __name__ == '__main__':
-    app.run(debug=True, host='127.0.0.1', port=5000, use_reloader=True)
+    app.run(debug=True, host='127.0.0.1', port=5000, use_reloader=False)

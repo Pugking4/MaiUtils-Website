@@ -1,0 +1,131 @@
+/* Set the styles for the main content */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.solo_stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.solo_stats > div {
+    flex-basis: 30%;
+    margin: 10px;
+}
+
+.multi_stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.multi_stats > div {
+    flex-basis: 30%;
+    margin: 10px;
+}
+
+.multi_stats .p2picks-level-chart {
+    height: auto;
+    margin: 10px;
+}
+
+/* Set the styles for the charts */
+.total_charts_played_p2-chart,
+.genre_ratio-chart,
+.level_ratio-chart,
+.genre_ratio_solo-chart,
+.notes-chart,
+.taps-chart,
+.holds-chart,
+.slides-chart,
+.touch-chart,
+.breaks-chart,
+.p2picks-level-chart {
+    border: 1px solid #ccc !important;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3) !important;
+}
+
+.notes-chart {
+    width: auto;
+    height: auto;
+}
+
+.taps-chart,
+.holds-chart,
+.slides-chart,
+.touch-chart,
+.breaks-chart {
+    width: auto;
+    height: auto;
+}
+
+.notes-chart {
+    margin-right: 20px;
+}
+
+.avg_notes_ratio_dict {
+    order: 1;
+}
+
+.avg_taps_ratio_dict {
+    order: 2;
+}
+
+.avg_holds_ratio_dict {
+    order: 3;
+}
+
+.avg_slides_ratio_dict {
+    order: 4;
+}
+
+.avg_touch_ratio_dict {
+    order: 5;
+}
+
+.avg_breaks_ratio_dict {
+    order: 6;
+}
+
+.p2picks-level {
+    order: 7;
+}
+
+.avg_notes_ratio_dict .notes-chart {
+    width: auto;
+    height: auto;
+}
+
+.total_charts_played_p2 {
+    order: 8;
+}
+
+.genre_ratio {
+    order: 9;
+}
+
+.level_ratio {
+    order: 10;
+}
+
+.genre_ratio_solo {
+    order: 11;
+}
+
+.more_charts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    margin: 10px;
+}
+
+.more_charts > div {
+    flex-basis: 30%;
+    margin: 10px;
+}

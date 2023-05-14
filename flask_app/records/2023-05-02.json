@@ -55,7 +55,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "196",
-        "late": "82"
+        "late": "82",
+        "internal_level": "13.7",
+        "level": "13+",
+        "artist": "Cranky",
+        "genre": "maimai"
     },
     {
         "title": "LiftOff",
@@ -113,7 +117,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "197",
-        "late": "95"
+        "late": "95",
+        "internal_level": "13.9",
+        "level": "13+",
+        "artist": "MAYA AKAI",
+        "genre": "\u30aa\u30f3\u30b2\u30ad\uff06CHUNITHM"
     },
     {
         "title": "Maxi",
@@ -171,7 +179,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "246",
-        "late": "115"
+        "late": "115",
+        "internal_level": "13.9",
+        "level": "13+",
+        "artist": "Nizikawa",
+        "genre": "\u30b2\u30fc\u30e0\uff06\u30d0\u30e9\u30a8\u30c6\u30a3"
     },
     {
         "title": "HAGAKIRI",
@@ -229,7 +241,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "179",
-        "late": "105"
+        "late": "105",
+        "internal_level": "13.9",
+        "level": "14",
+        "artist": "Masayoshi Iimori",
+        "genre": "maimai"
     },
     {
         "title": "Burning Hearts \uff5e\u708e\u306eANGEL\uff5e",
@@ -287,7 +303,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "121",
-        "late": "69"
+        "late": "69",
+        "internal_level": "13.7",
+        "level": "13+",
+        "artist": "\u5e61\u8c37\u5c1a\u53f2 Arranged by SEGA Sound Unit [H.]\u300c\u30d0\u30fc\u30cb\u30f3\u30b0\u30ec\u30f3\u30b8\u30e3\u30fc\u300d",
+        "genre": "\u30b2\u30fc\u30e0\uff06\u30d0\u30e9\u30a8\u30c6\u30a3"
     },
     {
         "title": "\u5206\u304b\u3089\u306a\u3044",
@@ -345,7 +365,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "275",
-        "late": "150"
+        "late": "150",
+        "internal_level": "13.9",
+        "level": "13+",
+        "artist": "\u308d\u3093\u00d7\u9ed2\u9b54",
+        "genre": "maimai"
     },
     {
         "title": "\u7acb\u3061\u5165\u308a\u7981\u6b62",
@@ -403,7 +427,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "304",
-        "late": "109"
+        "late": "109",
+        "internal_level": "13.8",
+        "level": "13+",
+        "artist": "\u307e\u3075\u307e\u3075",
+        "genre": "niconico\uff06\u30dc\u30fc\u30ab\u30ed\u30a4\u30c9"
     },
     {
         "title": "RIDGE RACER STEPS -GMT remix-",
@@ -461,7 +489,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "74",
-        "late": "111"
+        "late": "111",
+        "internal_level": "13.3",
+        "level": "13",
+        "artist": "Yuji Masubuchi(BNGI)\u300cRIDGE RACER\u300d",
+        "genre": "\u30b2\u30fc\u30e0\uff06\u30d0\u30e9\u30a8\u30c6\u30a3"
     },
     {
         "title": "\u30a4\u30e4\u30db\u30f3\u30ed\u30de\u30f3\u30b9",
@@ -519,7 +551,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "114",
-        "late": "93"
+        "late": "93",
+        "internal_level": null,
+        "level": "12+",
+        "artist": "COOL&CREATE \u00d7 \u5b9d\u9418\u30de\u30ea\u30f3",
+        "genre": "\u6771\u65b9Project"
     },
     {
         "title": "\u30d5\u30a9\u30cb\u30a4",
@@ -577,7 +613,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "33",
-        "late": "67"
+        "late": "67",
+        "internal_level": "9.8",
+        "level": "9+",
+        "artist": "\u30c4\u30df\u30ad\u3000feat.\u97f3\u697d\u7684\u540c\u4f4d\u4f53\u3000\u53ef\u4e0d\uff08KAFU\uff09",
+        "genre": "niconico\uff06\u30dc\u30fc\u30ab\u30ed\u30a4\u30c9"
     },
     {
         "title": "Mj\u00f6lnir",
@@ -635,7 +675,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "286",
-        "late": "172"
+        "late": "172",
+        "internal_level": "14.4",
+        "level": "14",
+        "artist": "xi",
+        "genre": "\u30b2\u30fc\u30e0\uff06\u30d0\u30e9\u30a8\u30c6\u30a3"
     },
     {
         "title": "\u30d2\u30d3\u30ab\u30bb",
@@ -693,7 +737,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "80",
-        "late": "47"
+        "late": "47",
+        "internal_level": "13.1",
+        "level": "13",
+        "artist": "GigaReol",
+        "genre": "niconico\uff06\u30dc\u30fc\u30ab\u30ed\u30a4\u30c9"
     },
     {
         "title": "\u52a3\u7b49\u4e0a\u7b49",
@@ -751,7 +799,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "48",
-        "late": "11"
+        "late": "11",
+        "internal_level": null,
+        "level": "10",
+        "artist": "Giga / \u93e1\u97f3\u30ea\u30f3\u30fb\u30ec\u30f3 / Vivid BAD SQUAD\u300c\u30d7\u30ed\u30b8\u30a7\u30af\u30c8\u30bb\u30ab\u30a4 \u30ab\u30e9\u30d5\u30eb\u30b9\u30c6\u30fc\u30b8\uff01 feat. \u521d\u97f3\u30df\u30af\u300d",
+        "genre": "niconico\uff06\u30dc\u30fc\u30ab\u30ed\u30a4\u30c9"
     },
     {
         "title": "Oshama Scramble!",
@@ -809,7 +861,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "453",
-        "late": "95"
+        "late": "95",
+        "internal_level": "14.5",
+        "level": "14",
+        "artist": "t+pazolite",
+        "genre": "maimai"
     },
     {
         "title": "Seyana. \uff5e\u4f55\u3067\u3082\u8a00\u3046\u3053\u3068\u3092\u805e\u3044\u3066\u304f\u308c\u308b\u30a2\u30ab\u30cd\u30c1\u30e3\u30f3\uff5e",
@@ -867,7 +923,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "27",
-        "late": "75"
+        "late": "75",
+        "internal_level": null,
+        "level": "10+",
+        "artist": "GYARI",
+        "genre": "niconico\uff06\u30dc\u30fc\u30ab\u30ed\u30a4\u30c9"
     },
     {
         "title": "U&iVERSE -\u9280\u6cb3\u9e1e\u7fd4-",
@@ -925,7 +985,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "285",
-        "late": "116"
+        "late": "116",
+        "internal_level": "14.4",
+        "level": "14",
+        "artist": "Kai VS \u5927\u56fd\u594f\u97f3 VS \u6c34\u91ce\u5065\u6cbb",
+        "genre": "maimai"
     },
     {
         "title": "\u30a8\u30f3\u30c9\u30de\u30fc\u30af\u306b\u5e0c\u671b\u3068\u6d99\u3092\u6dfb\u3048\u3066",
@@ -983,7 +1047,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "376",
-        "late": "112"
+        "late": "112",
+        "internal_level": "14.3",
+        "level": "14",
+        "artist": "cosMo\uff20\u66b4\u8d70P",
+        "genre": "\u30aa\u30f3\u30b2\u30ad\uff06CHUNITHM"
     },
     {
         "title": "Valsqotch",
@@ -1041,7 +1109,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "329",
-        "late": "153"
+        "late": "153",
+        "internal_level": "14.7",
+        "level": "14+",
+        "artist": "owl\uff0atree feat.chi\uff0atree",
+        "genre": "maimai"
     },
     {
         "title": "ARAIS",
@@ -1099,7 +1171,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "329",
-        "late": "63"
+        "late": "63",
+        "internal_level": "14.4",
+        "level": "14",
+        "artist": "\u5343\u672c\u677e \u4ec1",
+        "genre": "maimai"
     },
     {
         "title": "the EmpErroR",
@@ -1157,7 +1233,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "251",
-        "late": "211"
+        "late": "211",
+        "internal_level": "14.9",
+        "level": "14+",
+        "artist": "sasakure.UK",
+        "genre": "maimai"
     },
     {
         "title": "Strive against fate",
@@ -1215,7 +1295,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "351",
-        "late": "106"
+        "late": "106",
+        "internal_level": "14.5",
+        "level": "14",
+        "artist": "Noah",
+        "genre": "maimai"
     },
     {
         "title": "\u8a18\u61b6\u3001\u8a18\u9332",
@@ -1273,7 +1357,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "158",
-        "late": "58"
+        "late": "58",
+        "internal_level": "13.4",
+        "level": "13",
+        "artist": "LOPIT(SEGA)",
+        "genre": "maimai"
     },
     {
         "title": "\u30a8\u30ca\u30c9\u30ea\u304a\u3044\u3057\u3044\u30bd\u30f3\u30b0",
@@ -1331,7 +1419,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "161",
-        "late": "97"
+        "late": "97",
+        "internal_level": "14.0",
+        "level": "14",
+        "artist": "\u51a5\u5802\u9662\u30fb\u30a2\u30ec\u30af\u30b5\u30f3\u30c9\u30eb\u30fb\u30f4\u30a3\u30af\u30c8\u30ea\u30a2\u30fb\u30ea\u30d2\u30c6\u30f3\u30b7\u30e5\u30bf\u30a4\u30f3\u30fb\u8056\u6597 feat.TINOP",
+        "genre": "\u30b2\u30fc\u30e0\uff06\u30d0\u30e9\u30a8\u30c6\u30a3"
     },
     {
         "title": "My Dearest Song",
@@ -1389,7 +1481,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "27",
-        "late": "78"
+        "late": "78",
+        "internal_level": null,
+        "level": "11+",
+        "artist": "\u6708\u9234 \u767d\u5948(CV:\u9ad8\u91ce \u9ebb\u91cc\u4f73)",
+        "genre": "\u30aa\u30f3\u30b2\u30ad\uff06CHUNITHM"
     },
     {
         "title": "J\u00f6rqer",
@@ -1447,7 +1543,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "147",
-        "late": "114"
+        "late": "114",
+        "internal_level": "13.5",
+        "level": "13",
+        "artist": "owl\uff0atree feat.yu\uff0atree",
+        "genre": "maimai"
     },
     {
         "title": "EVERGREEN",
@@ -1505,7 +1605,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "147",
-        "late": "94"
+        "late": "94",
+        "internal_level": "13.5",
+        "level": "13",
+        "artist": "Cranky",
+        "genre": "\u30b2\u30fc\u30e0\uff06\u30d0\u30e9\u30a8\u30c6\u30a3"
     },
     {
         "title": "Streak",
@@ -1563,7 +1667,11 @@
         "rating_gain": null,
         "current_rating": "15054",
         "fast": "37",
-        "late": "69"
+        "late": "69",
+        "internal_level": "13.4",
+        "level": "13+",
+        "artist": "ARM(IOSYS)",
+        "genre": "maimai"
     },
     {
         "title": "\u9f13\u52d5",
@@ -1621,7 +1729,11 @@
         "rating_gain": null,
         "current_rating": "15054",
         "fast": "29",
-        "late": "101"
+        "late": "101",
+        "internal_level": null,
+        "level": "10+",
+        "artist": "\u9752\u6728 \u5343\u7d18\u300c\u9f8d\u304c\u5982\u304f \u7dad\u65b0\uff01\u300d",
+        "genre": "\u30b2\u30fc\u30e0\uff06\u30d0\u30e9\u30a8\u30c6\u30a3"
     },
     {
         "title": "\u30a2\u30f3\u30af\u30ed\u30fc\u30ba\u30fb\u30d2\u30e5\u30fc\u30de\u30f3",
@@ -1679,7 +1791,11 @@
         "rating_gain": null,
         "current_rating": "15054",
         "fast": "185",
-        "late": "82"
+        "late": "82",
+        "internal_level": "13.2",
+        "level": "13",
+        "artist": "\u4f5c\u66f2\uff1a\u30ab\u30b8\u30e3\u3000\u4f5c\u8a5e\uff1a\u5098\u6751\u30c8\u30fc\u30bf\u3000\u7de8\u66f2\uff1a\u306d\u3058\u5f0f\u3000\u8abf\u58f0\uff1a\u30b7\u30ea\u30a2",
+        "genre": "niconico\uff06\u30dc\u30fc\u30ab\u30ed\u30a4\u30c9"
     },
     {
         "title": "Danza zandA",
@@ -1737,7 +1853,11 @@
         "rating_gain": null,
         "current_rating": "15054",
         "fast": "137",
-        "late": "70"
+        "late": "70",
+        "internal_level": "13.4",
+        "level": "13",
+        "artist": "\u798f\u5c71\u5149\u6674",
+        "genre": "maimai"
     },
     {
         "title": "Still",
@@ -1795,7 +1915,11 @@
         "rating_gain": null,
         "current_rating": "15054",
         "fast": "214",
-        "late": "54"
+        "late": "54",
+        "internal_level": "13.4",
+        "level": "13",
+        "artist": "\u30a4\u30ed\u30c9\u30ea\u30df\u30c9\u30ea\u300cCHUNITHM\u300d",
+        "genre": "\u30aa\u30f3\u30b2\u30ad\uff06CHUNITHM"
     },
     {
         "title": "\u5263\u3092\u629c\u3051\uff01GCCX MAX",
@@ -1853,7 +1977,11 @@
         "rating_gain": null,
         "current_rating": "15054",
         "fast": "73",
-        "late": "59"
+        "late": "59",
+        "internal_level": "13.0",
+        "level": "12+",
+        "artist": "\u30e1\u30c3\u30bb\u30e1\u30c3\u30bb\u30af\u30e9\u30d6",
+        "genre": "POPS\uff06\u30a2\u30cb\u30e1"
     },
     {
         "title": "\u82b1\u3068\u3001\u96ea\u3068\u3001\u30c9\u30e9\u30e0\u30f3\u30d9\u30fc\u30b9\u3002",
@@ -1911,7 +2039,11 @@
         "rating_gain": null,
         "current_rating": "15054",
         "fast": "57",
-        "late": "58"
+        "late": "58",
+        "internal_level": "13.8",
+        "level": "13+",
+        "artist": "kanone feat. \u305b\u3093\u3056\u3044",
+        "genre": "maimai"
     },
     {
         "title": "\u9ad8\u6c17\u5727\u306d\u3053\u30ed\u30c3\u30af",
@@ -1969,7 +2101,11 @@
         "rating_gain": null,
         "current_rating": "15054",
         "fast": "218",
-        "late": "112"
+        "late": "112",
+        "internal_level": "13.8",
+        "level": "13+",
+        "artist": "\u5c0f\u91ce\u968a\u9577\u3068Jimmy\u89aa\u5206",
+        "genre": "maimai"
     },
     {
         "title": "\u5e78\u305b\u306b\u306a\u308c\u308b\u96a0\u3057\u30b3\u30de\u30f3\u30c9\u304c\u3042\u308b\u3089\u3057\u3044",
@@ -2027,7 +2163,11 @@
         "rating_gain": null,
         "current_rating": "15054",
         "fast": "147",
-        "late": "132"
+        "late": "132",
+        "internal_level": "13.9",
+        "level": "13+",
+        "artist": "\u3046\u305f\u305fP",
+        "genre": "niconico\uff06\u30dc\u30fc\u30ab\u30ed\u30a4\u30c9"
     },
     {
         "title": "Big Daddy",
@@ -2085,6 +2225,10 @@
         "rating_gain": null,
         "current_rating": "15054",
         "fast": "140",
-        "late": "112"
+        "late": "112",
+        "internal_level": "13.8",
+        "level": "13+",
+        "artist": "USAO",
+        "genre": "\u30b2\u30fc\u30e0\uff06\u30d0\u30e9\u30a8\u30c6\u30a3"
     }
 ]

@@ -5,8 +5,10 @@
 	<title>MaiUtils</title>
 	<link rel="stylesheet" href="static/styles.css">
 	<link rel="stylesheet" href="static/view-records-stats-overall.css">
+    <link rel="stylesheet" href="static/view-records.css">
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-HPHDZG3MYW"></script>
+    <script src="static/scripts/charts.js"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
@@ -14,6 +16,10 @@
 
 		gtag('config', 'G-HPHDZG3MYW');
 	</script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    
+
+
 	<link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
 </head>
 <body>
@@ -25,132 +31,263 @@
 	<!-- navigation section -->
 	<nav>
 		<ul>
-			<li><a href="index">Index</a></li>
-			<li><a href="rating-calculator">Rating Calculator</a></li>
-			<li><a href="db-export">Song Database Export</a></li>
-			<li><a href="mai-camera">MaiMai Camera Gallery</a></li>
-			<li><a href="view-records">Daily Records</a></li>
+			<li><a href="../../index">Index</a></li>
+			<li><a href="../../rating-calculator">Rating Calculator</a></li>
+			<li><a href="../../db-export">Song Database Export</a></li>
+			<li><a href="../../mai-camera">MaiMai Camera Gallery</a></li>
+			<li><a href="../../view-records">Daily Records</a></li>
 			<li class="dropdown">
-				<a href="#">Records Stats▾</a>
+				<a href="../stats">Records Stats▾</a>
                 <ul class="dropdown-content">
-                	<li><a href="view-records/stats/overall">Overall</a></li>
-                	<li><a href="view-records/stats/today">Today</a></li>
-                	<li><a href="view-records/stats/date">Date</a></li>
+                	<li><a href="overall">Overall</a></li>
+                	<li><a href="today">Today</a></li>
+                	<li><a href="date">Date</a></li>
 				</ul>
 			</li>
 		</ul>
 	</nav>
 
 	<!-- main content section -->
-    <table>
-        <tr>
-            <th>Field</th>
-            <th>Value</th>
-        </tr>
-        <tr>
-            <td>Time</td>
-            <td>{{ time }}</td>
-        </tr>
-        <tr>
-            <td>Title</td>
-            <td>{{ title }}</td>
-        </tr>
-        <tr>
-            <td>Type</td>
-            <td>{{ type }}</td>
-        </tr>
-        <tr>
-            <td>Difficulty</td>
-            <td>{{ difficulty }}</td>
-        </tr>
-        <tr>
-            <td>Score</td>
-            <td>{{ score }}</td>
-        </tr>
-        <tr>
-            <td>Deluxe Score</td>
-            <td>{{ deluxe_score }}</td>
-        </tr>
-        <tr>
-            <td>Track</td>
-            <td>{{ track }}</td>
-        </tr>
-        <tr>
-            <td>Image Link</td>
-            <td>{{ img_link }}</td>
-        </tr>
-        <tr>
-            <td>Combo</td>
-            <td>{{ combo }}</td>
-        </tr>
-        <tr>
-            <td>Sync</td>
-            <td>{{ sync }}</td>
-        </tr>
-        <tr>
-            <td>Place</td>
-            <td>{{ place }}</td>
-        </tr>
-        <tr>
-            <td>Players</td>
-            <td>{{ players }}</td>
-        </tr>
-        <tr>
-            <td>New Record</td>
-            <td>{{ new_record }}</td>
-        </tr>
-        <tr>
-            <td>New Record Deluxe</td>
-            <td>{{ new_record_deluxe }}</td>
-        </tr>
-        <tr>
-            <td>Taps</td>
-            <td>{{ taps }}</td>
-        </tr>
-        <tr>
-            <td>Holds</td>
-            <td>{{ holds }}</td>
-        </tr>
-        <tr>
-            <td>Slides</td>
-            <td>{{ slides }}</td>
-        </tr>
-        <tr>
-            <td>Touch</td>
-            <td>{{ touch }}</td>
-        </tr>
-        <tr>
-            <td>Breaks</td>
-            <td>{{ breaks }}</td>
-        </tr>
-        <tr>
-            <td>Player 2</td>
-            <td>{{ player2 }}</td>
-        </tr>
-        <tr>
-            <td>Max Combo</td>
-            <td>{{ max_combo }}</td>
-        </tr>
-        <tr>
-            <td>Max Sync</td>
-            <td>{{ max_sync }}</td>
-        </tr>
-        <tr>
-            <td>Rating Gain</td>
-            <td>{{ rating_gain }}</td>
-        </tr>
-        <tr>
-            <td>Current Rating</td>
-            <td>{{ current_rating }}</td>
-        </tr>
-        <tr>
-            <td>Fast</td>
-            <td>{{ fast }}</td>
-        </tr>
-        <tr>
-            <td>Late</td>
-            <td>{{ late }}</td>
-        </tr>
-    </table>
+    <main>
+        <section class="solo_stats">
+            <div class="avg_notes_ratio_dict">
+                <h2>Avg Note Ratios</h2>
+                <div id="notes-chart" class="notes-chart"></div>
+                <script type="text/javascript">
+                    var jsstats = JSON.parse('{{ jsstats|safe }}');
+                    google.charts.load('current', {'packages':['corechart']});
+                    google.charts.setOnLoadCallback(function () {
+                        drawPieChart('notes-chart', jsstats.avg_notes_ratio_dict, 600, 300);
+                    });
+                </script>
+            </div>
+            <div class="avg_taps_ratio_dict">
+                <h2>Avg Taps Ratios</h2>
+                <div id="taps-chart" class="taps-chart"></div>
+                <script type="text/javascript">
+                    var jsstats = JSON.parse('{{ jsstats|safe }}');
+                    google.charts.load('current', {'packages':['corechart']});
+                    google.charts.setOnLoadCallback(function () {
+                        drawPieChart('taps-chart', jsstats.avg_taps_ratio_dict, 600, 300);
+                    });
+                </script>
+            </div>
+            <div class="avg_holds_ratio_dict">
+                <h2>Avg Holds Ratios</h2>
+                <div id="holds-chart" class="holds-chart"></div>
+                <script type="text/javascript">
+                    var jsstats = JSON.parse('{{ jsstats|safe }}');
+                    google.charts.load('current', {'packages':['corechart']});
+                    google.charts.setOnLoadCallback(function () {
+                        drawPieChart('holds-chart', jsstats.avg_holds_ratio_dict, 600, 300);
+                    });
+                </script>
+            </div>
+            <div class="avg_slides_ratio_dict">
+                <h2>Avg Slides Ratios</h2>
+                <div id="slides-chart" class="slides-chart"></div>
+                <script type="text/javascript">
+                    var jsstats = JSON.parse('{{ jsstats|safe }}');
+                    google.charts.load('current', {'packages':['corechart']});
+                    google.charts.setOnLoadCallback(function () {
+                        drawPieChart('slides-chart', jsstats.avg_slides_ratio_dict, 600, 300);
+                    });
+                </script>
+            </div>
+            <div class="avg_touch_ratio_dict">
+                <h2>Avg Touch Ratios</h2>
+                <div id="touch-chart" class="touch-chart"></div>
+                <script type="text/javascript">
+                    var jsstats = JSON.parse('{{ jsstats|safe }}');
+                    google.charts.load('current', {'packages':['corechart']});
+                    google.charts.setOnLoadCallback(function () {
+                        drawPieChart('touch-chart', jsstats.avg_touch_ratio_dict, 600, 300);
+                    });
+                </script>
+            </div>
+            <div class="avg_breaks_ratio_dict">
+                <h2>Avg Breaks Ratios</h2>
+                <div id="breaks-chart" class="breaks-chart"></div>
+                <script type="text/javascript">
+                    var jsstats = JSON.parse('{{ jsstats|safe }}');
+                    google.charts.load('current', {'packages':['corechart']});
+                    google.charts.setOnLoadCallback(function () {
+                        drawPieChart('breaks-chart', jsstats.avg_breaks_ratio_dict, 600, 300);
+                    });
+                </script>
+            </div>
+        </section>
+
+        <section class="multi_stats">
+            <div class="p2picks-level">
+                {% for username, data in stats.p2_picks.level.items() %}
+                {% if username != None %}
+                    <div class="p2picks-level-chart">
+                        <h2>{{ username }} Picks</h2>
+                        <div id="p2picks-chart-{{ username }}"></div>
+                    </div>
+                {% endif %}
+                {% endfor %}
+            
+                <script type="text/javascript">
+                    google.charts.load('current', {'packages':['corechart']});
+                    google.charts.setOnLoadCallback(function() {
+                        {% for username, data in stats.p2_picks.level.items() %}
+                        {% if username != None %}
+                            drawPieChart('p2picks-chart-{{ username }}', {{ data|tojson|safe }}, 400, 400);
+                        {% endif %}          
+                        {% endfor %}
+                    });
+                </script>
+            </div>
+
+        </section>
+
+        <table>
+            <tr>
+              <td>Total Charts Played</td>
+              <td>{{ stats['total_charts'] }}</td>
+            </tr>
+            <tr>
+              <td>Average Internal Level</td>
+              <td>{{ stats['avg_internal_level']|round(1) }}</td>
+            </tr>
+            <tr>
+              <td>Average Internal Level (none)</td>
+              <td>{{ stats['avg_internal_level_none']|round(1) }}</td>
+            </tr>
+            <tr>
+              <td>New Record Ratio</td>
+              <td>{{ (stats['new_record_ratio']*100)|round(2) }}%</td>
+            </tr>
+            <tr>
+              <td>New Record Deluxe Ratio</td>
+              <td>{{ (stats['new_record_deluxe_ratio']*100)|round(2) }}%</td>
+            </tr>
+            <tr>
+                <td>Give Up Ratio</td>
+                <td>{{ (stats['give_up_ratio']*100)|round(2) }}%</td>
+              </tr>
+            <tr>
+              <td>Total Charts Played (Player 2)</td>
+              <td>{{ stats['total_charts_played_p2'] }}</td>
+            </tr>
+            <tr>
+              <td>Average Internal Level (Player 2)</td>
+              <td>{{ stats['avg_internal_level_p2'] }}</td>
+            </tr>
+            <tr>
+              <td>Average Internal Level (Player 2, none)</td>
+              <td>{{ stats['avg_internal_level_p2_none'] }}</td>
+            </tr>
+            <tr>
+              <td>Sync Ratio</td>
+              <td>{{ stats['sync_ratio'] }}</td>
+            </tr>
+            <tr>
+              <td>Player 2 Sync Fail</td>
+              <td>{{ stats['p2_sync_fail'] }}</td>
+            </tr>
+            <tr>
+              <td>Combo Ratio</td>
+              <td>{{ stats['combo_ratio'] }}</td>
+            </tr>
+            <tr>
+              <td>Average Deluxe Star Level</td>
+              <td>{{ stats['avg_deluxe_star_level'] }}</td>
+            </tr>
+            <tr>
+              <td>Average Deluxe Star Internal Level</td>
+              <td>{{ stats['avg_deluxe_star_int_level'] }}</td>
+            </tr>
+            
+            <tr>
+              <td>Player 2 Give Up Ratio</td>
+              <td>{{ stats['p2_give_up_ratio'] }}</td>
+            </tr>
+            <tr>
+                <td>genre_ratio</td>
+                <td>{{ stats['genre_ratio'] }}</td>
+            </tr>
+            <tr>
+                <td>genre_ratio_solo</td>
+                <td>{{ stats['genre_ratio_solo'] }}</td>
+            </tr>
+            <tr>
+                <td>difficulty_ratio</td>
+                <td>{{ stats['difficulty_ratio'] }}</td>
+            </tr>
+            <tr>
+                <td>level_ratio</td>
+                <td>{{ stats['level_ratio'] }}</td>
+            </tr>
+            <tr>
+                <td>int_level_ratio</td>
+                <td>{{ stats['int_level_ratio'] }}</td>
+            </tr>
+            <tr>
+                <td>deluxe_star_level_ratio</td>
+                <td>{{ stats['deluxe_star_level_ratio'] }}</td>
+            </tr>
+            <tr>
+                <td>genre_ratio_p2</td>
+                <td>{{ stats['genre_ratio_p2'] }}</td>
+            </tr>
+        </table>
+
+        <section class="more_charts">
+            <div class="total_charts_played_p2">
+                <h2>total_charts_played_p2</h2>
+                <div id="total_charts_played_p2-chart" class="total_charts_played_p2-chart"></div>
+                <script type="text/javascript">
+                    var jsstats = JSON.parse('{{ jsstats|safe }}');
+                    google.charts.load('current', {'packages':['corechart']});
+                    google.charts.setOnLoadCallback(function () {
+                        drawPieChart('total_charts_played_p2-chart', jsstats.total_charts_played_p2, 750, 600);
+                    });
+                </script>
+            </div>
+
+            <div class="genre_ratio">
+                <h2>genre_ratio</h2>
+                <div id="genre_ratio-chart" class="genre_ratio-chart"></div>
+                <script type="text/javascript">
+                    var jsstats = JSON.parse('{{ jsstats|safe }}');
+                    google.charts.load('current', {'packages':['corechart']});
+                    google.charts.setOnLoadCallback(function () {
+                        drawPieChart('genre_ratio-chart', jsstats.genre_ratio, 450, 600);
+                    });
+                </script>
+            </div>
+
+            <div class="level_ratio">
+                <h2>level_ratio</h2>
+                <div id="level_ratio-chart" class="level_ratio-chart"></div>
+                <script type="text/javascript">
+                    var jsstats = JSON.parse('{{ jsstats|safe }}');
+                    google.charts.load('current', {'packages':['corechart']});
+                    google.charts.setOnLoadCallback(function () {
+                        drawPieChart('level_ratio-chart', jsstats.level_ratio, 750, 600);
+                    });
+                </script>
+            </div>
+
+            <div class="genre_ratio_solo">
+                <h2>genre_ratio_solo</h2>
+                <div id="genre_ratio_solo-chart" class="genre_ratio_solo-chart"></div>
+                <script type="text/javascript">
+                    var jsstats = JSON.parse('{{ jsstats|safe }}');
+                    google.charts.load('current', {'packages':['corechart']});
+                    google.charts.setOnLoadCallback(function () {
+                        drawPieChart('genre_ratio_solo-chart', jsstats.genre_ratio_solo, 450, 600);
+                    });
+                </script>
+            </div>
+
+
+
+        </section>
+        
+    </main>
 </body>
 </html>

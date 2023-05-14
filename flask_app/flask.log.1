@@ -1,0 +1,125 @@
+Exception on /view-records [GET]
+Traceback (most recent call last):
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/pugking4/MaiUtils-Website/flask_app/app.py", line 232, in view_records50
+    reload_records()
+  File "/home/pugking4/MaiUtils-Website/flask_app/app.py", line 222, in reload_records
+    with open(os.path.expanduser(os.path.expanduser(fr'~/MaiUtils-Website/flask_app/records/{time}.json')), 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/pugking4/MaiUtils-Website/flask_app/records/2023-05-05.json'
+Exception on /view-records/stats/overall [GET]
+Traceback (most recent call last):
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/pugking4/MaiUtils-Website/flask_app/app.py", line 252, in view_records_stats_overall
+    return render_template('view-records-stats-overall.html', stats=stats, jsstats=json.dumps(stats))
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/pugking4/.local/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pugking4/MaiUtils-Website/flask_app/templates/view-records-stats-overall.html", line 189, in top-level template code
+    <td>{{ (stats['combo_ratio']*100)|round(2) }}</td>
+TypeError: unsupported operand type(s) for *: 'dict' and 'int'
+Exception on /view-records/stats/today [GET]
+Traceback (most recent call last):
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/pugking4/MaiUtils-Website/flask_app/app.py", line 257, in view_records_stats_today
+    return render_template('view-records-stats.html')
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/pugking4/.local/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: view-records-stats.html
+Exception on /view-records [GET]
+Traceback (most recent call last):
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/pugking4/MaiUtils-Website/flask_app/app.py", line 232, in view_records50
+    reload_records()
+  File "/home/pugking4/MaiUtils-Website/flask_app/app.py", line 222, in reload_records
+    with open(os.path.expanduser(os.path.expanduser(fr'~/MaiUtils-Website/flask_app/records/{time}.json')), 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/pugking4/MaiUtils-Website/flask_app/records/2023-05-12.json'
+Exception on /view-records/stats/overall [GET]
+Traceback (most recent call last):
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/pugking4/MaiUtils-Website/flask_app/app.py", line 250, in view_records_stats_overall
+    stats = stat.calculate_stats()
+  File "/home/pugking4/MaiUtils-Website/flask_app/backend_python/stats.py", line 113, in calculate_stats
+    internal_level = chart['internal_level']
+KeyError: 'internal_level'
+Exception on /view-records [GET]
+Traceback (most recent call last):
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/pugking4/MaiUtils-Website/flask_app/app.py", line 232, in view_records50
+    reload_records()
+  File "/home/pugking4/MaiUtils-Website/flask_app/app.py", line 222, in reload_records
+    with open(os.path.expanduser(os.path.expanduser(fr'~/MaiUtils-Website/flask_app/records/{time}.json')), 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/pugking4/MaiUtils-Website/flask_app/records/2023-05-13.json'
+Exception on /view-records/stats/overall [GET]
+Traceback (most recent call last):
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pugking4/.local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/pugking4/MaiUtils-Website/flask_app/app.py", line 250, in view_records_stats_overall
+    stats = stat.calculate_stats()
+  File "/home/pugking4/MaiUtils-Website/flask_app/backend_python/stats.py", line 113, in calculate_stats
+    internal_level = chart['internal_level']
+KeyError: 'internal_level'

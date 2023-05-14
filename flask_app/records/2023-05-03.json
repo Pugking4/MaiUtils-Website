@@ -55,7 +55,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "206",
-        "late": "146"
+        "late": "146",
+        "internal_level": "14.6",
+        "level": "14",
+        "artist": "sasakure.UK",
+        "genre": "maimai"
     },
     {
         "title": "Mj\u00f6lnir",
@@ -113,7 +117,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "298",
-        "late": "143"
+        "late": "143",
+        "internal_level": "14.4",
+        "level": "14",
+        "artist": "xi",
+        "genre": "\u30b2\u30fc\u30e0\uff06\u30d0\u30e9\u30a8\u30c6\u30a3"
     },
     {
         "title": "39\u307f\u3085\u30fc\u3058\u3063\u304f\uff01",
@@ -171,7 +179,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "17",
-        "late": "50"
+        "late": "50",
+        "internal_level": null,
+        "level": "9",
+        "artist": "\u307f\u304d\u3068P",
+        "genre": "niconico\uff06\u30dc\u30fc\u30ab\u30ed\u30a4\u30c9"
     },
     {
         "title": "\u30a2\u30dd\u30ab\u30ea\u30d7\u30b9\u306b\u53cd\u9006\u306e\u7114\u3092\u711a\u3079\u308d",
@@ -229,7 +241,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "258",
-        "late": "125"
+        "late": "125",
+        "internal_level": "14.5",
+        "level": "14",
+        "artist": "cosMo\uff20\u66b4\u8d70AlterEgo",
+        "genre": "maimai"
     },
     {
         "title": "\u795e\u3005\u304c\u604b\u3057\u305f\u5e7b\u60f3\u90f7",
@@ -287,7 +303,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "243",
-        "late": "139"
+        "late": "139",
+        "internal_level": "13.5",
+        "level": "13",
+        "artist": "Unlucky Morpheus",
+        "genre": "\u6771\u65b9Project"
     },
     {
         "title": "Grievous Lady",
@@ -345,7 +365,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "184",
-        "late": "96"
+        "late": "96",
+        "internal_level": "14.1",
+        "level": "14",
+        "artist": "Team Grimoire vs Laur",
+        "genre": "\u30b2\u30fc\u30e0\uff06\u30d0\u30e9\u30a8\u30c6\u30a3"
     },
     {
         "title": "\u84bc\u7a7a\u306b\u821e\u3048\u3001\u58a8\u67d3\u306e\u685c",
@@ -403,7 +427,11 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "76",
-        "late": "80"
+        "late": "80",
+        "internal_level": "13.4",
+        "level": "13",
+        "artist": "Silver Forest",
+        "genre": "\u6771\u65b9Project"
     },
     {
         "title": "Estahv",
@@ -461,6 +489,10 @@
         "rating_gain": null,
         "current_rating": "15056",
         "fast": "101",
-        "late": "99"
+        "late": "99",
+        "internal_level": "13.8",
+        "level": "13+",
+        "artist": "Feryquitous",
+        "genre": "\u30b2\u30fc\u30e0\uff06\u30d0\u30e9\u30a8\u30c6\u30a3"
     }
 ]

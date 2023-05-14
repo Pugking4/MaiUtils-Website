@@ -88,16 +88,23 @@ class add_external_data:
             json.dump(raw_data, f, indent=4)
         
 
-#my_class = add_external_data(r'C:\Users\joshu\Documents\GitHub\Projects-Website\flask_app\db\20230423db.sqlite3')
 
+#my_class = add_external_data(os.path.expanduser(r'~/MaiUtils-Website/flask_app/db/20230423db.sqlite3'))
+#
+#
 #my_class.get_sql_data_intern()
-
-#my_class.insert_sql_data_intern('2023-04-28')
-
+#
+#
+#my_class.insert_sql_data_intern('2023-05-07')
+#
+#
 #my_class.get_sql_data_level()
-
-#my_class.insert_sql_data_level('2023-04-28')
-
+#
+#
+#my_class.insert_sql_data_level('2023-05-07')
+#
+#
 #my_class.get_sql_data_genre_artist()
-
-#my_class.insert_sql_data_genre_artist('2023-04-28')
+#
+#
+#my_class.insert_sql_data_genre_artist('2023-05-07')

@@ -14,7 +14,7 @@ class overview_stats:
         #print(files)
         for file in files:
             if file.endswith('.json'):
-                #print(file)
+                print(file)
                 with open(self.file_path + '/' + file, 'r') as f:
                     data.append(json.load(f))
         self.data = data
@@ -574,8 +574,8 @@ class overview_stats:
 
         #print(max(total_charts_played_p2, key=total_charts_played_p2.get), max(total_charts_played_p2.values()))
 
-        print(avg_internal_level_p2)
-        print(avg_internal_level_p2_none)
+        #print(avg_internal_level_p2)
+        #print(avg_internal_level_p2_none)
 
         #print('total_charts', total_charts)
 
@@ -634,11 +634,5 @@ class overview_stats:
                }
 
         #print(master_dict)
+        #print(master_dict['avg_notes_ratio_dict'])
         return master_dict
-
-
-instance = overview_stats(r'~/MaiUtils-Website/flask_app/records')
-
-instance.get_stats_data()
-
-instance.calculate_stats()
